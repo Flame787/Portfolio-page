@@ -1,12 +1,13 @@
 import {
   Box,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardMedia,
   Button,
+  Grid,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
@@ -19,7 +20,9 @@ export default function Projects() {
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
-        <Grid item xs={12} sm={6} md={4}>
+
+        {/* <Grid size={{ xs: 12, sm: 6, md: 4 }}> */}
+        <Grid size={{ xs: 12 }}>
           <Card>
             <CardMedia
               component="img"
@@ -48,7 +51,7 @@ export default function Projects() {
         </Grid>
 
         {/* Project 2 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid size={{ xs: 12 }}>
           <Card>
             <CardMedia
               component="img"
@@ -77,7 +80,7 @@ export default function Projects() {
         </Grid>
 
         {/* Project 3 */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid size={{ xs: 12 }}>
           <Card>
             <CardMedia
               component="img"
@@ -105,6 +108,19 @@ export default function Projects() {
           </Card>
         </Grid>
       </Grid>
+
+      {/* Button to the Contact page */}
+      <Box sx={{ mt: 4, textAlign: "center" }}>
+        <Button
+          component={Link} 
+          to="/contact" 
+          variant="contained"
+          color="primary"
+          size="large"
+        >
+          Contact Me
+        </Button>
+      </Box>
     </Box>
   );
 }

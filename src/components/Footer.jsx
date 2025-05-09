@@ -1,4 +1,5 @@
 import { Box, Container, Typography, Link, Grid } from "@mui/material";
+// import Grid from '@mui/material/Grid';
 import { GitHub, LinkedIn, Email } from "@mui/icons-material";
 
 export default function Footer() {
@@ -7,7 +8,8 @@ export default function Footer() {
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
           {/* Left Section: Info */}
-          <Grid item xs={12} sm={6}>
+          {/* <Grid xs={12} sm={6}> */}
+            <Grid size={{xs: 12, sm: 6 }}>
             <Typography variant="body1" align="left">
               © {new Date().getFullYear()} Your Name. All Rights Reserved.
             </Typography>
@@ -17,7 +19,7 @@ export default function Footer() {
           </Grid>
 
           {/* Right Section: Social Links */}
-          <Grid item xs={12} sm={6} display="flex" justifyContent="flex-end" alignItems="center">
+          <Grid size={{xs: 12, sm: 6 }} display="flex" justifyContent="flex-end" alignItems="center">
             <Link href="https://github.com/username" target="_blank" sx={{ color: "white", mx: 2 }}>
               <GitHub fontSize="large" />
             </Link>
