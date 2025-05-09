@@ -9,11 +9,15 @@ import Navbar from "./components/Navbar";
 import { lightTheme, darkTheme } from "./theme";
 
 function App() {
+
+const [darkMode, setDarkMode] = useState(false);
+const handleThemeToggle = () => setDarkMode(!darkMode);
+
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Router>
-        <Navbar />
+        <Navbar darkMode={darkMode} handleThemeToggle={handleThemeToggle}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
