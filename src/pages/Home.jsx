@@ -21,8 +21,9 @@ export default function Home() {
 
   return (
     <Container>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom sx={{ mt: 6 }}>
         {/* gutterBottom - adds margin under h3-element */}
+        {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
         Welcome to my portfolio
       </Typography>
       <Typography>This is the home page.</Typography>

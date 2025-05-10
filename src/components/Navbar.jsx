@@ -6,13 +6,6 @@ import Brightness2Icon from "@mui/icons-material/Brightness2";
 export default function Navbar({ darkMode, handleThemeToggle }) {
   const navigate = useNavigate();
 
-  //   const scrollToProjects = () => {
-  //     const element = document.getElementById("projects");
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   };
-
   const handleProjectsClick = () => {
     if (window.location.pathname === "/") {
       window.location.hash = "projects";
@@ -30,21 +23,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         <Button color="inherit" component={Link} to="/">
           Home
         </Button>
-        {/* <Button color="inherit" component={Link} to="#projects"> */}
-        {/* <Button color="inherit" component="a" href="#projects"> */}
-        {/* <Button
-          color="inherit"
-          onClick={() => {
-            if (window.location.pathname === "/") {
-              scrollToProjects(); 
-            } else {
-              navigate("/#projects");
-            }
-          }}
-        > */}
 
+        {/* <Button color="inherit" component={Link} to="#projects"> */}
         <Button color="inherit" onClick={handleProjectsClick}>
-          {/* <Button color="inherit" component={Link} to="/#projects"> */}
           Projects
         </Button>
         <Button color="inherit" component={Link} to="/contact">

@@ -15,12 +15,12 @@ export default function Projects() {
       <Typography variant="h4" gutterBottom>
         Projects
       </Typography>
-      <Typography>Here are some of the projects I’ve worked on.</Typography>
+      <Typography>Here are some of the projects I’ve worked on:</Typography>
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
-        {/* Project 1 */}
 
+        {/* Project 1 */}
         {/* <Grid size={{ xs: 12, sm: 6, md: 4 }}> */}
         <Grid size={{ xs: 12 }}>
           <Card>
