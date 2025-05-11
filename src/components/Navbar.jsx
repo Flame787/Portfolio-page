@@ -79,7 +79,18 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         ) : (
           <Brightness7Icon sx={{ mx: 1 }} />
         )}
-        <Switch checked={darkMode} onChange={handleThemeToggle} />
+        <Switch
+          checked={darkMode}
+          onChange={handleThemeToggle}
+          sx={{
+            "& .MuiSwitch-thumb": {
+              backgroundColor: "#ffffff",
+            },
+            "& .MuiSwitch-track": {
+              backgroundColor: "#ffffff",
+            },
+          }}
+        />
       </Toolbar>
     </AppBar>
   );
