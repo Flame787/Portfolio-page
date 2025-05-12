@@ -42,15 +42,26 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                A brief description of project 1. It includes features X, Y, and
-                Z.
+                This real-time chat application is built with React and powered
+                by the Scaledrone WebSocket service for live communication.
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                text...
+                After entering a username and selecting an avatar, users can
+                choose from themed chat rooms where they can interact with
+                currently active participants.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
+                The app supports: browsing chat history, using emojis (via
+                emoji-picker-react), sending GIFs (via the Giphy API), and
+                uploading files (handled through Supabase).
               </Typography>
               <Typography
                 variant="body2"
@@ -58,16 +69,18 @@ export default function Projects() {
                 sx={{ mt: 2, mb: 2 }}
               >
                 Technologies:{" "}
-                <strong>React, REST API, Scaledrone Websocket </strong>
+                <strong>
+                  React, Scaledrone Websocket, external REST APIs{" "}
+                </strong>
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{ mt: 2 }}
-              >
-                View Project
-              </Button>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                <Button variant="contained" color="primary">
+                  GitHub
+                </Button>
+                <Button variant="contained" color="primary" sx={{ ml: 2 }}>
+                  Live Demo
+                </Button>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
@@ -94,15 +107,35 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                A brief description of project 2. It features unique
-                functionality.
+                Music Domain is a dynamic music search application that allows
+                users to explore artists, albums, and songs using real-time data
+                from the Spotify API.
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                text...
+                Users can search for music artists, songs, and albums, listen to
+                30-second previews of individual tracks or full albums, like and
+                save tracks to a favorites playlist, and access full songs or
+                artist details via external Spotify links.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ mt: 2, mb: 2 }}
+                >
+                  Express.js is used on the backend for Spotify authentication.
+                  The app also features 16 different visual themes (styled
+                  entirely with SCSS), letting users personalize their
+                  experience with ease.
+                </Typography>
               </Typography>
               <Typography
                 variant="body2"
@@ -110,16 +143,18 @@ export default function Projects() {
                 sx={{ mt: 2, mb: 2 }}
               >
                 Technologies:{" "}
-                <strong>JavaScript, SCSS, REST API, Express.js </strong>
+                <strong>
+                  JavaScript, SCSS, external REST APIs, Express.js{" "}
+                </strong>
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{ mt: 2 }}
-              >
-                View Project
-              </Button>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                <Button variant="contained" color="primary">
+                  GitHub
+                </Button>
+                <Button variant="contained" color="primary" sx={{ ml: 2 }}>
+                  Live Demo
+                </Button>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
@@ -155,6 +190,13 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
+                One of my earlier projects, recently refreshed with improved layout and updated code.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
                 The application integrates with the Open Library API to fetch
                 and display books authored by Tolkien, allowing users to explore
                 and sort them by current ratings.
@@ -164,16 +206,84 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                Technologies: <strong>JavaScript, Bootstrap, REST API </strong>
+                Technologies:{" "}
+                <strong>JavaScript, Bootstrap, external REST APIs </strong>
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                sx={{ mt: 2 }}
+
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                <Button variant="contained" color="primary">
+                  GitHub
+                </Button>
+                <Button variant="contained" color="primary" sx={{ ml: 2 }}>
+                  Live Demo
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Project 4 */}
+        <Grid size={{ xs: 12 }}>
+          <Card>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+            >
+              Portfolio page
+            </Typography>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/300"
+              alt="Project 4"
+            />
+            <CardContent>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
               >
-                View Project
-              </Button>
+                Portfolio Page is a personal showcase built with React, designed
+                to present web development projects in a clean, responsive, and
+                user-friendly layout.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
+                It uses React Router for seamless navigation, Material UI for
+                modern and consistent design components, and EmailJS to enable
+                users to get in touch directly via a built-in contact form.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
+                The app also features theme switching, allowing users to
+                personalize the visual experience. This single-page application
+                is fully responsive and optimized for accessibility and
+                performance across devices.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, mb: 2 }}
+              >
+                Technologies:{" "}
+                <strong>React, React Router, Material UI, EmailJS </strong>
+              </Typography>
+
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                <Button variant="contained" color="primary">
+                  GitHub
+                </Button>
+                <Button variant="contained" color="primary" sx={{ ml: 2 }}>
+                  Live Demo
+                </Button>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
