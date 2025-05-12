@@ -34,11 +34,11 @@ export default function Home() {
       >
         <Grid item xs={12} sm={6} md={6} lg={6} >
           <img
-            src="/aa4.png"
+            src="/111.jpg"
             alt="avatar developer"
             style={{
               width: "100%",
-              maxWidth: "200px",
+              maxWidth: "600px",
               borderRadius: "8px",
               display: "inline-block",
               margin: "0 auto",
@@ -61,8 +61,8 @@ export default function Home() {
           </Typography>
           <Typography sx={{ marginBottom: 1 }}>
             I enjoy working with modern libraries like React Router and Redux,
-            as well as frameworks like Express.js, and tools such as Git,
-            GitHub, Sass/SCSS, Material-UI (MUI), Webpack, Vite and Jira.
+            as well as frameworks like Bootstrap, Express.js, and tools such as Git,
+            GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
           </Typography>
           <Typography sx={{ marginBottom: 1 }}>
             I believe in following best practices, such as writing modular and

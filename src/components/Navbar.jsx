@@ -37,9 +37,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
       sx={{
         top: 0,
         backdropFilter: "blur(10px)",
-        backgroundColor: scrolled
-          ? "rgba(6, 111, 149, 0.58)" // darker if scrolled
-          : "rgba(11, 141, 188, 0.66)", // lighter
+        backgroundColor: scrolled ? "primary.transparent" : "primary.main",
         transition: "background-color 0.3s ease, box-shadow 0.3s ease",
         boxShadow: scrolled ? "0 2px 10px rgba(0, 0, 0, 0.7)" : "none",
         zIndex: 1100,
@@ -83,11 +81,17 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           checked={darkMode}
           onChange={handleThemeToggle}
           sx={{
+            "& .MuiSwitch-switchBase.Mui-checked": {
+              color: "#fff",
+              "& + .MuiSwitch-track": {
+                backgroundColor: "#000",
+              },
+            },
             "& .MuiSwitch-thumb": {
               backgroundColor: "#ffffff",
             },
             "& .MuiSwitch-track": {
-              backgroundColor: "#ffffff",
+              backgroundColor: "#ccc", // when unchecked
             },
           }}
         />
