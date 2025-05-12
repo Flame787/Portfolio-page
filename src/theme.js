@@ -5,6 +5,7 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "rgba(1, 130, 194, 0.66)",
+      // main: "rgba(0, 145, 181, 0.66)",
       // main: "rgba(1, 148, 185, 0.66)",
       // main: "rgba(3, 76, 160, 0.88)",
       // main: "rgba(0, 124, 185)",
