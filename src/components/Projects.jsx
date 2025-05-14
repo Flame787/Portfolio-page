@@ -26,10 +26,11 @@ export default function Projects() {
       <Grid container spacing={4} sx={{ mt: 4 }}>
         
         {/* Project 1 */}
-        {/* <Grid size={{ xs: 12, sm: 6, md: 4 }}> */}
+        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}> */}
           <Card sx={{ width: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
+            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
               variant="h6"
               gutterBottom
@@ -116,8 +117,10 @@ export default function Projects() {
 
         {/* Project 2 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
+        {/* <Grid item xs={12}> */}
           <Card sx={{ width: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
+            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
               variant="h6"
               gutterBottom
@@ -202,7 +205,8 @@ export default function Projects() {
 
         {/* Project 3 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
+        {/* <Grid item xs={12}> */}
           <Card sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
             <Typography
               variant="h6"
