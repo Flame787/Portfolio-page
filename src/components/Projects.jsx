@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function Projects() {
   return (
     <Box id="projects" sx={{ mt: 6 }}>
-      <Typography variant="h4" gutterBottom sx={{ mt: 6, mb: 4 }}>
+      <Typography variant="h4" gutterBottom sx={{ mt: 6, mb: 4 }} fontFamily={"Kenfolg Serif"}>
         Projects
       </Typography>
       <Typography>Here are some of the projects I’ve worked on:</Typography>
@@ -21,12 +21,13 @@ export default function Projects() {
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
         {/* <Grid size={{ xs: 12, sm: 6, md: 4 }}> */}
-        <Grid size={{ xs: 12 }}>
+        {/* <Grid size={{ xs: 12 }}> */}
+        <Grid item xs={12}>
           <Card>
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+              sx={{ textAlign: "center", mt: 2, mb: 3 }} 
             >
               React Chat App with Scaledrone Websocket
             </Typography>
@@ -42,8 +43,15 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                This real-time chat application is built with React and powered
-                by the Scaledrone WebSocket service for live communication.
+                This real-time chat application is built with{" "}
+                <strong>
+                  <span color="text.primary">React</span>
+                </strong>{" "}
+                and powered by the{" "}
+                <strong>
+                  <span color="text.primary">Scaledrone</span>
+                </strong>{" "}
+                WebSocket for live communication.
               </Typography>
               <Typography
                 variant="body2"
@@ -60,8 +68,15 @@ export default function Projects() {
                 sx={{ mt: 2, mb: 2 }}
               >
                 The app supports: browsing chat history, using emojis (via
-                emoji-picker-react), sending GIFs (via the Giphy API), and
-                uploading files (handled through Supabase).
+                emoji-picker-react), sending GIFs (via the{" "}
+                <strong>
+                  <span color="text.primary">Giphy API</span>
+                </strong>
+                ), and uploading files (handled through{" "}
+                <strong>
+                  <span color="text.primary">Supabase</span>
+                </strong>
+                ).
               </Typography>
               <Typography
                 variant="body2"
@@ -86,7 +101,8 @@ export default function Projects() {
         </Grid>
 
         {/* Project 2 */}
-        <Grid size={{ xs: 12 }}>
+        {/* <Grid size={{ xs: 12 }}> */}
+        <Grid item xs={12}>
           <Card>
             <Typography
               variant="h6"
@@ -107,9 +123,15 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                Music Domain is a dynamic music search application that allows
-                users to explore artists, albums, and songs using real-time data
-                from the Spotify API.
+                <strong>
+                  <span color="text.primary">Music Domain</span>
+                </strong>{" "}
+                is a dynamic music search application that allows users to
+                explore artists, albums, and songs using real-time data from the{" "}
+                <strong>
+                  <span color="text.primary">Spotify API</span>
+                </strong>
+                .
               </Typography>
               <Typography
                 variant="body2"
@@ -126,17 +148,14 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ mt: 2, mb: 2 }}
-                >
-                  Express.js is used on the backend for Spotify authentication.
-                  The app also features 16 different visual themes (styled
-                  entirely with SCSS), letting users personalize their
-                  experience with ease.
-                </Typography>
+                <strong>
+                  <span color="text.primary">Express.js</span>
+                </strong>{" "}
+                is used on the backend for Spotify authentication. The app also
+                features 16 different visual themes (styled entirely with SCSS),
+                letting users personalize their experience with ease.
               </Typography>
+
               <Typography
                 variant="body2"
                 color="text.secondary"
@@ -160,7 +179,8 @@ export default function Projects() {
         </Grid>
 
         {/* Project 3 */}
-        <Grid size={{ xs: 12 }}>
+        {/* <Grid size={{ xs: 12 }}> */}
+        <Grid item xs={12}>
           <Card>
             <Typography
               variant="h6"
@@ -190,16 +210,20 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                One of my earlier projects, recently refreshed with improved layout and updated code.
+                One of my earlier projects, recently refreshed with improved
+                layout and updated code.
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                The application integrates with the Open Library API to fetch
-                and display books authored by Tolkien, allowing users to explore
-                and sort them by current ratings.
+                The application integrates with the{" "}
+                <strong>
+                  <span color="text.primary">Open Library API</span>
+                </strong>{" "}
+                to fetch and display books authored by Tolkien, allowing users
+                to explore and sort them by current ratings.
               </Typography>
               <Typography
                 variant="body2"
@@ -223,7 +247,8 @@ export default function Projects() {
         </Grid>
 
         {/* Project 4 */}
-        <Grid size={{ xs: 12 }}>
+        {/* <Grid size={{ xs: 12 }}> */}
+        <Grid item xs={12}>
           <Card>
             <Typography
               variant="h6"
@@ -244,18 +269,32 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                Portfolio Page is a personal showcase built with React, designed
-                to present web development projects in a clean, responsive, and
-                user-friendly layout.
+                Portfolio Page is a personal showcase built with{" "}
+                <strong>
+                  <span color="text.primary">React</span>
+                </strong>
+                , designed to present web development projects in a clean,
+                responsive, and user-friendly layout.
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2 }}
               >
-                It uses React Router for seamless navigation, Material UI for
-                modern and consistent design components, and EmailJS to enable
-                users to get in touch directly via a built-in contact form.
+                It uses{" "}
+                <strong>
+                  <span color="text.primary">React Router</span>
+                </strong>{" "}
+                for seamless navigation,{" "}
+                <strong>
+                  <span color="text.primary">Material UI</span>
+                </strong>{" "}
+                for modern and consistent design components, and{" "}
+                <strong>
+                  <span color="text.primary">EmailJS</span>
+                </strong>{" "}
+                to enable users to get in touch directly via a built-in contact
+                form.
               </Typography>
               <Typography
                 variant="body2"

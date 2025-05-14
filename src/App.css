@@ -12,6 +12,17 @@ html {
 }
 
 
+
+@font-face {
+  font-family: 'Kenfolg Serif';
+  src: url('../public/fonts/Kenfolg.otf') format('opentype');
+}
+
+.kenfolg {
+  font-family: 'Kenfolg Serif', serif;
+}
+
+
 @media (min-width: 2100px) {
   .navbar-wavy::before {
     background-size: 100% calc(2vw + 74px);

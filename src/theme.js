@@ -13,10 +13,12 @@ export const lightTheme = createTheme({
     },
     background: {
       default: "#ffffff",
-      paper: "#f4f4f4",
+      // paper: "#f4f4f4",
+      paper: "rgba(205, 238, 248, 0.75)",
     },
-    text: {
-      primary: "#000000",
+    text: {    
+      primary: "rgba(2, 64, 134, 0.88)",
+      secondary: "#000000",
     },
   },
   typography: {
@@ -33,11 +35,16 @@ export const darkTheme = createTheme({
       transparent: "rgba(3, 76, 160, 0.75)",
     },
     background: {
-      default: "#121212",
-      paper: "#1e1e1e",
+      // default: "#121212",
+      default: "rgb(0, 15, 33)",
+      // paper: "#1e1e1e",
+      paper: "rgba(2, 27, 56, 0.5)",
+      
     },
     text: {
       primary: "#ffffff",
+      // secondary: "#94A3B8",
+      secondary:  "#c1cdde",
     },
   },
   typography: {

@@ -53,23 +53,25 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
       >
         <Typography
           variant="h6"
+          fontFamily={"Kenfolg Serif"}
           sx={{
             flexGrow: 1,
             fontSize: scrolled ? "1rem" : "1.25rem",
             transition: "font-size 0.3s ease",
           }}
         >
-          Dev Portfolio
+          Developer Portfolio
         </Typography>
-        <Button color="inherit" component={Link} to="/">
+
+        <Button color="inherit" component={Link} to="/" sx={{ fontFamily: 'Kenfolg Serif' }}>
           Home
         </Button>
 
         {/* <Button color="inherit" component={Link} to="#projects"> */}
-        <Button color="inherit" onClick={handleProjectsClick}>
+        <Button color="inherit" onClick={handleProjectsClick} sx={{ fontFamily: 'Kenfolg Serif' }}>
           Projects
         </Button>
-        <Button color="inherit" component={Link} to="/contact">
+        <Button color="inherit" component={Link} to="/contact" sx={{ fontFamily: 'Kenfolg Serif' }}>
           Contact
         </Button>
         {darkMode ? (
