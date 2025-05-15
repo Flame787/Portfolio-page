@@ -14,21 +14,34 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const handleThemeToggle = () => setDarkMode(!darkMode);
 
+  const darkBackground = `
+    radial-gradient(circle at 22% 27%, rgba(42, 181, 246, 0.15), transparent 9%),
+    radial-gradient(circle at 17% 79%, rgba(42, 181, 246, 0.15), transparent 15%),
+    radial-gradient(circle at 70% 60%, rgba(29, 167, 231, 0.25), transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(31, 142, 193, 0.2), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(19, 145, 203, 0.15), transparent 10%),
+    radial-gradient(circle at 40% 40%, rgba(16, 115, 161, 0.2), transparent 15%),
+    radial-gradient(circle at 90% 80%, rgba(0, 145, 181, 0.10), transparent 8%)
+  `;
+
+  const lightBackground = `
+     radial-gradient(circle at 22% 27%, rgba(1, 130, 194, 0.25), transparent 9%),
+  radial-gradient(circle at 17% 79%, rgba(1, 130, 194, 0.25), transparent 15%),
+  radial-gradient(circle at 70% 60%, rgba(0, 145, 181, 0.25), transparent 20%),
+  radial-gradient(circle at 50% 80%, rgba(1, 148, 185, 0.28), transparent 25%),
+  radial-gradient(circle at 80% 20%, rgba(1, 148, 185, 0.28), transparent 10%),
+  radial-gradient(circle at 40% 40%, rgba(0, 145, 181, 0.25), transparent 15%),
+  radial-gradient(circle at 90% 78%, rgba(0, 145, 181, 0.20), transparent 10%)
+  `;
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <GlobalStyles
         styles={{
           body: {
-            backgroundColor: "rgb(0, 15, 33)", 
-            backgroundImage: `
-        radial-gradient(circle at 22% 27%, rgba(42, 181, 246, 0.15), transparent 9%),
-        radial-gradient(circle at 17% 79%, rgba(42, 181, 246, 0.15), transparent 15%),
-        radial-gradient(circle at 70% 60%, rgba(29, 167, 231, 0.25), transparent 20%),
-        radial-gradient(circle at 50% 80%, rgba(31, 142, 193, 0.2), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(19, 145, 203, 0.15), transparent 10%),
-        radial-gradient(circle at 40% 40%, rgba(16, 115, 161, 0.2), transparent 15%)
-      `,
+            backgroundColor: darkMode ? "rgb(0, 15, 33)" : "rgb(221, 240, 250)",
+            backgroundImage: darkMode ? darkBackground : lightBackground,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
