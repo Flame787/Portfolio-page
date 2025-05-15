@@ -15,12 +15,12 @@ export default function Projects() {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 6, mb: 4 }}
+        sx={{ mt: 10, mb: 4, textAlign: "center" }}
         fontFamily={"Kenfolg Serif"}
       >
         Projects
       </Typography>
-      <Typography>Here are some of the projects I’ve worked on:</Typography>
+      <Typography sx={{ mb: 6, textAlign: "center" }}>Here are some of the projects I’ve worked on:</Typography>
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
