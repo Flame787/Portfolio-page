@@ -46,9 +46,9 @@ export default function Home() {
         }}
         direction={{ xs: "column", sm: "column", md: "row" }}
       >
-        <Grid item xs={12} sm={6} md={6} lg={6} sx={{ flexBasis: "50%", ml: 8 }}>
+        <Grid item xs={12} sm={6} md={6} lg={6} sx={{ flexBasis: "50%", ml: 8, mr: 6, mt: 1 }}>
           <img
-            src="/111.jpg"
+            src="/723.png"
             alt="code"
             style={{
               width: "100%",
@@ -60,7 +60,7 @@ export default function Home() {
           />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} sx={{ flexBasis: "50%", mr: 8 }}>
+        <Grid item xs={12} sm={6} md={6} lg={6} sx={{ flexBasis: "50%", ml: 6, mr: 8, border: "1px solid #4CC9FE", borderRadius: 4, p: 4 }}>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I started learning programming three years ago and developed a deep
             enthusiasm for front-end development.
@@ -80,7 +80,7 @@ export default function Home() {
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I believe in following best practices, such as writing modular and
-            maintainable code, which helps to build scalable applications that
+            maintainable code, to build scalable apps that
             are easy to manage even as the project grows.
           </Typography>
         </Grid>
