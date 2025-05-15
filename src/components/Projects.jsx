@@ -8,6 +8,16 @@ import {
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+
+
+const CustomButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.button,
+  "&:hover": {
+    backgroundColor: theme.palette.primary.button2,
+  },
+}));
+
 
 export default function Projects() {
   return (
@@ -15,26 +25,36 @@ export default function Projects() {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 10, mb: 4, textAlign: "center" }}
+        sx={{ mt: 10, mb: 4, textAlign: "center", color: "primary.title" }}
         fontFamily={"Kenfolg Serif"}
       >
         Projects
       </Typography>
-      <Typography sx={{ mb: 6, textAlign: "center" }}>Here are some of the projects I’ve worked on:</Typography>
+
+      <Typography sx={{ mb: 6, textAlign: "center" }}>
+        Here are some of the projects I’ve worked on:
+      </Typography>
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
-        
         {/* Project 1 */}
         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-        {/* <Grid size={{ xs: 12 }}> */}
-        {/* <Grid item xs={12}> */}
-          <Card sx={{ width: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
+          {/* <Grid size={{ xs: 12 }}> */}
+          {/* <Grid item xs={12}> */}
+          <Card
+            sx={{ width: "100%", margin: "0 auto", wordWrap: "break-word" }}
+          >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+              sx={{
+                textAlign: "center",
+                mt: 3,
+                mb: 3,
+                color: "primary.title",
+              }}
+              fontFamily={"Kenfolg Serif"}
             >
               React Chat App with Scaledrone Websocket
             </Typography>
@@ -96,20 +116,20 @@ export default function Projects() {
                 </strong>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                <Button
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
                 >
                   GitHub
-                </Button>
-                <Button
+                </CustomButton>
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
                 >
                   Live Demo
-                </Button>
+                </CustomButton>
               </Box>
             </CardContent>
           </Card>
@@ -118,13 +138,21 @@ export default function Projects() {
         {/* Project 2 */}
         {/* <Grid size={{ xs: 12 }}> */}
         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-        {/* <Grid item xs={12}> */}
-          <Card sx={{ width: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
+          {/* <Grid item xs={12}> */}
+          <Card
+            sx={{ width: "100%", margin: "0 auto", wordWrap: "break-word" }}
+          >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+              fontFamily={"Kenfolg Serif"}
+              sx={{
+                textAlign: "center",
+                mt: 3,
+                mb: 3,
+                color: "primary.title",
+              }}
             >
               Music Search App powered by Spotify API
             </Typography>
@@ -184,20 +212,20 @@ export default function Projects() {
                 </strong>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                <Button
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
                 >
                   GitHub
-                </Button>
-                <Button
+                </CustomButton>
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
                 >
                   Live Demo
-                </Button>
+                </CustomButton>
               </Box>
             </CardContent>
           </Card>
@@ -206,12 +234,20 @@ export default function Projects() {
         {/* Project 3 */}
         {/* <Grid size={{ xs: 12 }}> */}
         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
-        {/* <Grid item xs={12}> */}
-          <Card sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: 'break-word'  }}>
+          {/* <Grid item xs={12}> */}
+          <Card
+            sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: "break-word" }}
+          >
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+              sx={{
+                textAlign: "center",
+                mt: 3,
+                mb: 3,
+                color: "primary.title",
+              }}
+              fontFamily={"Kenfolg Serif"}
             >
               Tolkien info page with OpenLibrary API
             </Typography>
@@ -261,20 +297,20 @@ export default function Projects() {
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                <Button
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
                 >
                   GitHub
-                </Button>
-                <Button
+                </CustomButton>
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
                 >
                   Live Demo
-                </Button>
+                </CustomButton>
               </Box>
             </CardContent>
           </Card>
@@ -283,11 +319,19 @@ export default function Projects() {
         {/* Project 4 */}
         {/* <Grid size={{ xs: 12 }}> */}
         <Grid item xs={12}>
-          <Card sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: 'break-word' }}>
+          <Card
+            sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: "break-word" }}
+          >
             <Typography
               variant="h6"
               gutterBottom
-              sx={{ textAlign: "center", mt: 2, mb: 3 }}
+              sx={{
+                textAlign: "center",
+                mt: 3,
+                mb: 3,
+                color: "primary.title",
+              }}
+              fontFamily={"Kenfolg Serif"}
             >
               Portfolio page
             </Typography>
@@ -350,20 +394,20 @@ export default function Projects() {
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                <Button
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
                 >
                   GitHub
-                </Button>
-                <Button
+                </CustomButton>
+                <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
                 >
                   Live Demo
-                </Button>
+                </CustomButton>
               </Box>
             </CardContent>
           </Card>
@@ -372,7 +416,7 @@ export default function Projects() {
 
       {/* Button to the Contact page */}
       <Box sx={{ mt: 4, textAlign: "center" }}>
-        <Button
+        <CustomButton
           component={Link}
           to="/contact"
           variant="contained"
@@ -381,7 +425,7 @@ export default function Projects() {
           sx={{ fontFamily: "Kenfolg Serif" }}
         >
           Contact Me
-        </Button>
+        </CustomButton>
       </Box>
     </Box>
   );

@@ -23,7 +23,7 @@ export default function Home() {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 6, mb: 4, textAlign: "center" }}
+        sx={{ mt: 8, mb: 4, textAlign: "center" }}
         fontFamily={"Kenfolg Serif"}
       >
         {/* gutterBottom - adds margin under h3-element */}
