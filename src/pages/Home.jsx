@@ -52,7 +52,7 @@ export default function Home() {
           sm={6}
           md={6}
           lg={6}
-          sx={{ flexBasis: "50%", ml: 8, mr: 6, mt: 1 }}
+          sx={{ flexBasis: "50%", ml: 6, mr: 6, mt: 1 }}
         >
           <img
             src="/723.png"
@@ -76,7 +76,7 @@ export default function Home() {
           sx={{
             flexBasis: "50%",
             ml: 6,
-            mr: 8,
+            mr: 6,
             border: "1px solid #4CC9FE",
             borderRadius: 4,
             p: 4,

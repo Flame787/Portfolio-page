@@ -10,14 +10,13 @@ import {
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
-
 const CustomButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.primary.button,
+  // color: theme.palette.background.default,
   "&:hover": {
     backgroundColor: theme.palette.primary.button2,
   },
 }));
-
 
 export default function Projects() {
   return (
