@@ -58,7 +58,7 @@ export default function Home({ darkMode}) {
             src={darkMode ? "/728.png" : "/730.png"}
             alt="code"
             style={{
-              width: "100%",
+              width: "104%",
               // maxWidth: "450px",
               borderRadius: "16px",
               display: "inline-block",
@@ -81,20 +81,20 @@ export default function Home({ darkMode}) {
             mr: 6,
             border: "1px solid #4CC9FE",
             borderRadius: 4,
-            p: 4,
+            p: 3.7,
           }}
         >
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             My programming journey began three years ago, and I quickly become
-            deeply interested in front-end development.
+            deeply interested in <strong>front-end development</strong>.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I'm passionate about learning, solving problems, and building
             responsive, user-friendly and visually engaging web experiences.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            In my projects, I primarily work with React and vanilla JavaScript,
-            frequently integrating APIs to enhance interactivity.
+            In my projects, I primarily work with <strong>React</strong> and vanilla <strong>JavaScript</strong>,
+            frequently integrating <strong>APIs</strong> to enhance interactivity.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I enjoy working with modern libraries like React Router and Redux,
