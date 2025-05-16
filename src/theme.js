@@ -37,19 +37,15 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "rgba(1, 130, 194, 0.66)",
-
-      // main: "rgba(0, 145, 181, 0.66)",
-      // main: "rgba(1, 148, 185, 0.66)",
-      // main: "rgba(3, 76, 160, 0.88)",
-      // main: "rgba(0, 124, 185)",
+      main:  "rgba(5, 143, 193, 0.75)",
       transparent: "rgba(6, 153, 206, 0.75)",
       title: "rgba(5, 143, 193, 0.75)",
     },
     background: {
       default: "#ffffff",
       // paper: "#f4f4f4",
-      paper: "rgba(181, 235, 251, 0.75)",
+      // paper: "rgba(181, 235, 251, 0.75)",
+      paper: "rgba(237, 250, 254, 0.6)"
     },
     text: {
       primary: "rgba(2, 64, 134, 0.88)",

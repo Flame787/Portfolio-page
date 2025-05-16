@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Container, Typography, Grid, Box } from "@mui/material";
 import Projects from "../components/Projects";
 
-export default function Home() {
+export default function Home({ darkMode}) {
   // enable scrolling to the Projects-section from other pages, like Contact:
   const location = useLocation();
 
@@ -46,28 +46,30 @@ export default function Home() {
         }}
         direction={{ xs: "column", sm: "column", md: "row" }}
       >
-        <Grid
+           <Grid
           item
           xs={12}
           sm={6}
           md={6}
           lg={6}
-          sx={{ flexBasis: "50%", ml: 6, mr: 6, mt: 1 }}
+          sx={{ flexBasis: "50%", ml: 6, mr: 6, mt: 0, mb: 0, lineHeight: 0 }}
         >
           <img
-            src="/723.png"
+            src={darkMode ? "/728.png" : "/730.png"}
             alt="code"
             style={{
               width: "100%",
-              maxWidth: "450px",
-              borderRadius: "8px",
+              // maxWidth: "450px",
+              borderRadius: "16px",
               display: "inline-block",
               margin: "0 auto",
             }}
           />
         </Grid>
 
-        <Grid
+       
+
+         <Grid
           item
           xs={12}
           sm={6}
@@ -83,8 +85,8 @@ export default function Home() {
           }}
         >
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My programming journey began three years ago, and I quickly
-            become deeply interested in front-end development.
+            My programming journey began three years ago, and I quickly become
+            deeply interested in front-end development.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I'm passionate about learning, solving problems, and building

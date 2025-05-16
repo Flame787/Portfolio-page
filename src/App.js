@@ -25,13 +25,13 @@ function App() {
   `;
 
   const lightBackground = `
-     radial-gradient(circle at 22% 27%, rgba(1, 130, 194, 0.25), transparent 9%),
-  radial-gradient(circle at 17% 79%, rgba(1, 130, 194, 0.25), transparent 15%),
-  radial-gradient(circle at 70% 60%, rgba(0, 145, 181, 0.25), transparent 20%),
-  radial-gradient(circle at 50% 80%, rgba(1, 148, 185, 0.28), transparent 25%),
-  radial-gradient(circle at 80% 20%, rgba(1, 148, 185, 0.28), transparent 10%),
+     radial-gradient(circle at 22% 27%, rgba(1, 130, 194, 0.21), transparent 9%),
+  radial-gradient(circle at 17% 79%, rgba(1, 130, 194, 0.15), transparent 10%),
+  radial-gradient(circle at 70% 60%, rgba(0, 145, 181, 0.13), transparent 14%),
+  radial-gradient(circle at 50% 80%, rgba(1, 148, 185, 0.12), transparent 21%),
+  radial-gradient(circle at 80% 20%, rgba(1, 148, 185, 0.15), transparent 10%),
   radial-gradient(circle at 40% 40%, rgba(0, 145, 181, 0.25), transparent 15%),
-  radial-gradient(circle at 90% 78%, rgba(0, 145, 181, 0.20), transparent 10%)
+  radial-gradient(circle at 90% 78%, rgba(0, 145, 181, 0.15), transparent 10%)
   `;
 
   return (
@@ -45,7 +45,6 @@ function App() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
-
             minHeight: "100vh",
             margin: 0,
             padding: 0,
@@ -53,7 +52,6 @@ function App() {
         }}
       />
       <Router>
-        {/* Flex layout wrapper */}
         <div
           style={{
             display: "flex",
@@ -62,10 +60,9 @@ function App() {
           }}
         >
           <Navbar darkMode={darkMode} handleThemeToggle={handleThemeToggle} />
-          {/* Main content expands to fill space */}
           <main style={{ flex: 1 }}>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home darkMode={darkMode} />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

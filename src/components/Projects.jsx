@@ -41,7 +41,17 @@ export default function Projects() {
           {/* <Grid size={{ xs: 12 }}> */}
           {/* <Grid item xs={12}> */}
           <Card
-            sx={{ width: "100%", margin: "0 auto", wordWrap: "break-word" }}
+            sx={{
+              width: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              transition: "border 0.3s ease",
+              border: "1px solid transparent",
+              "&:hover": {
+                border: "1px solid #4CC9FE",
+              },
+            }}
           >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
@@ -139,7 +149,17 @@ export default function Projects() {
         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
           {/* <Grid item xs={12}> */}
           <Card
-            sx={{ width: "100%", margin: "0 auto", wordWrap: "break-word" }}
+            sx={{
+              width: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              transition: "border 0.3s ease",
+              border: "1px solid transparent",
+              "&:hover": {
+                border: "1px solid #4CC9FE",
+              },
+            }}
           >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
@@ -235,7 +255,17 @@ export default function Projects() {
         <Grid size={{ xs: 12, sm: 12, md: 12 }}>
           {/* <Grid item xs={12}> */}
           <Card
-            sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: "break-word" }}
+            sx={{
+              maxWidth: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              transition: "border 0.3s ease",
+              border: "1px solid transparent",
+              "&:hover": {
+                border: "1px solid #4CC9FE",
+              },
+            }}
           >
             <Typography
               variant="h6"
@@ -319,7 +349,17 @@ export default function Projects() {
         {/* <Grid size={{ xs: 12 }}> */}
         <Grid item xs={12}>
           <Card
-            sx={{ maxWidth: "100%", margin: "0 auto", wordWrap: "break-word" }}
+            sx={{
+              maxWidth: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              transition: "border 0.3s ease",
+              border: "1px solid transparent",
+              "&:hover": {
+                border: "1px solid #4CC9FE",
+              },
+            }}
           >
             <Typography
               variant="h6"
