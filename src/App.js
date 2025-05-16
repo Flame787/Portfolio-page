@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "@mui/material";
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const handleThemeToggle = () => setDarkMode(!darkMode);

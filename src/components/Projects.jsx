@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
+import Slider from "react-slick";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.primary.button,
@@ -19,6 +22,55 @@ const CustomButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function Projects() {
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <ArrowBackIosNewIcon
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          color: "#34a8d9",
+          left: 10,
+          zIndex: 1,
+          fontSize: "30px",
+          cursor: "pointer",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <ArrowForwardIosIcon
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          color: "#34a8d9",
+          right: 10,
+          zIndex: 1,
+          fontSize: "30px",
+          cursor: "pointer",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
   return (
     <Box id="projects" sx={{ mt: 6 }}>
       <Typography
@@ -67,12 +119,38 @@ export default function Projects() {
             >
               React Chat App with Scaledrone Websocket
             </Typography>
-            <CardMedia
+            {/* <CardMedia
               component="img"
               height="140"
               image="https://via.placeholder.com/300"
               alt="Project 1"
-            />
+            /> */}
+
+            <Box sx={{ px: 4 }}>
+              <Box
+                sx={{
+                  position: "relative",
+                  paddingTop: "56.25%",
+                  px: 4,
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/839xzx8jEkI"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "12px",
+                  }}
+                />
+              </Box>
+            </Box>
             <CardContent>
               <Typography
                 variant="body2"
@@ -175,12 +253,37 @@ export default function Projects() {
             >
               Music Search App powered by Spotify API
             </Typography>
-            <CardMedia
+            {/* <CardMedia
               component="img"
               height="140"
               image="https://via.placeholder.com/300"
               alt="Project 2"
-            />
+            /> */}
+            <Box sx={{ px: 4 }}>
+              <Box
+                sx={{
+                  position: "relative",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/xcBfPCyKA-8"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "12px",
+                  }}
+                />
+              </Box>
+            </Box>
+
             <CardContent>
               <Typography
                 variant="body2"
@@ -280,12 +383,76 @@ export default function Projects() {
             >
               Tolkien info page with OpenLibrary API
             </Typography>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://via.placeholder.com/300"
-              alt="Project 3"
-            />
+            <CardMedia>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: {
+                    xs: 220,
+                    sm: 320,
+                    md: 420,
+                    lg: 520,
+                  },
+                  overflow: "hidden",
+                  pl: 4,
+                  pr: 4,
+                  "& .slick-dots li button:before": {
+                    fontSize: "12px",
+                    color: "#34a8d9",
+                  },
+                  "& .slick-dots li.slick-active button:before": {
+                    color: "#34a8d9",
+                  },
+                }}
+              >
+                <Slider {...settings}>
+                  <Box
+                    component="img"
+                    src="/Tolkien1.png"
+                    alt="Slide 1"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien2.png"
+                    alt="Slide 2"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien3.png"
+                    alt="Slide 3"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien4.png"
+                    alt="Slide 4"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                </Slider>
+              </Box>
+            </CardMedia>
             <CardContent>
               <Typography
                 variant="body2"
