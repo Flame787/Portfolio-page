@@ -11,24 +11,33 @@ html {
   pointer-events: none;
 }
 
-
-
 @font-face {
-  font-family: 'Kenfolg Serif';
-  src: url('../public/fonts/Kenfolg.otf') format('opentype');
+  font-family: "Kenfolg Serif";
+  src: url("../public/fonts/Kenfolg.otf") format("opentype");
 }
 
 .kenfolg {
-  font-family: 'Kenfolg Serif', serif;
+  font-family: "Kenfolg Serif", serif;
 }
 
+.round {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 5px;
+  color: rgba(25, 132, 182, 0.88);
+  background-color: rgba(204, 229, 240, 0.075);
+  margin: 2px;
+}
+
+.round:hover {
+  color: rgba(78, 181, 229, 0.88);
+}
 
 @media (min-width: 2100px) {
   .navbar-wavy::before {
     background-size: 100% calc(2vw + 74px);
   }
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

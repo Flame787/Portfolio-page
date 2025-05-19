@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Container, Typography, Grid, Box } from "@mui/material";
 import Projects from "../components/Projects";
 
-export default function Home({ darkMode}) {
+export default function Home({ darkMode }) {
   // enable scrolling to the Projects-section from other pages, like Contact:
   const location = useLocation();
 
@@ -46,7 +46,7 @@ export default function Home({ darkMode}) {
         }}
         direction={{ xs: "column", sm: "column", md: "row" }}
       >
-           <Grid
+        <Grid
           item
           xs={12}
           sm={6}
@@ -55,7 +55,7 @@ export default function Home({ darkMode}) {
           sx={{ flexBasis: "50%", ml: 6, mr: 6, mt: 0, mb: 0, lineHeight: 0 }}
         >
           <img
-            src={darkMode ? "/728.png" : "/730.png"}
+            src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
               width: "104%",
@@ -67,9 +67,7 @@ export default function Home({ darkMode}) {
           />
         </Grid>
 
-       
-
-         <Grid
+        <Grid
           item
           xs={12}
           sm={6}
@@ -93,8 +91,9 @@ export default function Home({ darkMode}) {
             responsive, user-friendly and visually engaging web experiences.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            In my projects, I primarily work with <strong>React</strong> and vanilla <strong>JavaScript</strong>,
-            frequently integrating <strong>APIs</strong> to enhance interactivity.
+            In my projects, I primarily work with <strong>React</strong> and
+            vanilla <strong>JavaScript</strong>, frequently integrating{" "}
+            <strong>APIs</strong> to enhance interactivity.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I enjoy working with modern libraries like React Router and Redux,

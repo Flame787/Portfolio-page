@@ -83,13 +83,13 @@ export default function Projects() {
       </Typography>
 
       <Typography sx={{ mb: 6, textAlign: "center" }}>
-        Here are some of the projects I’ve worked on:
+        Here are some of my projects:
       </Typography>
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
           {/* <Grid size={{ xs: 12 }}> */}
           {/* <Grid item xs={12}> */}
           <Card
@@ -155,7 +155,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 This real-time chat application is built with{" "}
                 <strong>
@@ -170,7 +170,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 After entering a username and selecting an avatar, users can
                 choose from themed chat rooms where they can interact with
@@ -179,7 +179,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 The app supports: browsing chat history, using emojis (via
                 emoji-picker-react), sending GIFs (via the{" "}
@@ -195,11 +195,11 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Technologies:{" "}
                 <strong>
-                  React, Scaledrone Websocket, external REST APIs{" "}
+                  <span className="round">React</span> <span className="round">Scaledrone Websocket</span> <span className="round">external API</span>{" "}
                 </strong>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -207,6 +207,8 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
+                  href="https://github.com/Flame787/Chat-app-React"
+                  target="_blank"
                 >
                   GitHub
                 </CustomButton>
@@ -224,7 +226,7 @@ export default function Projects() {
 
         {/* Project 2 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
           {/* <Grid item xs={12}> */}
           <Card
             sx={{
@@ -288,7 +290,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 <strong>
                   <span color="text.primary">Music Domain</span>
@@ -303,7 +305,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Users can search for music artists, songs, and albums, listen to
                 30-second previews of individual tracks or full albums, like and
@@ -313,7 +315,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 <strong>
                   <span color="text.primary">Express.js</span>
@@ -326,11 +328,11 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Technologies:{" "}
                 <strong>
-                  JavaScript, SCSS, external REST APIs, Express.js{" "}
+                  <span className="round">JavaScript</span> <span className="round">SCSS</span> <span className="round">external API</span> <span className="round">Express.js</span>{" "}
                 </strong>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -338,6 +340,8 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
+                  href="https://github.com/Flame787/Music-app-Spotify-API"
+                  target="_blank"
                 >
                   GitHub
                 </CustomButton>
@@ -355,7 +359,7 @@ export default function Projects() {
 
         {/* Project 3 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
           {/* <Grid item xs={12}> */}
           <Card
             sx={{
@@ -457,7 +461,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 A fan-made landing page dedicated to J.R.R. Tolkien’s legacy,
                 featuring biographical information, his published works,
@@ -466,7 +470,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 One of my earlier projects, recently refreshed with improved
                 layout and updated code.
@@ -474,7 +478,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 The application integrates with the{" "}
                 <strong>
@@ -486,10 +490,10 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Technologies:{" "}
-                <strong>JavaScript, Bootstrap, external REST APIs </strong>
+                <strong><span className="round">JavaScript</span> <span className="round">Bootstrap</span> <span className="round">external API</span> </strong>
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -497,6 +501,8 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
+                  href="https://github.com/Flame787/Tolkien"
+                  target="_blank"
                 >
                   GitHub
                 </CustomButton>
@@ -504,6 +510,7 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
+                  
                 >
                   Live Demo
                 </CustomButton>
@@ -514,7 +521,7 @@ export default function Projects() {
 
         {/* Project 4 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ mb: 6}}>
           <Card
             sx={{
               maxWidth: "100%",
@@ -551,7 +558,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Portfolio Page is a personal showcase built with{" "}
                 <strong>
@@ -563,7 +570,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 It uses{" "}
                 <strong>
@@ -583,7 +590,7 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 The app also features theme switching, allowing users to
                 personalize the visual experience. This single-page application
@@ -593,10 +600,10 @@ export default function Projects() {
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ mt: 2, mb: 2 }}
+                sx={{ mt: 2, mb: 2, px: 2 }}
               >
                 Technologies:{" "}
-                <strong>React, React Router, Material UI, EmailJS </strong>
+                <strong><span className="round">React</span> <span className="round">React Router</span> <span className="round">Material UI</span> <span className="round">EmailJS</span> </strong>
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -604,6 +611,8 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ fontFamily: "Kenfolg Serif" }}
+                  href="https://github.com/Flame787/Portfolio-page"
+                  target="_blank"
                 >
                   GitHub
                 </CustomButton>
@@ -621,7 +630,7 @@ export default function Projects() {
       </Grid>
 
       {/* Button to the Contact page */}
-      <Box sx={{ mt: 4, textAlign: "center" }}>
+      <Box sx={{ mt: 3, mb: 4, textAlign: "center" }} >
         <CustomButton
           component={Link}
           to="/contact"
