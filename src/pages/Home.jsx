@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Typography, Grid, Box } from "@mui/material";
+import { Link } from "react-router-dom";
+import CustomButton from "../components/CustomButton";
 import Projects from "../components/Projects";
 
 export default function Home({ darkMode }) {
@@ -28,7 +30,6 @@ export default function Home({ darkMode }) {
       >
         {/* gutterBottom - adds margin under h3-element */}
         {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
-        {/* Hi, I'm <span sx={{ color: "primary.main" }}>xy</span> */}
         Hi, I'm{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
           Marina
@@ -58,7 +59,7 @@ export default function Home({ darkMode }) {
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
-              width: "104%",
+              width: "110%",
               // maxWidth: "450px",
               borderRadius: "16px",
               display: "inline-block",
@@ -91,9 +92,9 @@ export default function Home({ darkMode }) {
             responsive, user-friendly and visually engaging web experiences.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            In my projects, I primarily work with <strong>React</strong> and
-            vanilla <strong>JavaScript</strong>, frequently integrating{" "}
-            <strong>APIs</strong> to enhance interactivity.
+            My projects are built with <strong>React</strong> and vanilla{" "}
+            <strong>JavaScript</strong>, often integrating <strong>APIs</strong>{" "}
+            to enhance interactivity.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
             I enjoy working with modern libraries like React Router and Redux,
@@ -101,10 +102,33 @@ export default function Home({ darkMode }) {
             Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
           </Typography>
           <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I believe in following best practices, such as writing modular and
-            maintainable code, to build scalable apps that are easy to manage
-            even as the project grows.
+            My goal is to build scalable, modern front-end apps by following best
+            practices and writing modular, easily maintainable code.
           </Typography>
+          
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+            <CustomButton
+              component={Link}
+              to="/contact"
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ fontFamily: "Kenfolg Serif" }}
+            >
+              About me
+            </CustomButton>
+         
+        <CustomButton
+          variant="contained"
+          color="primary"
+          size="large"
+          sx={{ ml: 2, mr: 2, fontFamily: "Kenfolg Serif" }}
+          href="https://github.com/Flame787"
+          target="_blank"
+        >
+          Github
+        </CustomButton>
+      </Box>
         </Grid>
       </Grid>
 

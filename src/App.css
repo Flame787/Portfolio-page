@@ -23,14 +23,20 @@ html {
 .round {
   border: 1px solid;
   border-radius: 15px;
-  padding: 5px;
-  color: rgba(25, 132, 182, 0.88);
+  padding: 7px;
+  /* color: rgba(35, 142, 192, 0.88); */
+  color: rgba(89, 190, 236, 0.88);
   background-color: rgba(204, 229, 240, 0.075);
-  margin: 2px;
+  margin: 2px 4px;
+  font-weight: bold;
 }
 
 .round:hover {
-  color: rgba(78, 181, 229, 0.88);
+  color: rgba(160, 221, 249, 0.88);
+}
+
+.github-chart {
+  filter: brightness(1) contrast(1.2);
 }
 
 @media (min-width: 2100px) {

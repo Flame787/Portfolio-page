@@ -8,18 +8,10 @@ import {
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { styled } from "@mui/material/styles";
 import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
-const CustomButton = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.button,
-  // color: theme.palette.background.default,
-  "&:hover": {
-    backgroundColor: theme.palette.primary.button2,
-  },
-}));
+import CustomButton from "./CustomButton";
 
 export default function Projects() {
   function PrevArrow(props) {
@@ -89,7 +81,7 @@ export default function Projects() {
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
           {/* <Grid size={{ xs: 12 }}> */}
           {/* <Grid item xs={12}> */}
           <Card
@@ -197,10 +189,9 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2, px: 2 }}
               >
-                Technologies:{" "}
-                <strong>
-                  <span className="round">React</span> <span className="round">Scaledrone Websocket</span> <span className="round">external API</span>{" "}
-                </strong>
+                Technologies: <button className="round">React</button>
+                <button className="round">Scaledrone Websocket</button>
+                <button className="round">external API</button>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
@@ -226,7 +217,7 @@ export default function Projects() {
 
         {/* Project 2 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
           {/* <Grid item xs={12}> */}
           <Card
             sx={{
@@ -330,10 +321,11 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2, px: 2 }}
               >
-                Technologies:{" "}
-                <strong>
-                  <span className="round">JavaScript</span> <span className="round">SCSS</span> <span className="round">external API</span> <span className="round">Express.js</span>{" "}
-                </strong>
+                Technologies:
+                <button className="round">JavaScript</button>
+                <button className="round">SCSS</button>
+                <button className="round">external API</button>
+                <button className="round">Express.js</button>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
@@ -359,7 +351,7 @@ export default function Projects() {
 
         {/* Project 3 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6}}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
           {/* <Grid item xs={12}> */}
           <Card
             sx={{
@@ -492,8 +484,12 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2, px: 2 }}
               >
-                Technologies:{" "}
-                <strong><span className="round">JavaScript</span> <span className="round">Bootstrap</span> <span className="round">external API</span> </strong>
+                Technologies:
+                <strong>
+                  <button className="round">JavaScript</button>
+                  <button className="round">Bootstrap</button>
+                  <button className="round">external API</button>
+                </strong>
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -510,7 +506,6 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
-                  
                 >
                   Live Demo
                 </CustomButton>
@@ -521,7 +516,7 @@ export default function Projects() {
 
         {/* Project 4 */}
         {/* <Grid size={{ xs: 12 }}> */}
-        <Grid item xs={12} sx={{ mb: 6}}>
+        <Grid item xs={12} sx={{ mb: 6 }}>
           <Card
             sx={{
               maxWidth: "100%",
@@ -602,8 +597,13 @@ export default function Projects() {
                 color="text.secondary"
                 sx={{ mt: 2, mb: 2, px: 2 }}
               >
-                Technologies:{" "}
-                <strong><span className="round">React</span> <span className="round">React Router</span> <span className="round">Material UI</span> <span className="round">EmailJS</span> </strong>
+                Technologies:
+                <strong>
+                  <button className="round">React</button>
+                  <button className="round">React Router</button>
+                  <button className="round">Material UI</button>
+                  <button className="round">EmailJS</button>
+                </strong>
               </Typography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
@@ -630,7 +630,7 @@ export default function Projects() {
       </Grid>
 
       {/* Button to the Contact page */}
-      <Box sx={{ mt: 3, mb: 4, textAlign: "center" }} >
+      <Box sx={{ mt: 3, mb: 4, textAlign: "center" }}>
         <CustomButton
           component={Link}
           to="/contact"
