@@ -1,31 +1,32 @@
 import { TextField, Button, Container, Typography, Box } from "@mui/material";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CustomButton from "../components/CustomButton";
 import emailjs from "emailjs-com";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("Email sent!", result.text);
-          alert("Email successfully sent!");
-          e.target.reset();
-        },
-        (error) => {
-          console.log("Failed to send email:", error.text);
-          alert("Failed to send email. Please try again later.");
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  //       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  //       e.target,
+  //       process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log("Email sent!", result.text);
+  //         alert("Email successfully sent!");
+  //         e.target.reset();
+  //       },
+  //       (error) => {
+  //         console.log("Failed to send email:", error.text);
+  //         alert("Failed to send email. Please try again later.");
+  //       }
+  //     );
+  // };
 
   return (
     <>
@@ -122,12 +123,15 @@ export default function Contact() {
           </CustomButton>
         </Box>
 
+        <ContactForm />
+
         {/* <Typography variant="h4" sx={{ mt: 6, mb: 4 }}>
           Get in touch via email or social media
         </Typography> */}
       </Container>
 
-      <Box
+      {/* EMAIL FORM - EmailJS: */}
+      {/* <Box
         component="form"
         onSubmit={sendEmail}
         sx={{ maxWidth: 500, mx: "auto", mt: 4 }}
@@ -139,13 +143,20 @@ export default function Contact() {
           fullWidth
           required
           label="Your Email Address"
-          name="user_email"
+          name="from_email"
           type="email"
           margin="normal"
         />
         <TextField
           fullWidth
-        //   required
+          //   required
+          label="Name"
+          name="from_name"
+          margin="normal"
+        />
+        <TextField
+          fullWidth
+          //   required
           label="Subject"
           name="subject"
           margin="normal"
@@ -162,7 +173,7 @@ export default function Contact() {
         <Button type="submit" variant="contained" sx={{ mt: 2, mb: 3 }}>
           Send Email
         </Button>
-      </Box>
+      </Box> */}
     </>
   );
 }
