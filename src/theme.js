@@ -14,6 +14,7 @@ export const darkTheme = createTheme({
       title2: "rgba(31, 142, 193, 0.88)",
       button: "rgba(19, 145, 203, 0.88)",
       button2: "rgba(16, 115, 161, 0.88)",
+      form: "rgba(89, 190, 236, 0.88)"
     },
     background: {
       // default: "#121212",
@@ -40,6 +41,7 @@ export const lightTheme = createTheme({
       main:  "rgba(5, 143, 193, 0.75)",
       transparent: "rgba(6, 153, 206, 0.75)",
       title: "rgba(5, 143, 193, 0.75)",
+      form: "rgba(52, 154, 214, 0.88)"
     },
     background: {
       default: "#ffffff",

@@ -1,43 +1,79 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Box, Grid } from "@mui/material";
 import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
 
-export default function Contact() {
+export default function Contact({ darkMode }) {
   return (
     <>
       <Container>
-        <Typography variant="h4" sx={{ mt: 6, mb: 4 }}>
+        <Typography
+          variant="h4"
+          fontFamily={"Kenfolg Serif"}
+          sx={{ mt: 6, mb: 4, textAlign: "center" }}
+        >
           About me
         </Typography>
-        <Box id="about-me" sx={{ mt: 2, mb: 2 }}>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My programming journey began three years ago, and I quickly become
-            deeply interested in <strong>front-end development</strong>.
-          </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I'm passionate about learning, solving problems, and building
-            responsive, user-friendly and visually engaging web experiences.
-          </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My projects are built with <strong>React</strong> and vanilla{" "}
-            <strong>JavaScript</strong>, often integrating <strong>APIs</strong>{" "}
-            to enhance interactivity.
-          </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I enjoy working with modern libraries like React Router and Redux,
-            as well as frameworks like Bootstrap, Express.js, and tools such as
-            Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
-          </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My goal is to build scalable, modern front-end apps by following
-            best practices and writing modular, easily maintainable code.
-          </Typography>
-        </Box>
-        <Typography variant="h5" sx={{ mt: 6, mb: 4 }}>
+        <Grid
+          id="about-me"
+          sx={{
+            mt: 2,
+            mb: 2,
+            p: 2,
+            border: "1px solid transparent",
+            "&:hover": {
+              border: "1.3px solid rgba(76, 201, 254, 0.4)",
+            },
+            borderRadius: 4,
+            boxShadow:
+              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+          }}
+        >
+          <Box id="about-me-text" sx={{ mt: 2, mb: 2 }}>
+            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+              My programming journey began three years ago, and I quickly become
+              deeply interested in <strong>front-end development</strong>.
+            </Typography>
+            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+              I'm passionate about learning, solving problems, and building
+              responsive, user-friendly and visually engaging web experiences.
+            </Typography>
+            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+              My projects are built with <strong>React</strong> and vanilla{" "}
+              <strong>JavaScript</strong>, often integrating{" "}
+              <strong>APIs</strong> to enhance interactivity.
+            </Typography>
+            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+              I enjoy working with modern libraries like React Router and Redux,
+              as well as frameworks like Bootstrap, Express.js, and tools such
+              as Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
+            </Typography>
+            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+              My goal is to build scalable, modern front-end apps by following
+              best practices and writing modular, easily maintainable code.
+            </Typography>
+          </Box>
+        </Grid>
+        <Typography
+          variant="h5"
+          fontFamily={"Kenfolg Serif"}
+          sx={{ mt: 8, mb: 4, textAlign: "center", color: "primary.title" }}
+        >
           Technologies
         </Typography>
-        <Box id="projects" sx={{ mt: 2, mb: 2 }}>
-          <button className="round">React</button>
+        <Box
+          id="projects"
+          sx={{
+            mt: 2,
+            mb: 2,
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: 1,
+          }}
+        >
+          <button className="round" sx={{ color: "primary.form" }}>
+            React
+          </button>
           <button className="round">JavaScript</button>
           <button className="round">external APIs</button>
           <button className="round">Scaledrone Websocket</button>
@@ -59,10 +95,24 @@ export default function Contact() {
           <button className="round">Visual Studio Code</button>
         </Box>
 
-        <Typography variant="h5" sx={{ mt: 6, mb: 2 }}>
+        <Typography
+          variant="h5"
+          fontFamily={"Kenfolg Serif"}
+          sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
+        >
           Skills
         </Typography>
-        <Box id="projects" sx={{ mt: 2, mb: 2 }}>
+        <Box
+          id="projects"
+          sx={{
+            mt: 2,
+            mb: 2,
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: 1,
+          }}
+        >
           <button className="round">Agile</button>
           <button className="round">Problem solving</button>
           <button className="round">PC hardware</button>
@@ -74,18 +124,26 @@ export default function Contact() {
           <button className="round">Organisation skills</button>
         </Box>
 
-        <Typography variant="h5" sx={{ mt: 6, mb: 2 }}>
+        <Typography
+          variant="h5"
+          fontFamily={"Kenfolg Serif"}
+          sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
+        >
           My GitHub Activity
         </Typography>
-        <Box id="projects" sx={{ mt: 6, mb: 4 }}>
+        <Box
+          id="github-activity"
+          sx={{ mt: 6, mb: 4, display: "flex", justifyContent: "center" }}
+        >
           <img
             src="https://ghchart.rshah.org/Flame787"
             alt="GitHub Activity Chart"
             className="github-chart"
+            style={{ maxWidth: "100%" }}
           ></img>
         </Box>
 
-        <Box sx={{ mt: 3, mb: 1, ml: 3.5, textAlign: "left" }}>
+        <Box sx={{ mt: 3, mb: 8, textAlign: "center" }}>
           <CustomButton
             variant="contained"
             color="primary"
@@ -98,7 +156,7 @@ export default function Contact() {
           </CustomButton>
         </Box>
 
-        <ContactForm />
+        <ContactForm darkMode={darkMode} />
       </Container>
     </>
   );

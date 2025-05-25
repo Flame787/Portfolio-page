@@ -66,7 +66,7 @@ function App() {
           <main style={{ flex: 1 }}>
             <Routes>
               <Route path="/" element={<Home darkMode={darkMode} />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contact" element={<Contact darkMode={darkMode} />} />
             </Routes>
           </main>
           <Footer />

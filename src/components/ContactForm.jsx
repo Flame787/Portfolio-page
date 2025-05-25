@@ -2,14 +2,15 @@ import { useState } from "react";
 import { TextField, Button, Typography, Box } from "@mui/material";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
+import CustomButton from "./CustomButton";
+import CustomTextField from "./CustomTextField";
 
-export default function ContactForm() {
+export default function ContactForm({ darkMode }) {
+  const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
-const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+  const [captchaToken, setCaptchaToken] = useState(null);
 
-const [captchaToken, setCaptchaToken] = useState(null);
-
- const handleCaptchaChange = (token) => {
+  const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
   };
 
@@ -30,7 +31,6 @@ const [captchaToken, setCaptchaToken] = useState(null);
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
-        
         (result) => {
           console.log("Email sent!", result.text);
           alert("Email successfully sent!");
@@ -41,57 +41,77 @@ const [captchaToken, setCaptchaToken] = useState(null);
           alert("Failed to send email. Please try again later.");
         }
       );
-      setCaptchaToken(null);
+    setCaptchaToken(null);
   };
 
   return (
     <Box
       component="form"
       onSubmit={sendEmail}
-      sx={{ maxWidth: 500, mx: "auto", mt: 4 }}
+      sx={{
+        maxWidth: 500,
+        mx: "auto",
+        mt: 4,
+        mb: 6,
+        p: 4,
+        borderRadius: 4,
+        border: "1px solid transparent",
+              "&:hover": {
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              },
+        boxShadow:
+          "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+      }}
     >
-      <Typography variant="h5" mb={2} sx={{ textAlign: "center" }}>
+      <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}>
         Contact me:
       </Typography>
-      <TextField
-        fullWidth
-        required
+      <CustomTextField
         label="Your Email Address"
         name="from_email"
         type="email"
-        margin="normal"
-      />
-      <TextField
-        fullWidth
-        //   required
-        label="Name"
-        name="from_name"
-        margin="normal"
-      />
-      <TextField
-        fullWidth
-        //   required
-        label="Subject"
-        name="subject"
-        margin="normal"
-      />
-      <TextField
-        fullWidth
         required
+        darkMode={darkMode}
+      />
+      <CustomTextField label="Name" name="from_name" darkMode={darkMode} />
+      <CustomTextField label="Subject" name="subject" darkMode={darkMode} />
+      <CustomTextField
         label="Message"
         name="message"
-        multiline
         rows={5}
-        margin="normal"
+        required
+        darkMode={darkMode}
       />
 
-      <ReCAPTCHA
-        sitekey={RECAPTCHA_SITE_KEY}
-        onChange={handleCaptchaChange}
-      />
-      <Button type="submit" variant="contained" sx={{ mt: 2, mb: 3 }}>
+      <Box
+        sx={{
+          mt: 2,
+          mb: 2,
+          fontFamily: "Kenfolg Serif",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <ReCAPTCHA
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={handleCaptchaChange}
+        />
+      </Box>
+      <CustomButton
+        type="submit"
+        variant="contained"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontFamily: "Kenfolg Serif",
+          display: "block",
+          mx: "auto",
+        }}
+        color="primary"
+        size="large"
+      >
         Send Email
-      </Button>
+      </CustomButton>
     </Box>
   );
 }

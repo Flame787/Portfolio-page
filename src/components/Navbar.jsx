@@ -72,17 +72,14 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           style={{
             width: "4%", minWidth: "60px",
             height: "auto",
-            // width: "809px",
-            // height: "554px",
-            // transform: "scale(0.1)",
+         
 
             borderRadius: "16px",
             display: "inline-block",
             margin: "0 4px",
 
           }}
-          // sx={{ width: { xs: "5%", sm: "5%", md: "3%", lg: "3%", xl: "3%" },
-          //   height: "auto"}}
+     
         ></img>
         <Typography
           variant="h6"
