@@ -129,7 +129,7 @@ export default function Home({ darkMode }) {
               variant="contained"
               color="primary"
               size="large"
-              sx={{ ml: 2, mr: 2, fontFamily: "Kenfolg Serif" }}
+              sx={{ ml: 2.5, fontFamily: "Kenfolg Serif" }}
               href="https://github.com/Flame787"
               target="_blank"
             >
