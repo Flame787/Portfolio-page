@@ -21,7 +21,7 @@ export default function Home({ darkMode }) {
   }, [location]);
 
   return (
-    <Container>
+    <Container id="home">
       <Typography
         variant="h4"
         gutterBottom
@@ -113,10 +113,10 @@ export default function Home({ darkMode }) {
             best practices and writing modular, easily maintainable code.
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 2, flexWrap: "wrap", gap: 2 }}>
             <CustomButton
               component={Link}
-              to="/contact"
+              to="/contact#about"
               variant="contained"
               color="primary"
               size="large"
@@ -129,11 +129,22 @@ export default function Home({ darkMode }) {
               variant="contained"
               color="primary"
               size="large"
-              sx={{ ml: 2.5, fontFamily: "Kenfolg Serif" }}
+              sx={{  fontFamily: "Kenfolg Serif" }}
               href="https://github.com/Flame787"
               target="_blank"
             >
               Github
+            </CustomButton>
+
+            <CustomButton
+              component={Link}
+              to="/contact#contactme"
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{  fontFamily: "Kenfolg Serif" }}
+            >
+              Contact me
             </CustomButton>
           </Box>
         </Grid>

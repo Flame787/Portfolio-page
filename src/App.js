@@ -67,6 +67,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home darkMode={darkMode} />} />
               <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+              
             </Routes>
           </main>
           <Footer />

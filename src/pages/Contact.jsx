@@ -1,11 +1,36 @@
-import { Container, Typography, Box, Grid } from "@mui/material";
+import { Container, Typography, Box, Grid, Link } from "@mui/material";
 import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Contact({ darkMode }) {
+  const location = useLocation();
+
+  // useEffect(() => {
+  //   if (location.hash === "#about") {
+  //     const aboutSection = document.getElementById("about");
+  //     if (aboutSection) {
+  //       aboutSection.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [location]);
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const section = document.getElementById(location.hash.substring(1));
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+    }
+  }, [location]);
+
+
   return (
     <>
-      <Container>
+      <Container id="about">
         <Typography
           variant="h4"
           fontFamily={"Kenfolg Serif"}
@@ -155,8 +180,9 @@ export default function Contact({ darkMode }) {
             Github
           </CustomButton>
         </Box>
-
-        <ContactForm darkMode={darkMode} />
+        <Box id="contactme">
+          <ContactForm darkMode={darkMode} />
+        </Box>
       </Container>
     </>
   );

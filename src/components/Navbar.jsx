@@ -15,8 +15,11 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar({ darkMode, handleThemeToggle }) {
+  const location = useLocation();
+
   const navigate = useNavigate();
 
   // Nabvar-behavior when scrolling down:
@@ -27,7 +30,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // možeš prilagoditi broj piksela
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,6 +45,28 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
       navigate("/#projects");
     }
   };
+
+  useEffect(() => {
+    if (location.hash === "/") {
+      const el = document.getElementById("home");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  const handleHomeClick = () => {
+  if (window.location.pathname === "/") {
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
+  } else {
+    navigate("/", { replace: true });
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+  }
+};
 
   return (
     // <AppBar position="static" color="primary">
@@ -70,16 +95,14 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           src="/wave3.png"
           alt="logo"
           style={{
-            width: "4%", minWidth: "60px",
+            width: "4%",
+            minWidth: "60px",
             height: "auto",
-         
 
             borderRadius: "16px",
             display: "inline-block",
             margin: "0 4px",
-
           }}
-     
         ></img>
         <Typography
           variant="h6"
@@ -165,6 +188,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         <Button
           color="inherit"
           component={Link}
+           onClick={handleHomeClick}
           to="/"
           sx={{
             display: { xs: "none", sm: "inline-block" },

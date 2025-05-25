@@ -6,6 +6,8 @@ import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
 
 export default function ContactForm({ darkMode }) {
+
+
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
   const [captchaToken, setCaptchaToken] = useState(null);
@@ -64,7 +66,9 @@ export default function ContactForm({ darkMode }) {
       }}
     >
       <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}>
+         
         Contact me:
+        
       </Typography>
       <CustomTextField
         label="Your Email Address"
