@@ -100,6 +100,9 @@ const [captchaToken, setCaptchaToken] = useState(null);
 
 EmailJS limit: 200 emails/month
 
+install npm package:
+npm install emailjs-com -> deprecated: The SDK name changed: npm install @emailjs/browser
+
 https://dashboard.emailjs.com/admin/
 
 - Email Services: 
@@ -146,6 +149,7 @@ Add a domain - just domain without https/... (or just: localhost).
 Get a Site key -> save it to .env file.
 Get a Secret key - enter it on EmailJS page.
 
+install npm package:
 npm install react-google-recaptcha
 
 *Adding/changing a new domain (f.e. production domain) on Capcha:
@@ -159,6 +163,8 @@ https://www.google.com/recaptcha/admin
   my-app.vercel.app
   myportfolio.com
 -Save
+
+Captcha token expires after 2 min. 
 
 **OPTIONAL - Adding new domain (f.e. production domain) to EmailJS:
 https://dashboard.emailjs.com/admin/

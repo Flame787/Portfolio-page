@@ -91,9 +91,11 @@ export default function Projects() {
               wordWrap: "break-word",
               borderRadius: 4,
               transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               "&:hover": {
-                border: "1px solid #4CC9FE",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
@@ -226,9 +228,11 @@ export default function Projects() {
               wordWrap: "break-word",
               borderRadius: 4,
               transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               "&:hover": {
-                border: "1px solid #4CC9FE",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
@@ -360,9 +364,11 @@ export default function Projects() {
               wordWrap: "break-word",
               borderRadius: 4,
               transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               "&:hover": {
-                border: "1px solid #4CC9FE",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
@@ -524,9 +530,11 @@ export default function Projects() {
               wordWrap: "break-word",
               borderRadius: 4,
               transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               "&:hover": {
-                border: "1px solid #4CC9FE",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
