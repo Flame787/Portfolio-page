@@ -39,6 +39,10 @@ html {
   filter: brightness(1) contrast(1.2);
 }
 
+.css-qwb71x-MuiButtonBase-root-MuiIconButton-root{
+  color: white;
+}
+
 @media (min-width: 2100px) {
   .navbar-wavy::before {
     background-size: 100% calc(2vw + 74px);

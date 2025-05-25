@@ -1,5 +1,17 @@
-import { AppBar, Toolbar, Typography, Button, Switch } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Switch,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import { useEffect, useState } from "react";
@@ -9,6 +21,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
 
   // Nabvar-behavior when scrolling down:
   const [scrolled, setScrolled] = useState(false);
+
+  // state for tracking if mobile view:
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +66,17 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           px: { xs: 1, sm: 2 },
         }}
       >
+        <img
+          src="/wave3.png"
+          alt="logo"
+          style={{
+            width: "6%",
+            // maxWidth: "450px",
+            borderRadius: "16px",
+            display: "inline-block",
+            margin: "0 4px",
+          }}
+        ></img>
         <Typography
           variant="h6"
           fontFamily={"Kenfolg Serif"}
@@ -63,15 +89,119 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           Developer Portfolio
         </Typography>
 
-        <Button color="inherit" component={Link} to="/" sx={{ fontFamily: 'Kenfolg Serif' }}>
+        {/* Hamburger Menu, if mobile resolution: */}
+        <IconButton
+          sx={{ display: { xs: "block", sm: "none" }, color: "white" }}
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Drawer
+          anchor="right"
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+          sx={{
+            display: {
+              xs: "block",
+              sm: "none",
+            },
+          }}
+        >
+          <List>
+            <ListItem
+              button
+              component={Link}
+              to="/"
+              onClick={() => setMobileOpen(false)}
+            >
+              <ListItemText
+                primary="Home"
+                sx={{ color: "primary.title" }}
+                primaryTypographyProps={{
+                  fontWeight: "bold",
+                  fontFamily: "Kenfolg Serif",
+                }}
+              />
+            </ListItem>
+            <ListItem
+              button
+              onClick={() => {
+                handleProjectsClick();
+                setMobileOpen(false);
+              }}
+            >
+              <ListItemText
+                primary="Projects"
+                sx={{ color: "primary.title" }}
+                primaryTypographyProps={{
+                  fontWeight: "bold",
+                  fontFamily: "Kenfolg Serif",
+                }}
+              />
+            </ListItem>
+            <ListItem
+              button
+              component={Link}
+              to="/contact"
+              onClick={() => setMobileOpen(false)}
+            >
+              <ListItemText
+                primary="Contact"
+                sx={{ color: "primary.title" }}
+                primaryTypographyProps={{
+                  fontWeight: "bold",
+                  fontFamily: "Kenfolg Serif",
+                }}
+              />
+            </ListItem>
+          </List>
+        </Drawer>
+
+        <Button
+          color="inherit"
+          component={Link}
+          to="/"
+          sx={{
+            display: { xs: "none", sm: "inline-block" },
+            fontFamily: "Kenfolg Serif",
+            borderBottom: "1px solid transparent",
+            "&:hover": {
+              borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
+            },
+          }}
+        >
           Home
         </Button>
 
         {/* <Button color="inherit" component={Link} to="#projects"> */}
-        <Button color="inherit" onClick={handleProjectsClick} sx={{ fontFamily: 'Kenfolg Serif' }}>
+        <Button
+          color="inherit"
+          onClick={handleProjectsClick}
+          sx={{
+            display: { xs: "none", sm: "inline-block" },
+            fontFamily: "Kenfolg Serif",
+            borderBottom: "1px solid transparent",
+            "&:hover": {
+              borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
+            },
+          }}
+        >
           Projects
         </Button>
-        <Button color="inherit" component={Link} to="/contact" sx={{ fontFamily: 'Kenfolg Serif' }}>
+        <Button
+          color="inherit"
+          component={Link}
+          to="/contact"
+          sx={{
+            display: { xs: "none", sm: "inline-block" },
+            fontFamily: "Kenfolg Serif",
+            borderBottom: "1px solid transparent",
+            "&:hover": {
+              borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
+            },
+          }}
+        >
           Contact
         </Button>
         {darkMode ? (
