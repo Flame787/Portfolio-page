@@ -2,7 +2,7 @@ import { Box, Container, Typography, Link, Grid } from "@mui/material";
 // import Grid from '@mui/material/Grid';
 import { GitHub, LinkedIn, Email } from "@mui/icons-material";
 
-export default function Footer() {
+export default function Footer({ darkMode }) {
   return (
     <Box
       component="footer"
@@ -12,8 +12,8 @@ export default function Footer() {
         <Grid container spacing={3} justifyContent="space-between">
           {/* Left Section: Info */}
           {/* <Grid xs={12} sm={6}> */}
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <Typography variant="body2" align="left">
+          <Grid size={{ xs: 12, sm: 4 }}>
+            <Typography variant="body2" align="left" sx={{ mt: 3 }}>
               © {new Date().getFullYear()} Marina Brezovic. All Rights Reserved.
             </Typography>
             <Typography variant="body2" align="left" sx={{ mt: 2 }}>
@@ -21,9 +21,34 @@ export default function Footer() {
             </Typography>
           </Grid>
 
+          {/* Middle Section: Logo */}
+          <Grid
+            item
+            size={{ xs: 12, sm: 4 }}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <img
+              // src={darkMode ? "/logo3.png" : "/logo7.png"}
+              // src="/logo3.png"
+              src="/Marina-transparent.png"
+              alt="logo"
+              style={{
+                width: "120px",
+                // minWidth: "60px",
+                height: "auto",
+                // borderRadius: "16px",
+                borderRadius: "4px",
+                display: "inline-block",
+                margin: "0 4px",
+              }}
+            ></img>
+          </Grid>
+
           {/* Right Section: Social Links */}
           <Grid
-            size={{ xs: 12, sm: 6 }}
+            size={{ xs: 12, sm: 4 }}
             display="flex"
             justifyContent="flex-end"
             alignItems="center"

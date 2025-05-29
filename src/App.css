@@ -43,6 +43,10 @@ html {
   color: white;
 }
 
+.my-logo {
+  width: 6%;
+}
+
 @media (min-width: 2100px) {
   .navbar-wavy::before {
     background-size: 100% calc(2vw + 74px);
@@ -76,5 +80,29 @@ html {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .my-logo {
+    width: 8%;
+  }
+}
+
+@media (max-width: 960px) {
+  .my-logo {
+    width: 10%;
+  }
+}
+
+@media (max-width: 750px) {
+  .my-logo {
+    width: 13%;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-logo {
+    width: 17%;
   }
 }

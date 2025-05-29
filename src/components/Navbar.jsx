@@ -92,14 +92,19 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         }}
       >
         <img
-          src="/wave3.png"
+        // src={darkMode ? "/logo3.png" : "/logo7.png"}
+          // src="/wave3.png"
+          src="/Marina-transparent.png"
           alt="logo"
+          className="my-logo"
           style={{
-            width: "4%",
+            // width: "4%",
+            // width: "6%",
             minWidth: "60px",
             height: "auto",
 
-            borderRadius: "16px",
+            // borderRadius: "16px",
+            borderRadius: "4px",
             display: "inline-block",
             margin: "0 4px",
           }}
@@ -108,6 +113,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           variant="h6"
           fontFamily={"Kenfolg Serif"}
           sx={{
+            ml: 3.5,
             flexGrow: 1,
             fontSize: scrolled ? "1rem" : "1.25rem",
             transition: "font-size 0.3s ease",

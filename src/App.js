@@ -70,7 +70,7 @@ function App() {
               
             </Routes>
           </main>
-          <Footer />
+          <Footer darkMode={darkMode}/>
         </div>
       </Router>
     </ThemeProvider>
