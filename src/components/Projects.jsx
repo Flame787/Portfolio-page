@@ -4,7 +4,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Button,
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -68,13 +67,29 @@ export default function Projects() {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 10, mb: 4, textAlign: "center", color: "primary.title" }}
-        fontFamily={"Kenfolg Serif"}
+        sx={{
+          mt: 10,
+          mb: 4,
+          textAlign: "center",
+          color: "primary.title",
+          fontFamily: "TheSeasons-Regular, serif",
+        }}
+        // fontFamily={"Kenfolg Serif"}
       >
         Projects
       </Typography>
 
-      <Typography sx={{ mb: 6, textAlign: "center" }}>
+      <Typography
+        sx={{
+          mb: 6,
+          textAlign: "center",
+          // fontFamily: "TheSeasons-Regular, serif",
+          // fontFamily: "Satoshi-Regular, sans-serif",
+          fontFamily: "Marcellus-Regular, serif",
+          fontSize: "1.2rem",
+          letterSpacing: "0.03em",
+        }}
+      >
         Here are some of my projects:
       </Typography>
 
@@ -105,11 +120,16 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 3,
-                mb: 3,
-                color: "primary.title",
+                mt: 4,
+                mb: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Bold, serif",
+                // fontFamily: "Satoshi-Regular, sans-serif",
+                // letterSpacing: "0.05em",
+                fontFamily: "Marcellus-Regular, serif",
+                fontSize: "1.5rem",
               }}
-              fontFamily={"Kenfolg Serif"}
+              // fontFamily={"Kenfolg Serif"}
             >
               React Chat App with Scaledrone Websocket
             </Typography>
@@ -199,7 +219,15 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
                 >
@@ -208,7 +236,16 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    ml: 2,
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                 >
                   Live Demo
                 </CustomButton>
@@ -240,12 +277,16 @@ export default function Projects() {
             <Typography
               variant="h6"
               gutterBottom
-              fontFamily={"Kenfolg Serif"}
               sx={{
                 textAlign: "center",
-                mt: 3,
-                mb: 3,
-                color: "primary.title",
+                mt: 4,
+                mb: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Bold, serif",
+                fontSize: "1.5rem",
+                // fontFamily: "Satoshi-Regular, sans-serif",
+                // letterSpacing: "0.05em",
+                fontFamily: "Marcellus-Regular, serif",
               }}
             >
               Music Search App powered by Spotify API
@@ -335,7 +376,15 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
                 >
@@ -344,7 +393,16 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    ml: 2,
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                 >
                   Live Demo
                 </CustomButton>
@@ -377,11 +435,15 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 3,
-                mb: 3,
-                color: "primary.title",
+                mt: 4,
+                mb: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Bold, serif",
+                fontSize: "1.5rem",
+                // fontFamily: "Satoshi-Regular, sans-serif",
+                // letterSpacing: "0.05em",
+                fontFamily: "Marcellus-Regular, serif",
               }}
-              fontFamily={"Kenfolg Serif"}
             >
               Tolkien info page with OpenLibrary API
             </Typography>
@@ -502,7 +564,15 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
                 >
@@ -511,7 +581,16 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    ml: 2,
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                 >
                   Live Demo
                 </CustomButton>
@@ -543,11 +622,15 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 3,
-                mb: 3,
-                color: "primary.title",
+                mt: 4,
+                mb: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Bold, serif",
+                fontSize: "1.5rem",
+                // fontFamily: "Satoshi-Regular, sans-serif",
+                // letterSpacing: "0.05em",
+                fontFamily: "Marcellus-Regular, serif",
               }}
-              fontFamily={"Kenfolg Serif"}
             >
               Portfolio page
             </Typography>
@@ -618,7 +701,15 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
                 >
@@ -627,9 +718,18 @@ export default function Projects() {
                 <CustomButton
                   variant="contained"
                   color="primary"
-                  sx={{ ml: 2, fontFamily: "Kenfolg Serif" }}
+                  sx={{
+                    ml: 2,
+                    // fontFamily: "Marcellus-Regular, serif",
+                    // fontWeight: "bold",
+                    // textTransform: "none",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Satoshi-Regular, sans-serif",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
                 >
-                  Live Demo
+                  Home
                 </CustomButton>
               </Box>
             </CardContent>
@@ -645,7 +745,15 @@ export default function Projects() {
           variant="contained"
           color="primary"
           size="large"
-          sx={{ fontFamily: "Kenfolg Serif" }}
+          sx={{
+            // fontFamily: "Marcellus-Regular, serif",
+            // fontWeight: "bold",
+            // textTransform: "none",
+            // letterSpacing: "0.07em",
+            fontFamily: "Satoshi-Regular, sans-serif",
+            fontSize: "1rem",
+            textTransform: "none",
+          }}
         >
           Contact Me
         </CustomButton>

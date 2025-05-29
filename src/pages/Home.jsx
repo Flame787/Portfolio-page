@@ -26,11 +26,11 @@ export default function Home({ darkMode }) {
         variant="h4"
         gutterBottom
         sx={{ mt: 8, mb: 4, textAlign: "center" }}
-        fontFamily={"Kenfolg Serif"}
+        fontFamily={"TheSeasons-Regular, serif"}
       >
         {/* gutterBottom - adds margin under h3-element */}
         {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
-        Hi, I'm{" "}
+        Hi, I am{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
           Marina
         </Box>
@@ -59,12 +59,13 @@ export default function Home({ darkMode }) {
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
-              width: "109%",
+              width: "113%",
               // maxWidth: "450px",
               borderRadius: "16px",
               display: "inline-block",
               margin: "0 auto",
-              boxShadow: "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
             }}
           />
         </Grid>
@@ -82,19 +83,19 @@ export default function Home({ darkMode }) {
             // border: "1px solid #4CC9FE",
             borderRadius: 4,
             border: "1px solid transparent",
-              "&:hover": {
-                border: "1.3px solid rgba(76, 201, 254, 0.4)",
-              },
+            "&:hover": {
+              border: "1.3px solid rgba(76, 201, 254, 0.4)",
+            },
             p: 3.7,
             boxShadow:
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
           }}
         >
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+          <Typography color="text.secondary" sx={{ marginBottom: 1,  }}>
             My programming journey began three years ago, and I quickly become
             deeply interested in <strong>front-end development</strong>.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+          <Typography color="text.secondary" sx={{ marginBottom: 1  }}>
             I'm passionate about learning, solving problems, and building
             responsive, user-friendly and visually engaging web experiences.
           </Typography>
@@ -103,7 +104,7 @@ export default function Home({ darkMode }) {
             <strong>JavaScript</strong>, often integrating <strong>APIs</strong>{" "}
             to enhance interactivity.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+          <Typography color="text.secondary" sx={{ marginBottom: 1  }}>
             I enjoy working with modern libraries like React Router and Redux,
             as well as frameworks like Bootstrap, Express.js, and tools such as
             Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
@@ -113,27 +114,33 @@ export default function Home({ darkMode }) {
             best practices and writing modular, easily maintainable code.
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "center", mt: 2, flexWrap: "wrap", gap: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: 2,
+              flexWrap: "wrap",
+              gap: 2,
+            }}
+          >
             <CustomButton
               component={Link}
               to="/contact#about"
               variant="contained"
               color="primary"
               size="large"
-              sx={{ fontFamily: "Kenfolg Serif" }}
+              sx={{
+                // fontFamily: "TheSeasons-Bold, serif",
+                // fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Satoshi-Bold, sans-serif",
+                fontFamily: "Satoshi-Regular, sans-serif",
+                fontSize: "1rem",
+                textTransform: "none",
+                //  fontWeight: "bold",  
+                // letterSpacing: "0.07em" 
+              }}
             >
               About me
-            </CustomButton>
-
-            <CustomButton
-              variant="contained"
-              color="primary"
-              size="large"
-              sx={{  fontFamily: "Kenfolg Serif" }}
-              href="https://github.com/Flame787"
-              target="_blank"
-            >
-              Github
             </CustomButton>
 
             <CustomButton
@@ -142,10 +149,43 @@ export default function Home({ darkMode }) {
               variant="contained"
               color="primary"
               size="large"
-              sx={{  fontFamily: "Kenfolg Serif" }}
+              sx={{
+                // fontFamily: "TheSeasons-Bold, serif",
+                // fontSize: "0.9rem",
+                // fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Satoshi-Bold, sans-serif",
+                fontFamily: "Satoshi-Regular, sans-serif",
+                fontSize: "1rem",
+                textTransform: "none",
+                //  fontWeight: "bold",  
+                // letterSpacing: "0.07em" 
+              }}
             >
               Contact me
             </CustomButton>
+
+            <CustomButton
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{
+                // fontFamily: "TheSeasons-Bold, serif",
+                // fontSize: "0.9rem",
+                // fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Satoshi-Bold, sans-serif",
+                fontFamily: "Satoshi-Regular, sans-serif",
+                fontSize: "1rem",
+                textTransform: "none",
+                // fontWeight: "bold",  
+                // letterSpacing: "0.07em" 
+              }}
+              href="https://github.com/Flame787"
+              target="_blank"
+            >
+              GitHub
+            </CustomButton>
+
+            
           </Box>
         </Grid>
       </Grid>

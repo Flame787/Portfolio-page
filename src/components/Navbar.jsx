@@ -58,15 +58,15 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
   }, [location]);
 
   const handleHomeClick = () => {
-  if (window.location.pathname === "/") {
-    window.scrollTo({ top: 0, behavior: "smooth" }); 
-  } else {
-    navigate("/", { replace: true });
-    setTimeout(() => {
+    if (window.location.pathname === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 100);
-  }
-};
+    } else {
+      navigate("/", { replace: true });
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
 
   return (
     // <AppBar position="static" color="primary">
@@ -85,14 +85,14 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
     >
       <Toolbar
         sx={{
-          height: scrolled ? 48 : 64,
+          height: scrolled ? 56 : 64,
           minHeight: "0 !important",
           transition: "height 0.3s ease",
           px: { xs: 1, sm: 2 },
         }}
       >
         <img
-        // src={darkMode ? "/logo3.png" : "/logo7.png"}
+          // src={darkMode ? "/logo3.png" : "/logo7.png"}
           // src="/wave3.png"
           src="/Marina-transparent.png"
           alt="logo"
@@ -111,12 +111,13 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         ></img>
         <Typography
           variant="h6"
-          fontFamily={"Kenfolg Serif"}
+          fontFamily={"TheSeasons-Regular, serif"}
           sx={{
             ml: 3.5,
             flexGrow: 1,
-            fontSize: scrolled ? "1rem" : "1.25rem",
+            fontSize: scrolled ? "1.1rem" : "1.25rem",
             transition: "font-size 0.3s ease",
+            letterSpacing: "0.03em",
           }}
         >
           Developer Portfolio
@@ -153,7 +154,6 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  fontFamily: "Kenfolg Serif",
                 }}
               />
             </ListItem>
@@ -169,7 +169,6 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  fontFamily: "Kenfolg Serif",
                 }}
               />
             </ListItem>
@@ -184,7 +183,6 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  fontFamily: "Kenfolg Serif",
                 }}
               />
             </ListItem>
@@ -194,11 +192,16 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         <Button
           color="inherit"
           component={Link}
-           onClick={handleHomeClick}
+          onClick={handleHomeClick}
           to="/"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Kenfolg Serif",
+            // fontFamily: "TheSeasons-Bold, serif",
+            // fontFamily: "Cardo-Bold, serif",
+            fontFamily: "Marcellus-Regular, serif",
+            textTransform: "none",
+            fontSize: "1.1rem",
+            letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -214,7 +217,11 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           onClick={handleProjectsClick}
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Kenfolg Serif",
+            // fontFamily: "TheSeasons-Bold, serif",
+            fontFamily: "Marcellus-Regular, serif",
+            textTransform: "none",
+            fontSize: "1.1rem",
+            letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -229,7 +236,11 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           to="/contact"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Kenfolg Serif",
+            // fontFamily: "TheSeasons-Bold, serif",
+            fontFamily: "Marcellus-Regular, serif",
+            textTransform: "none",
+            fontSize: "1.1rem",
+            letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",

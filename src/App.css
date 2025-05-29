@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-size: 1.05rem;
 }
 
 .App {
@@ -16,19 +17,92 @@ html {
   src: url("../public/fonts/Kenfolg.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "TheSeasons-Regular";
+  src: url("../public/fonts/Fontspring-DEMO-theseasons-reg.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TheSeasons-Bold";
+  src: url("../public/fonts/Fontspring-DEMO-theseasons-bd.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("../public/fonts/Forum-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cardo-Regular";
+  src: url("../public/fonts/Cardo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cardo-Bold";
+  src: url("../public/fonts/Cardo-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Marcellus-Regular";
+  src: url("../public/fonts/Marcellus-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../public/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source-Sans-Regular";
+  src: url("../public/fonts/SourceSans3-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../public/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../public/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .kenfolg {
   font-family: "Kenfolg Serif", serif;
 }
 
 .round {
   border: 1px solid;
-  border-radius: 15px;
-  padding: 7px;
+  border-radius: 4px;
+  padding: 7px 10px;
   /* color: rgba(35, 142, 192, 0.88); */
   color: rgba(67, 172, 220, 0.88);
   background-color: rgba(204, 229, 240, 0.075);
   margin: 2px 4px;
-  font-weight: bold;
+  font-family: "Satoshi-Regular", sans-serif;
+  font-size: 0.85rem;
 }
 
 .round:hover {
@@ -39,7 +113,7 @@ html {
   filter: brightness(1) contrast(1.2);
 }
 
-.css-qwb71x-MuiButtonBase-root-MuiIconButton-root{
+.css-qwb71x-MuiButtonBase-root-MuiIconButton-root {
   color: white;
 }
 
