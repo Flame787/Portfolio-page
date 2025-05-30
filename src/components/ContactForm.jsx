@@ -106,7 +106,6 @@ export default function ContactForm({ darkMode }) {
         sx={{
           mt: 2,
           mb: 2,
-          // fontFamily: "Kenfolg Serif",
           fontFamily: "Mulish-Extralight, sans-serif",
           display: "flex",
           justifyContent: "center",

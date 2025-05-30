@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 1.05rem;
-
 }
 
 .App {
@@ -196,10 +195,15 @@ html {
 }
 
 
-
 @media (max-width: 960px) {
   .my-logo {
     width: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-picture {
+    max-width: 400px;
   }
 }
 
@@ -212,5 +216,11 @@ html {
 @media (max-width: 600px) {
   .my-logo {
     width: 17%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-picture {
+    max-width: 300px;
   }
 }

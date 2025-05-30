@@ -40,11 +40,8 @@ export default function Home({ darkMode }) {
           mt: 4,
           mb: 1,
           textAlign: "center",
-          // fontFamily: "Marcellus-Regular, serif",
-          // fontFamily: "Lato-Regular, sans-serif",
           fontFamily: "Mulish-Extralight, sans-serif",
           fontSize: "1.2rem",
-          // letterSpacing: "0.03em",
         }}
       >
         a front-end developer passionate about creating
@@ -54,11 +51,8 @@ export default function Home({ darkMode }) {
           mt: 1,
           mb: 4,
           textAlign: "center",
-          // fontFamily: "Marcellus-Regular, serif",
-          // fontFamily: "Lato-Regular, sans-serif",
           fontFamily: "Mulish-Extralight, sans-serif",
           fontSize: "1.2rem",
-          // letterSpacing: "0.03em",
         }}
       >
         interactive, API-driven interfaces with React and modern JavaScript.
@@ -71,9 +65,9 @@ export default function Home({ darkMode }) {
           display: "flex",
           alignItems: "center",
           flexWrap: "nowrap",
-          // gap: 6,
+          gap: 6,
         }}
-        direction={{ xs: "column", sm: "column", md: "row" }}
+        direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
       >
         <Grid
           item
@@ -82,23 +76,26 @@ export default function Home({ darkMode }) {
           md={6}
           lg={6}
           sx={{
+            display: "flex",
+
+            justifyContent: {
+              xs: "center",
+              lg: "flex-end",
+            },
+            flexDirection: "row",
             flexBasis: "50%",
-            ml: { xs: 0, md: 6 },
-            mr: 6,
-            mt: 0,
-            mb: 0,
+            m: 0,
             lineHeight: 0,
           }}
         >
-          <img
+          <Box
+            component="img"
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
-            style={{
-              width: "116%",
-              // maxWidth: "530px",
+            sx={{
+              width: "100%",
+              maxWidth: "487px",
               borderRadius: "16px",
-              display: "inline-block",
-              margin: "0 auto",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
             }}
@@ -113,10 +110,8 @@ export default function Home({ darkMode }) {
           lg={6}
           sx={{
             flexBasis: "50%",
-            ml: 6,
-            mr: 6,
-            // border: "1px solid #4CC9FE",
-            // backgroundColor: darkMode ? "rgba(1, 39, 86, 0.24)" : "rgba(237, 250, 254, 0.6)" ,
+            ml: { xs: 2, sm: 2, md: 0, lg: 0 },
+            mr: { xs: 2, sm: 2, md: 0, lg: 0 },
             backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
             borderRadius: 4,
             border: "1px solid transparent",
@@ -132,12 +127,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              // fontFamily: "Lato-Regular, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
               textAlign: "justify",
-              // letterSpacing: "0.01em",
-              // fontSize: "0.875rem"
             }}
           >
             My programming journey began three years ago, and I quickly became
@@ -147,7 +139,6 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              // fontFamily: "Lato-Light, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
               textAlign: "justify",
@@ -160,11 +151,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              // fontFamily: "Lato-Light, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
               textAlign: "justify",
-              // letterSpacing: "0.03em",
             }}
           >
             My projects are built with React and JavaScript, often integrating
@@ -217,13 +206,9 @@ export default function Home({ darkMode }) {
               sx={{
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.07em",
-                // fontFamily: "Mulish-Extralight, sans-serif",
-                // fontFamily: "Marcellus-Regular, serif",
-                // fontFamily: "Satoshi-Bold, sans-serif",
-                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold",
+
               }}
             >
               About me
@@ -238,14 +223,8 @@ export default function Home({ darkMode }) {
               sx={{
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.07em",
-                // fontSize: "0.9rem",
-                // fontFamily: "Mulish-Extralight, sans-serif",
-                // fontFamily: "Marcellus-Regular, serif",
-                // fontFamily: "Satoshi-Bold, sans-serif",
-                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold",
               }}
             >
               Contact
@@ -258,14 +237,8 @@ export default function Home({ darkMode }) {
               sx={{
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.07em",
-                // fontSize: "0.9rem",
-                // fontFamily: "Mulish-Extralight, sans-serif",
-                // fontFamily: "Marcellus-Regular, serif",
-                // fontFamily: "Satoshi-Bold, sans-serif",
-                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                // fontWeight: "bold",
               }}
               href="https://github.com/Flame787"
               target="_blank"

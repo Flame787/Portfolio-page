@@ -13,10 +13,10 @@ export default function Footer({ darkMode }) {
           {/* Left Section: Info */}
           {/* <Grid xs={12} sm={6}> */}
           <Grid size={{ xs: 12, sm: 4 }}>
-            <Typography variant="body2" align="left" sx={{ mt: 3, fontFamily: "Mulish-Extralight, sans-serif" }}>
+            <Typography variant="body2" align="left" sx={{ mt: 2, fontFamily: "Mulish-Extralight, sans-serif" }}>
               © {new Date().getFullYear()} Marina Brezovic. All Rights Reserved.
             </Typography>
-            <Typography variant="body2" align="left" sx={{ mt: 2, fontFamily: "Mulish-Extralight, sans-serif" }}>
+            <Typography variant="body2" align="left" sx={{ mt: 1, fontFamily: "Mulish-Extralight, sans-serif" }}>
               This page was built with React and MUI.
             </Typography>
           </Grid>

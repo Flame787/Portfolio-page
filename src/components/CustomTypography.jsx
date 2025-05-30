@@ -6,7 +6,6 @@ const CustomTypography = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(1),
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
-//   fontFamily: "Lato-Regular, sans-serif",
   fontFamily: "Mulish-Extralight, sans-serif",
   fontSize: "1rem",
   textAlign: "justify",

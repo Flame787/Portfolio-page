@@ -42,9 +42,6 @@ export default function CustomTextField({
               : "rgba(52, 154, 214, 0.88)",
           },
         },
-        // "& .MuiInputLabel-root": {
-        //   color: "primary.form",
-        // },
         "&:hover .MuiInputLabel-root": {
           color: darkMode
             ? "rgba(89, 190, 236, 0.88)"

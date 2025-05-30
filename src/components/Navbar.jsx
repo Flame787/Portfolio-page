@@ -98,12 +98,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           alt="logo"
           className="my-logo"
           style={{
-            // width: "4%",
-            // width: "6%",
             minWidth: "60px",
             height: "auto",
-
-            // borderRadius: "16px",
             borderRadius: "4px",
             display: "inline-block",
             margin: "0 4px",
@@ -154,7 +150,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
                 }}
               />
             </ListItem>
@@ -170,7 +166,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
                 }}
               />
             </ListItem>
@@ -185,7 +181,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
                 sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
                 }}
               />
             </ListItem>
@@ -199,15 +195,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           to="/"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            // fontFamily: "TheSeasons-Bold, serif",
-            // fontFamily: "Cardo-Bold, serif",
-            // fontFamily: "Marcellus-Regular, serif",
-            // fontFamily: "TheSeasons-Regular, serif",
-                // letterSpacing: "0.07em",
-                fontFamily: "Mulish-Extralight, sans-serif",
-            // textTransform: "none",
+            fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: "0.9rem",
-            // letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -223,14 +212,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           onClick={handleProjectsClick}
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            // fontFamily: "TheSeasons-Bold, serif",
-            // fontFamily: "Marcellus-Regular, serif",
-            // fontFamily: "TheSeasons-Regular, serif",
-                // letterSpacing: "0.07em",
-                fontFamily: "Mulish-Extralight, sans-serif",
-            // textTransform: "none",
+            fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: "0.9rem",
-            // letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -245,14 +228,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           to="/contact#aboutme"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            // fontFamily: "TheSeasons-Bold, serif",
-            // fontFamily: "Marcellus-Regular, serif",
-            // fontFamily: "TheSeasons-Regular, serif",
-                // letterSpacing: "0.07em",
-                fontFamily: "Mulish-Extralight, sans-serif",
-            // textTransform: "none",
+            fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: "0.9rem",
-            // letterSpacing: "0.05em",
+
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",

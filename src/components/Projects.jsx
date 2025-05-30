@@ -84,14 +84,7 @@ export default function Projects() {
         sx={{
           mb: 6,
           textAlign: "center",
-          // fontFamily: "TheSeasons-Regular, serif",
-          // fontFamily: "Satoshi-Regular, sans-serif",
-          // fontFamily: "Marcellus-Regular, serif",
-          // fontSize: "1.2rem",
-          // letterSpacing: "0.03em",
-          // fontFamily: "Lato-Light, sans-serif",
           fontFamily: "Mulish-Extralight, sans-serif",
-
           fontSize: "1.2rem",
         }}
       >
@@ -130,11 +123,8 @@ export default function Projects() {
                 color: "primary.title3",
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.05em",
-                // fontFamily: "Satoshi-Regular, sans-serif",
-                // fontFamily: "Marcellus-Regular, serif",
                 fontSize: "1.5rem",
               }}
-              // fontFamily={"Kenfolg Serif"}
             >
               React Chat App with Scaledrone Websocket
             </Typography>
@@ -196,14 +186,8 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -217,14 +201,8 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -264,10 +242,7 @@ export default function Projects() {
                 mt: 4,
                 mb: 4,
                 color: "primary.title3",
-                // fontFamily: "TheSeasons-Bold, serif",
                 fontSize: "1.5rem",
-                // fontFamily: "Satoshi-Regular, sans-serif",
-                // letterSpacing: "0.05em",
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
@@ -335,11 +310,6 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -356,11 +326,6 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -402,10 +367,7 @@ export default function Projects() {
                 mt: 4,
                 mb: 4,
                 color: "primary.title3",
-                // fontFamily: "TheSeasons-Bold, serif",
                 fontSize: "1.5rem",
-                // fontFamily: "Satoshi-Regular, sans-serif",
-                // letterSpacing: "0.05em",
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
@@ -508,11 +470,6 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -529,11 +486,6 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -574,10 +526,7 @@ export default function Projects() {
                 mt: 4,
                 mb: 4,
                 color: "primary.title3",
-                // fontFamily: "TheSeasons-Bold, serif",
                 fontSize: "1.5rem",
-                // fontFamily: "Satoshi-Regular, sans-serif",
-                // letterSpacing: "0.05em",
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
@@ -619,11 +568,6 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -640,11 +584,6 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    // fontFamily: "Marcellus-Regular, serif",
-                    // fontWeight: "bold",
-                    // textTransform: "none",
-                    // letterSpacing: "0.07em",
-                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
@@ -669,11 +608,6 @@ export default function Projects() {
           color="primary"
           size="large"
           sx={{
-            // fontFamily: "Marcellus-Regular, serif",
-            // fontWeight: "bold",
-            // textTransform: "none",
-            // letterSpacing: "0.07em",
-            // fontFamily: "Satoshi-Regular, sans-serif",
             fontSize: "1rem",
             textTransform: "none",
             // fontFamily: "Marcellus-Regular, serif",

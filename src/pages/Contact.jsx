@@ -91,11 +91,7 @@ export default function Contact({ darkMode }) {
             </CustomTypography>
           </Box>
         </Grid>
-        {/* <Typography
-          variant="h5"
-          fontFamily={"Kenfolg Serif"}
-          sx={{ mt: 8, mb: 4, textAlign: "center", color: "primary.title" }}
-        > */}
+
         <Typography
           variant="h5"
           gutterBottom
@@ -139,11 +135,6 @@ export default function Contact({ darkMode }) {
           <button className="round">Visual Studio Code</button>
         </Box>
 
-        {/* <Typography
-          variant="h5"
-          fontFamily={"Kenfolg Serif"}
-          sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
-        > */}
         <Typography
           variant="h5"
           gutterBottom
@@ -174,11 +165,6 @@ export default function Contact({ darkMode }) {
           <button className="round">Organisation skills</button>
         </Box>
 
-        {/* <Typography
-          variant="h5"
-          fontFamily={"Kenfolg Serif"}
-          sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
-        > */}
         <Typography
           variant="h5"
           gutterBottom
