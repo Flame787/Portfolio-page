@@ -48,7 +48,9 @@ export default function ContactForm({ darkMode }) {
     <Box
       component="form"
       onSubmit={sendEmail}
+      
       sx={{
+        backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
         maxWidth: 500,
         mx: "auto",
         mt: 4,

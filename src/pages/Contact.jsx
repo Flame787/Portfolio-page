@@ -31,7 +31,8 @@ export default function Contact({ darkMode }) {
   return (
     <>
       <Container id="about">
-        <Typography id="aboutme"
+        <Typography
+          id="aboutme"
           variant="h4"
           gutterBottom
           sx={{ mt: 6, mb: 4, textAlign: "center", color: "primary.title" }}
@@ -44,6 +45,7 @@ export default function Contact({ darkMode }) {
             mt: 2,
             mb: 2,
             p: 2,
+            backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
             border: "1px solid transparent",
             "&:hover": {
               border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -200,7 +202,6 @@ export default function Contact({ darkMode }) {
           >
             Github
           </CustomButton>
-          
         </Box>
         <Box id="contactme">
           <ContactForm darkMode={darkMode} />
