@@ -11,6 +11,7 @@ import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CustomButton from "./CustomButton";
+import CustomTypography from "./CustomTypography";
 
 export default function Projects() {
   function PrevArrow(props) {
@@ -85,9 +86,11 @@ export default function Projects() {
           textAlign: "center",
           // fontFamily: "TheSeasons-Regular, serif",
           // fontFamily: "Satoshi-Regular, sans-serif",
-          fontFamily: "Marcellus-Regular, serif",
+          // fontFamily: "Marcellus-Regular, serif",
+          // fontSize: "1.2rem",
+          // letterSpacing: "0.03em",
+          fontFamily: "Lato-Light, sans-serif",
           fontSize: "1.2rem",
-          letterSpacing: "0.03em",
         }}
       >
         Here are some of my projects:
@@ -123,10 +126,10 @@ export default function Projects() {
                 mt: 4,
                 mb: 4,
                 color: "primary.title3",
-                // fontFamily: "TheSeasons-Bold, serif",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.05em",
                 // fontFamily: "Satoshi-Regular, sans-serif",
-                // letterSpacing: "0.05em",
-                fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Marcellus-Regular, serif",
                 fontSize: "1.5rem",
               }}
               // fontFamily={"Kenfolg Serif"}
@@ -166,55 +169,26 @@ export default function Projects() {
               </Box>
             </Box>
             <CardContent>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                This real-time chat application is built with{" "}
-                <strong>
-                  <span color="text.primary">React</span>
-                </strong>{" "}
-                and powered by the{" "}
-                <strong>
-                  <span color="text.primary">Scaledrone</span>
-                </strong>{" "}
-                WebSocket for live communication.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              <CustomTypography>
+                This real-time chat application is built with React and powered
+                by the Scaledrone WebSocket for live communication.
+              </CustomTypography>
+              <CustomTypography>
                 After entering a username and selecting an avatar, users can
                 choose from themed chat rooms where they can interact with
                 currently active participants.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              </CustomTypography>
+              <CustomTypography>
                 The app supports: browsing chat history, using emojis (via
-                emoji-picker-react), sending GIFs (via the{" "}
-                <strong>
-                  <span color="text.primary">Giphy API</span>
-                </strong>
-                ), and uploading files (handled through{" "}
-                <strong>
-                  <span color="text.primary">Supabase</span>
-                </strong>
-                ).
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                Technologies: <button className="round">React</button>
+                emoji-picker-react), sending GIFs (via the Giphy API), and
+                uploading files (handled through Supabase).
+              </CustomTypography>
+              <CustomTypography>
+                Technologies:
+                <button className="round">React</button>
                 <button className="round">Scaledrone Websocket</button>
                 <button className="round">external API</button>
-              </Typography>
+              </CustomTypography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
                   variant="contained"
@@ -224,9 +198,11 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
+                   
                   }}
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
@@ -242,9 +218,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                 >
                   Live Demo
@@ -323,55 +300,31 @@ export default function Projects() {
             </Box>
 
             <CardContent>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                <strong>
-                  <span color="text.primary">Music Domain</span>
-                </strong>{" "}
-                is a dynamic music search application that allows users to
-                explore artists, albums, and songs using real-time data from the{" "}
-                <strong>
-                  <span color="text.primary">Spotify API</span>
-                </strong>
-                .
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              <CustomTypography>
+                Music Domain is a dynamic music search application that allows
+                users to explore artists, albums, and songs using real-time data
+                from the Spotify API.
+              </CustomTypography>
+              <CustomTypography>
                 Users can search for music artists, songs, and albums, listen to
                 30-second previews of individual tracks or full albums, like and
                 save tracks to a favorites playlist, and access full songs or
                 artist details via external Spotify links.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                <strong>
-                  <span color="text.primary">Express.js</span>
-                </strong>{" "}
-                is used on the backend for Spotify authentication. The app also
-                features 16 different visual themes (styled entirely with SCSS),
-                letting users personalize their experience with ease.
-              </Typography>
+              </CustomTypography>
+              <CustomTypography>
+                Express.js is used on the backend for Spotify authentication.
+                The app also features 16 different visual themes (styled
+                entirely with SCSS), letting users personalize their experience
+                with ease.
+              </CustomTypography>
 
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              <CustomTypography>
                 Technologies:
                 <button className="round">JavaScript</button>
                 <button className="round">SCSS</button>
                 <button className="round">external API</button>
                 <button className="round">Express.js</button>
-              </Typography>
+              </CustomTypography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
                   variant="contained"
@@ -381,9 +334,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
@@ -399,9 +353,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                 >
                   Live Demo
@@ -518,47 +473,26 @@ export default function Projects() {
               </Box>
             </CardMedia>
             <CardContent>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              <CustomTypography>
                 A fan-made landing page dedicated to J.R.R. Tolkien’s legacy,
                 featuring biographical information, his published works,
                 illustrations and external resources.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              </CustomTypography>
+              <CustomTypography>
                 One of my earlier projects, recently refreshed with improved
                 layout and updated code.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                The application integrates with the{" "}
-                <strong>
-                  <span color="text.primary">Open Library API</span>
-                </strong>{" "}
-                to fetch and display books authored by Tolkien, allowing users
-                to explore and sort them by current ratings.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              </CustomTypography>
+              <CustomTypography>
+                The application integrates with the Open Library API to fetch
+                and display books authored by Tolkien, allowing users to explore
+                and sort them by current ratings.
+              </CustomTypography>
+              <CustomTypography>
                 Technologies:
-                <strong>
-                  <button className="round">JavaScript</button>
-                  <button className="round">Bootstrap</button>
-                  <button className="round">external API</button>
-                </strong>
-              </Typography>
+                <button className="round">JavaScript</button>
+                <button className="round">Bootstrap</button>
+                <button className="round">external API</button>
+              </CustomTypography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
@@ -569,9 +503,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
@@ -587,9 +522,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                 >
                   Live Demo
@@ -641,61 +577,29 @@ export default function Projects() {
               alt="Project 4"
             />
             <CardContent>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                Portfolio Page is a personal showcase built with{" "}
-                <strong>
-                  <span color="text.primary">React</span>
-                </strong>
-                , designed to present web development projects in a clean,
-                responsive, and user-friendly layout.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
-                It uses{" "}
-                <strong>
-                  <span color="text.primary">React Router</span>
-                </strong>{" "}
-                for seamless navigation,{" "}
-                <strong>
-                  <span color="text.primary">Material UI</span>
-                </strong>{" "}
-                for modern and consistent design components, and{" "}
-                <strong>
-                  <span color="text.primary">EmailJS</span>
-                </strong>{" "}
-                to enable users to get in touch directly via a built-in contact
-                form.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              <CustomTypography>
+                Portfolio Page is a personal showcase built with React, designed
+                to present web development projects in a clean, responsive, and
+                user-friendly layout.
+              </CustomTypography>
+              <CustomTypography>
+                It uses React Router for seamless navigation, Material UI for
+                modern and consistent design components, and EmailJS to enable
+                users to get in touch directly via a built-in contact form.
+              </CustomTypography>
+              <CustomTypography>
                 The app also features theme switching, allowing users to
                 personalize the visual experience. This single-page application
                 is fully responsive and optimized for accessibility and
                 performance across devices.
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 2, mb: 2, px: 2 }}
-              >
+              </CustomTypography>
+              <CustomTypography>
                 Technologies:
-                <strong>
-                  <button className="round">React</button>
-                  <button className="round">React Router</button>
-                  <button className="round">Material UI</button>
-                  <button className="round">EmailJS</button>
-                </strong>
-              </Typography>
+                <button className="round">React</button>
+                <button className="round">React Router</button>
+                <button className="round">Material UI</button>
+                <button className="round">EmailJS</button>
+              </CustomTypography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                 <CustomButton
@@ -706,9 +610,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
@@ -724,9 +629,10 @@ export default function Projects() {
                     // fontWeight: "bold",
                     // textTransform: "none",
                     // letterSpacing: "0.07em",
-                    fontFamily: "Satoshi-Regular, sans-serif",
+                    // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
+                    fontFamily: "Marcellus-Regular, serif",
                   }}
                 >
                   Home
@@ -750,9 +656,10 @@ export default function Projects() {
             // fontWeight: "bold",
             // textTransform: "none",
             // letterSpacing: "0.07em",
-            fontFamily: "Satoshi-Regular, sans-serif",
+            // fontFamily: "Satoshi-Regular, sans-serif",
             fontSize: "1rem",
             textTransform: "none",
+            fontFamily: "Marcellus-Regular, serif",
           }}
         >
           Contact Me

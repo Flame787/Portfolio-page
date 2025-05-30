@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 1.05rem;
+
 }
 
 .App {
@@ -69,6 +70,27 @@ html {
 }
 
 @font-face {
+  font-family: "Lato-Light";
+  src: url("../public/fonts/Lato-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Black";
+  src: url("../public/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("../public/fonts/Lato-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Source-Sans-Regular";
   src: url("../public/fonts/SourceSans3-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -102,7 +124,8 @@ html {
   background-color: rgba(204, 229, 240, 0.075);
   margin: 2px 4px;
   font-family: "Satoshi-Regular", sans-serif;
-  font-size: 0.85rem;
+  font-family: "Lato-Light", sans-serif;
+  font-size: 0.9rem;
 }
 
 .round:hover {
@@ -162,6 +185,8 @@ html {
     width: 8%;
   }
 }
+
+
 
 @media (max-width: 960px) {
   .my-logo {

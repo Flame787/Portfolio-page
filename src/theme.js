@@ -34,8 +34,8 @@ export const darkTheme = createTheme({
     // fontFamily: "Roboto, sans-serif",
     // fontFamily: "Marcellus-Regular, serif",
     // fontFamily: "Source-Sans-Regular, sans-serif",
-    // fontFamily: "Lato-Regular, sans-serif",
-    fontFamily: "Satoshi-Regular, sans-serif"
+    fontFamily: "Lato-Regular, sans-serif",
+    // fontFamily: "Satoshi-Regular, sans-serif"
   },
 });
 

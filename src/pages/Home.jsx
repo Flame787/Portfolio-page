@@ -30,10 +30,36 @@ export default function Home({ darkMode }) {
       >
         {/* gutterBottom - adds margin under h3-element */}
         {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
-        Hi, I am{" "}
+        Hi, I´m{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
-          Marina
+          Marina,
         </Box>
+      </Typography>
+      <Typography
+        sx={{
+          mt: 4,
+          mb: 1,
+          textAlign: "center",
+          // fontFamily: "Marcellus-Regular, serif",
+          fontFamily: "Lato-Regular, sans-serif",
+          fontSize: "1.2rem",
+          // letterSpacing: "0.03em",
+        }}
+      >
+        a front-end developer passionate about creating
+      </Typography>
+      <Typography
+        sx={{
+          mt: 1,
+          mb: 4,
+          textAlign: "center",
+          // fontFamily: "Marcellus-Regular, serif",
+          fontFamily: "Lato-Regular, sans-serif",
+          fontSize: "1.2rem",
+          // letterSpacing: "0.03em",
+        }}
+      >
+        interactive, API-driven interfaces with React and modern JavaScript.
       </Typography>
 
       <Grid
@@ -53,13 +79,20 @@ export default function Home({ darkMode }) {
           sm={6}
           md={6}
           lg={6}
-          sx={{ flexBasis: "50%", ml: 6, mr: 6, mt: 0, mb: 0, lineHeight: 0 }}
+          sx={{
+            flexBasis: "50%",
+            ml: { xs: 0, md: 6 },
+            mr: 6,
+            mt: 0,
+            mb: 0,
+            lineHeight: 0,
+          }}
         >
           <img
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
-              width: "113%",
+              width: "118%",
               // maxWidth: "450px",
               borderRadius: "16px",
               display: "inline-block",
@@ -91,25 +124,68 @@ export default function Home({ darkMode }) {
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
           }}
         >
-          <Typography color="text.secondary" sx={{ marginBottom: 1,  }}>
-            My programming journey began three years ago, and I quickly become
-            deeply interested in <strong>front-end development</strong>.
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginBottom: 1,
+              fontFamily: "Lato-Regular, sans-serif",
+              fontSize: "1.05rem",
+              textAlign: "justify"
+              // letterSpacing: "0.01em",
+              // fontSize: "0.875rem"
+            }}
+          >
+            My programming journey began three years ago, as I was working on early
+            projects, which led me to explore and enjoy front-end development.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1  }}>
-            I'm passionate about learning, solving problems, and building
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginBottom: 1,
+              fontFamily: "Lato-Light, sans-serif",
+              fontSize: "1.05rem",
+              textAlign: "justify"
+            }}
+          >
+            I'm enthusiastic about learning, solving problems, and creating
             responsive, user-friendly and visually engaging web experiences.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My projects are built with <strong>React</strong> and vanilla{" "}
-            <strong>JavaScript</strong>, often integrating <strong>APIs</strong>{" "}
-            to enhance interactivity.
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginBottom: 1,
+              fontFamily: "Lato-Light, sans-serif",
+              fontSize: "1.05rem",
+              textAlign: "justify"
+              // letterSpacing: "0.03em",
+            }}
+          >
+            My projects are built with React and JavaScript, often integrating
+            APIs to enhance interactivity.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1  }}>
-            I enjoy working with modern libraries like React Router and Redux,
-            as well as frameworks like Bootstrap, Express.js, and tools such as
-            Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginBottom: 1,
+              fontFamily: "Lato-Light, sans-serif",
+              fontSize: "1.05rem",
+              textAlign: "justify"
+            }}
+          >
+            I also apply modern libraries like React Router, Redux, Material-UI
+            (MUI), or frameworks such as Bootstrap, Express.js, and many other
+            tools like SCSS, Webpack etc.
           </Typography>
-          <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+          <Typography
+            color="text.secondary"
+            sx={{
+              marginBottom: 1,
+              fontFamily: "Lato-Light, sans-serif",
+              // fontSize: "1.03rem",
+              fontSize: "1.05rem",
+              textAlign: "justify"
+            }}
+          >
             My goal is to build scalable, modern front-end apps by following
             best practices and writing modular, easily maintainable code.
           </Typography>
@@ -131,13 +207,13 @@ export default function Home({ darkMode }) {
               size="large"
               sx={{
                 // fontFamily: "TheSeasons-Bold, serif",
-                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
-                fontFamily: "Satoshi-Regular, sans-serif",
+                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold",  
-                // letterSpacing: "0.07em" 
+                //  fontWeight: "bold",
+                // letterSpacing: "0.07em"
               }}
             >
               About me
@@ -152,13 +228,13 @@ export default function Home({ darkMode }) {
               sx={{
                 // fontFamily: "TheSeasons-Bold, serif",
                 // fontSize: "0.9rem",
-                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
-                fontFamily: "Satoshi-Regular, sans-serif",
+                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold",  
-                // letterSpacing: "0.07em" 
+                //  fontWeight: "bold",
+                // letterSpacing: "0.07em"
               }}
             >
               Contact me
@@ -171,21 +247,19 @@ export default function Home({ darkMode }) {
               sx={{
                 // fontFamily: "TheSeasons-Bold, serif",
                 // fontSize: "0.9rem",
-                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
-                fontFamily: "Satoshi-Regular, sans-serif",
+                // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                // fontWeight: "bold",  
-                // letterSpacing: "0.07em" 
+                // fontWeight: "bold",
+                // letterSpacing: "0.07em"
               }}
               href="https://github.com/Flame787"
               target="_blank"
             >
               GitHub
             </CustomButton>
-
-            
           </Box>
         </Grid>
       </Grid>

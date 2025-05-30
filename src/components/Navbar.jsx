@@ -201,7 +201,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             fontFamily: "Marcellus-Regular, serif",
             textTransform: "none",
             fontSize: "1.1rem",
-            letterSpacing: "0.05em",
+            // letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -221,7 +221,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             fontFamily: "Marcellus-Regular, serif",
             textTransform: "none",
             fontSize: "1.1rem",
-            letterSpacing: "0.05em",
+            // letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -240,7 +240,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             fontFamily: "Marcellus-Regular, serif",
             textTransform: "none",
             fontSize: "1.1rem",
-            letterSpacing: "0.05em",
+            // letterSpacing: "0.05em",
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
