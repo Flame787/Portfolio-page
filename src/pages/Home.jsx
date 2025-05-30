@@ -32,8 +32,8 @@ export default function Home({ darkMode }) {
         {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
         Hi, I´m{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
-          Marina,
-        </Box>
+          Marina
+        </Box>,
       </Typography>
       <Typography
         sx={{
@@ -41,7 +41,8 @@ export default function Home({ darkMode }) {
           mb: 1,
           textAlign: "center",
           // fontFamily: "Marcellus-Regular, serif",
-          fontFamily: "Lato-Regular, sans-serif",
+          // fontFamily: "Lato-Regular, sans-serif",
+          fontFamily: "Mulish-Extralight, sans-serif",
           fontSize: "1.2rem",
           // letterSpacing: "0.03em",
         }}
@@ -54,7 +55,8 @@ export default function Home({ darkMode }) {
           mb: 4,
           textAlign: "center",
           // fontFamily: "Marcellus-Regular, serif",
-          fontFamily: "Lato-Regular, sans-serif",
+          // fontFamily: "Lato-Regular, sans-serif",
+          fontFamily: "Mulish-Extralight, sans-serif",
           fontSize: "1.2rem",
           // letterSpacing: "0.03em",
         }}
@@ -92,8 +94,8 @@ export default function Home({ darkMode }) {
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
-              width: "118%",
-              // maxWidth: "450px",
+              width: "114%",
+              // maxWidth: "530px",
               borderRadius: "16px",
               display: "inline-block",
               margin: "0 auto",
@@ -128,8 +130,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              fontFamily: "Lato-Regular, sans-serif",
-              fontSize: "1.05rem",
+              // fontFamily: "Lato-Regular, sans-serif",
+              fontFamily: "Mulish-Extralight, sans-serif",
+              fontSize: "1rem",
               textAlign: "justify"
               // letterSpacing: "0.01em",
               // fontSize: "0.875rem"
@@ -142,8 +145,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              fontFamily: "Lato-Light, sans-serif",
-              fontSize: "1.05rem",
+              // fontFamily: "Lato-Light, sans-serif",
+              fontFamily: "Mulish-Extralight, sans-serif",
+              fontSize: "1rem",
               textAlign: "justify"
             }}
           >
@@ -154,8 +158,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              fontFamily: "Lato-Light, sans-serif",
-              fontSize: "1.05rem",
+              // fontFamily: "Lato-Light, sans-serif",
+              fontFamily: "Mulish-Extralight, sans-serif",
+              fontSize: "1rem",
               textAlign: "justify"
               // letterSpacing: "0.03em",
             }}
@@ -167,8 +172,9 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              fontFamily: "Lato-Light, sans-serif",
-              fontSize: "1.05rem",
+              // fontFamily: "Lato-Light, sans-serif",
+              fontFamily: "Mulish-Extralight, sans-serif",
+              fontSize: "1rem",
               textAlign: "justify"
             }}
           >
@@ -180,9 +186,10 @@ export default function Home({ darkMode }) {
             color="text.secondary"
             sx={{
               marginBottom: 1,
-              fontFamily: "Lato-Light, sans-serif",
+              // fontFamily: "Lato-Light, sans-serif",
+              fontFamily: "Mulish-Extralight, sans-serif",
               // fontSize: "1.03rem",
-              fontSize: "1.05rem",
+              fontSize: "1rem",
               textAlign: "justify"
             }}
           >
@@ -206,14 +213,15 @@ export default function Home({ darkMode }) {
               color="primary"
               size="large"
               sx={{
-                // fontFamily: "TheSeasons-Bold, serif",
-                fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
+                // fontFamily: "Mulish-Extralight, sans-serif",
+                // fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
                 // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold",
-                // letterSpacing: "0.07em"
+                //  fontWeight: "bold", 
               }}
             >
               About me
@@ -226,18 +234,20 @@ export default function Home({ darkMode }) {
               color="primary"
               size="large"
               sx={{
-                // fontFamily: "TheSeasons-Bold, serif",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                 // fontSize: "0.9rem",
-                fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Mulish-Extralight, sans-serif",
+                // fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
                 // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
                 //  fontWeight: "bold",
-                // letterSpacing: "0.07em"
+                
               }}
             >
-              Contact me
+              Contact
             </CustomButton>
 
             <CustomButton
@@ -245,15 +255,17 @@ export default function Home({ darkMode }) {
               color="primary"
               size="large"
               sx={{
-                // fontFamily: "TheSeasons-Bold, serif",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                 // fontSize: "0.9rem",
-                fontFamily: "Marcellus-Regular, serif",
+                // fontFamily: "Mulish-Extralight, sans-serif",
+                // fontFamily: "Marcellus-Regular, serif",
                 // fontFamily: "Satoshi-Bold, sans-serif",
                 // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
                 // fontWeight: "bold",
-                // letterSpacing: "0.07em"
+                
               }}
               href="https://github.com/Flame787"
               target="_blank"

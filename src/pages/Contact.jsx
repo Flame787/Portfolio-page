@@ -3,6 +3,7 @@ import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import CustomTypography from "../components/CustomTypography";
 
 export default function Contact({ darkMode }) {
   const location = useLocation();
@@ -26,7 +27,6 @@ export default function Contact({ darkMode }) {
       }, 300);
     }
   }, [location]);
-
 
   return (
     <>
@@ -53,29 +53,45 @@ export default function Contact({ darkMode }) {
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
           }}
         >
-          <Box id="about-me-text" sx={{ mt: 2, mb: 2 }}>
-            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-              My programming journey began three years ago, and I quickly become
-              deeply interested in <strong>front-end development</strong>.
-            </Typography>
-            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-              I'm passionate about learning, solving problems, and building
+          <Box
+            id="about-me-text"
+            sx={{
+              mt: 2,
+              mb: 2,
+            }}
+          >
+            <CustomTypography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "1rem",
+                textAlign: "justify",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
+              }}
+            >
+              My programming journey began three years ago, as I was working on
+              early projects, which led me to explore and enjoy front-end
+              development.
+            </CustomTypography>
+            <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
+              I'm enthusiastic about learning, solving problems, and creating
               responsive, user-friendly and visually engaging web experiences.
-            </Typography>
-            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-              My projects are built with <strong>React</strong> and vanilla{" "}
-              <strong>JavaScript</strong>, often integrating{" "}
-              <strong>APIs</strong> to enhance interactivity.
-            </Typography>
-            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
-              I enjoy working with modern libraries like React Router and Redux,
-              as well as frameworks like Bootstrap, Express.js, and tools such
-              as Git, GitHub, SCSS, Material-UI (MUI), Webpack, Vite and Jira.
-            </Typography>
-            <Typography color="text.secondary" sx={{ marginBottom: 1 }}>
+            </CustomTypography>
+            <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
+              My projects are built with React and JavaScript, often integrating
+              APIs to enhance interactivity.
+            </CustomTypography>
+            <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
+              I also apply modern libraries like React Router, Redux,
+              Material-UI (MUI), or frameworks such as Bootstrap, Express.js,
+              and many other tools like SCSS, Webpack etc.
+            </CustomTypography>
+            <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
               My goal is to build scalable, modern front-end apps by following
               best practices and writing modular, easily maintainable code.
-            </Typography>
+            </CustomTypography>
           </Box>
         </Grid>
         <Typography

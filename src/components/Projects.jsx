@@ -89,7 +89,9 @@ export default function Projects() {
           // fontFamily: "Marcellus-Regular, serif",
           // fontSize: "1.2rem",
           // letterSpacing: "0.03em",
-          fontFamily: "Lato-Light, sans-serif",
+          // fontFamily: "Lato-Light, sans-serif",
+          fontFamily: "Mulish-Extralight, sans-serif",
+
           fontSize: "1.2rem",
         }}
       >
@@ -201,8 +203,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
-                   
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
@@ -221,7 +224,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -337,7 +342,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
@@ -356,7 +363,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -506,7 +515,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
@@ -525,7 +536,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -613,7 +626,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
@@ -632,7 +647,9 @@ export default function Projects() {
                     // fontFamily: "Satoshi-Regular, sans-serif",
                     fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "Marcellus-Regular, serif",
+                    // fontFamily: "Marcellus-Regular, serif",
+                    fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
                   }}
                 >
                   Home
@@ -659,7 +676,9 @@ export default function Projects() {
             // fontFamily: "Satoshi-Regular, sans-serif",
             fontSize: "1rem",
             textTransform: "none",
-            fontFamily: "Marcellus-Regular, serif",
+            // fontFamily: "Marcellus-Regular, serif",
+            fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
           }}
         >
           Contact Me

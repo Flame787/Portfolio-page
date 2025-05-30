@@ -111,6 +111,13 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mulish-Extralight";
+  src: url("../public/fonts/Mulish-Extralight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .kenfolg {
   font-family: "Kenfolg Serif", serif;
 }
@@ -125,6 +132,7 @@ html {
   margin: 2px 4px;
   font-family: "Satoshi-Regular", sans-serif;
   font-family: "Lato-Light", sans-serif;
+  font-family: "Mulish-Extralight", sans-serif;
   font-size: 0.9rem;
 }
 
