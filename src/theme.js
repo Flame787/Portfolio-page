@@ -34,7 +34,8 @@ export const darkTheme = createTheme({
     // fontFamily: "Roboto, sans-serif",
     // fontFamily: "Marcellus-Regular, serif",
     // fontFamily: "Source-Sans-Regular, sans-serif",
-    fontFamily: "Lato-Regular, sans-serif",
+    // fontFamily: "Lato-Regular, sans-serif",
+      fontFamily: "Mulish-Extralight, sans-serif",
     // fontFamily: "Satoshi-Regular, sans-serif"
   },
 });
@@ -53,6 +54,7 @@ export const lightTheme = createTheme({
       default: "#ffffff",
       // paper: "#f4f4f4",
       // paper: "rgba(181, 235, 251, 0.75)",
+      // paper: "rgba(237, 250, 254, 0.6)",
       paper: "rgba(237, 250, 254, 0.6)",
     },
     text: {
@@ -65,6 +67,7 @@ export const lightTheme = createTheme({
     // fontFamily: "Marcellus-Regular, serif",
   //   fontFamily: "Source-Sans-Regular, sans-serif",
   // fontFamily: "Lato-Regular, sans-serif",
-  fontFamily: "Satoshi-Regular, sans-serif"
+  // fontFamily: "Satoshi-Regular, sans-serif",
+    fontFamily: "Mulish-Extralight, sans-serif",
   },
 });

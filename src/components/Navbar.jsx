@@ -150,10 +150,11 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
               onClick={() => setMobileOpen(false)}
             >
               <ListItemText
-                primary="Home"
-                sx={{ color: "primary.title" }}
+                primary="HOME"
+                sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
                 }}
               />
             </ListItem>
@@ -165,24 +166,26 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
               }}
             >
               <ListItemText
-                primary="Projects"
-                sx={{ color: "primary.title" }}
+                primary="PROJECTS"
+                sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
                 }}
               />
             </ListItem>
             <ListItem
               button
               component={Link}
-              to="/contact"
+              to="/contact#aboutme"
               onClick={() => setMobileOpen(false)}
             >
               <ListItemText
-                primary="Contact"
-                sx={{ color: "primary.title" }}
+                primary="CONTACT"
+                sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)"
                 }}
               />
             </ListItem>
@@ -239,7 +242,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         <Button
           color="inherit"
           component={Link}
-          to="/contact"
+          to="/contact#aboutme"
           sx={{
             display: { xs: "none", sm: "inline-block" },
             // fontFamily: "TheSeasons-Bold, serif",

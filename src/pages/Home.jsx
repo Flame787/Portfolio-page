@@ -33,7 +33,7 @@ export default function Home({ darkMode }) {
         Hi, I´m{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
           Marina
-        </Box>,
+        </Box>
       </Typography>
       <Typography
         sx={{
@@ -94,7 +94,7 @@ export default function Home({ darkMode }) {
             src={darkMode ? "/732.png" : "/730.png"}
             alt="code"
             style={{
-              width: "114%",
+              width: "116%",
               // maxWidth: "530px",
               borderRadius: "16px",
               display: "inline-block",
@@ -116,6 +116,8 @@ export default function Home({ darkMode }) {
             ml: 6,
             mr: 6,
             // border: "1px solid #4CC9FE",
+            // backgroundColor: darkMode ? "rgba(1, 39, 86, 0.24)" : "rgba(237, 250, 254, 0.6)" ,
+            backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
             borderRadius: 4,
             border: "1px solid transparent",
             "&:hover": {
@@ -133,13 +135,13 @@ export default function Home({ darkMode }) {
               // fontFamily: "Lato-Regular, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
-              textAlign: "justify"
+              textAlign: "justify",
               // letterSpacing: "0.01em",
               // fontSize: "0.875rem"
             }}
           >
-            My programming journey began three years ago, as I was working on early
-            projects, which led me to explore and enjoy front-end development.
+            My programming journey began three years ago, and I quickly became
+            deeply interested in front-end development.
           </Typography>
           <Typography
             color="text.secondary"
@@ -148,7 +150,7 @@ export default function Home({ darkMode }) {
               // fontFamily: "Lato-Light, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
-              textAlign: "justify"
+              textAlign: "justify",
             }}
           >
             I'm enthusiastic about learning, solving problems, and creating
@@ -161,7 +163,7 @@ export default function Home({ darkMode }) {
               // fontFamily: "Lato-Light, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
-              textAlign: "justify"
+              textAlign: "justify",
               // letterSpacing: "0.03em",
             }}
           >
@@ -175,7 +177,7 @@ export default function Home({ darkMode }) {
               // fontFamily: "Lato-Light, sans-serif",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1rem",
-              textAlign: "justify"
+              textAlign: "justify",
             }}
           >
             I also apply modern libraries like React Router, Redux, Material-UI
@@ -190,7 +192,7 @@ export default function Home({ darkMode }) {
               fontFamily: "Mulish-Extralight, sans-serif",
               // fontSize: "1.03rem",
               fontSize: "1rem",
-              textAlign: "justify"
+              textAlign: "justify",
             }}
           >
             My goal is to build scalable, modern front-end apps by following
@@ -201,7 +203,7 @@ export default function Home({ darkMode }) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              mt: 2,
+              mt: 3,
               flexWrap: "wrap",
               gap: 2,
             }}
@@ -221,7 +223,7 @@ export default function Home({ darkMode }) {
                 // fontFamily: "Satoshi-Regular, sans-serif",
                 fontSize: "1rem",
                 textTransform: "none",
-                //  fontWeight: "bold", 
+                //  fontWeight: "bold",
               }}
             >
               About me
@@ -244,7 +246,6 @@ export default function Home({ darkMode }) {
                 fontSize: "1rem",
                 textTransform: "none",
                 //  fontWeight: "bold",
-                
               }}
             >
               Contact
@@ -265,7 +266,6 @@ export default function Home({ darkMode }) {
                 fontSize: "1rem",
                 textTransform: "none",
                 // fontWeight: "bold",
-                
               }}
               href="https://github.com/Flame787"
               target="_blank"

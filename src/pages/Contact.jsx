@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Grid, Link } from "@mui/material";
+import { Container, Typography, Box, Grid } from "@mui/material";
 import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
 import { useEffect } from "react";
@@ -31,15 +31,15 @@ export default function Contact({ darkMode }) {
   return (
     <>
       <Container id="about">
-        <Typography
+        <Typography id="aboutme"
           variant="h4"
-          fontFamily={"Kenfolg Serif"}
-          sx={{ mt: 6, mb: 4, textAlign: "center" }}
+          gutterBottom
+          sx={{ mt: 6, mb: 4, textAlign: "center", color: "primary.title" }}
+          fontFamily={"TheSeasons-Regular, serif"}
         >
           About me
         </Typography>
         <Grid
-          id="about-me"
           sx={{
             mt: 2,
             mb: 2,
@@ -67,13 +67,10 @@ export default function Contact({ darkMode }) {
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "1rem",
                 textAlign: "justify",
-                fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
               }}
             >
-              My programming journey began three years ago, as I was working on
-              early projects, which led me to explore and enjoy front-end
-              development.
+              My programming journey began three years ago, and I quickly became
+              deeply interested in front-end development.
             </CustomTypography>
             <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
               I'm enthusiastic about learning, solving problems, and creating
@@ -94,15 +91,21 @@ export default function Contact({ darkMode }) {
             </CustomTypography>
           </Box>
         </Grid>
-        <Typography
+        {/* <Typography
           variant="h5"
           fontFamily={"Kenfolg Serif"}
           sx={{ mt: 8, mb: 4, textAlign: "center", color: "primary.title" }}
+        > */}
+        <Typography
+          variant="h5"
+          gutterBottom
+          sx={{ mt: 6, mb: 4, textAlign: "center" }}
+          fontFamily={"TheSeasons-Regular, serif"}
         >
           Technologies
         </Typography>
         <Box
-          id="projects"
+          id="technologies"
           sx={{
             mt: 2,
             mb: 2,
@@ -136,15 +139,21 @@ export default function Contact({ darkMode }) {
           <button className="round">Visual Studio Code</button>
         </Box>
 
-        <Typography
+        {/* <Typography
           variant="h5"
           fontFamily={"Kenfolg Serif"}
           sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
+        > */}
+        <Typography
+          variant="h5"
+          gutterBottom
+          sx={{ mt: 6, mb: 4, textAlign: "center" }}
+          fontFamily={"TheSeasons-Regular, serif"}
         >
           Skills
         </Typography>
         <Box
-          id="projects"
+          id="skills"
           sx={{
             mt: 2,
             mb: 2,
@@ -165,10 +174,16 @@ export default function Contact({ darkMode }) {
           <button className="round">Organisation skills</button>
         </Box>
 
-        <Typography
+        {/* <Typography
           variant="h5"
           fontFamily={"Kenfolg Serif"}
           sx={{ mt: 8, mb: 2, textAlign: "center", color: "primary.title" }}
+        > */}
+        <Typography
+          variant="h5"
+          gutterBottom
+          sx={{ mt: 6, mb: 4, textAlign: "center" }}
+          fontFamily={"TheSeasons-Regular, serif"}
         >
           My GitHub Activity
         </Typography>
@@ -188,13 +203,18 @@ export default function Contact({ darkMode }) {
           <CustomButton
             variant="contained"
             color="primary"
-            size="large"
-            sx={{ fontFamily: "Kenfolg Serif" }}
+            sx={{
+              fontSize: "1rem",
+              textTransform: "none",
+              fontFamily: "TheSeasons-Regular, serif",
+              letterSpacing: "0.07em",
+            }}
             href="https://github.com/Flame787"
             target="_blank"
           >
             Github
           </CustomButton>
+          
         </Box>
         <Box id="contactme">
           <ContactForm darkMode={darkMode} />

@@ -125,7 +125,7 @@ html {
 .round {
   border: 1px solid;
   border-radius: 4px;
-  padding: 7px 10px;
+  padding: 5px 10px;
   /* color: rgba(35, 142, 192, 0.88); */
   color: rgba(67, 172, 220, 0.88);
   background-color: rgba(204, 229, 240, 0.075);
@@ -133,6 +133,7 @@ html {
   font-family: "Satoshi-Regular", sans-serif;
   font-family: "Lato-Light", sans-serif;
   font-family: "Mulish-Extralight", sans-serif;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 

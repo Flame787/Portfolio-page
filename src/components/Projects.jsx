@@ -191,7 +191,7 @@ export default function Projects() {
                 <button className="round">Scaledrone Websocket</button>
                 <button className="round">external API</button>
               </CustomTypography>
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
                   color="primary"
@@ -205,7 +205,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
@@ -226,7 +226,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -330,7 +330,7 @@ export default function Projects() {
                 <button className="round">external API</button>
                 <button className="round">Express.js</button>
               </CustomTypography>
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
                   color="primary"
@@ -344,7 +344,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
@@ -365,7 +365,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -483,7 +483,7 @@ export default function Projects() {
             </CardMedia>
             <CardContent>
               <CustomTypography>
-                A fan-made landing page dedicated to J.R.R. Tolkien’s legacy,
+                A fan-made landing page dedicated to J. R. R. Tolkien’s legacy,
                 featuring biographical information, his published works,
                 illustrations and external resources.
               </CustomTypography>
@@ -503,7 +503,7 @@ export default function Projects() {
                 <button className="round">external API</button>
               </CustomTypography>
 
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
                   color="primary"
@@ -517,7 +517,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
@@ -538,7 +538,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                 >
                   Live Demo
@@ -614,7 +614,7 @@ export default function Projects() {
                 <button className="round">EmailJS</button>
               </CustomTypography>
 
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
                   color="primary"
@@ -628,7 +628,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
@@ -649,7 +649,7 @@ export default function Projects() {
                     textTransform: "none",
                     // fontFamily: "Marcellus-Regular, serif",
                     fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+                    letterSpacing: "0.07em",
                   }}
                 >
                   Home
@@ -678,7 +678,7 @@ export default function Projects() {
             textTransform: "none",
             // fontFamily: "Marcellus-Regular, serif",
             fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
+            letterSpacing: "0.07em",
           }}
         >
           Contact Me

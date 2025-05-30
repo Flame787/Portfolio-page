@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { TextField, Button, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
 
 export default function ContactForm({ darkMode }) {
-
-
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
   const [captchaToken, setCaptchaToken] = useState(null);
@@ -57,18 +55,23 @@ export default function ContactForm({ darkMode }) {
         mb: 6,
         p: 4,
         borderRadius: 4,
+
         border: "1px solid transparent",
-              "&:hover": {
-                border: "1.3px solid rgba(76, 201, 254, 0.4)",
-              },
+        "&:hover": {
+          border: "1.3px solid rgba(76, 201, 254, 0.4)",
+        },
         boxShadow:
           "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
       }}
     >
-      <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}>
-         
+      {/* <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}> */}
+      <Typography
+        variant="h4"
+        gutterBottom
+        sx={{ mt: 4, mb: 4, textAlign: "center" }}
+        fontFamily={"TheSeasons-Regular, serif"}
+      >
         Contact me:
-        
       </Typography>
       <CustomTextField
         label="Your Email Address"
@@ -76,22 +79,35 @@ export default function ContactForm({ darkMode }) {
         type="email"
         required
         darkMode={darkMode}
+        sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
       />
-      <CustomTextField label="Name" name="from_name" darkMode={darkMode} />
-      <CustomTextField label="Subject" name="subject" darkMode={darkMode} />
+      <CustomTextField
+        label="Name"
+        name="from_name"
+        darkMode={darkMode}
+        sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
+      />
+      <CustomTextField
+        label="Subject"
+        name="subject"
+        darkMode={darkMode}
+        sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
+      />
       <CustomTextField
         label="Message"
         name="message"
         rows={5}
         required
         darkMode={darkMode}
+        sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
       />
 
       <Box
         sx={{
           mt: 2,
           mb: 2,
-          fontFamily: "Kenfolg Serif",
+          // fontFamily: "Kenfolg Serif",
+          fontFamily: "Mulish-Extralight, sans-serif",
           display: "flex",
           justifyContent: "center",
         }}
@@ -107,14 +123,18 @@ export default function ContactForm({ darkMode }) {
         sx={{
           mt: 4,
           mb: 3,
-          fontFamily: "Kenfolg Serif",
+
+          fontFamily: "TheSeasons-Regular, serif",
+          letterSpacing: "0.07em",
+          fontSize: "1rem",
+          textTransform: "none",
           display: "block",
           mx: "auto",
         }}
         color="primary"
-        size="large"
+        // size="large"
       >
-        Send Email
+        Send
       </CustomButton>
     </Box>
   );

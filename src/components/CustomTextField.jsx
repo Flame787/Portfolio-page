@@ -1,6 +1,14 @@
 import { TextField } from "@mui/material";
 
-export default function CustomTextField({ label, name, type = "text", required = false, multiline = false, rows, darkMode }) {
+export default function CustomTextField({
+  label,
+  name,
+  type = "text",
+  required = false,
+  multiline = false,
+  rows,
+  darkMode,
+}) {
   return (
     <TextField
       fullWidth
@@ -12,25 +20,40 @@ export default function CustomTextField({ label, name, type = "text", required =
       multiline={multiline}
       rows={rows}
       sx={{
-        "& .MuiOutlinedInput-root": {
-          "& fieldset": {
-            borderColor: "primary.form"
-          },
-          "&:hover fieldset": {
-            borderColor: darkMode ? "rgba(89, 190, 236, 0.88)" : "rgba(52, 154, 214, 0.88)"
-          },
-          "&.Mui-focused fieldset": {
-            color: darkMode ? "rgba(89, 190, 236, 0.88)" : "rgba(52, 154, 214, 0.88)"
-          },
+        "& .MuiInputBase-input": {
+          fontFamily: "Mulish-Extralight, sans-serif",
         },
         "& .MuiInputLabel-root": {
-          color: "primary.form"
+          fontFamily: "Mulish-Extralight, sans-serif",
+          color: "primary.form",
         },
+        "& .MuiOutlinedInput-root": {
+          "& fieldset": {
+            borderColor: "primary.form",
+          },
+          "&:hover fieldset": {
+            borderColor: darkMode
+              ? "rgba(89, 190, 236, 0.88)"
+              : "rgba(52, 154, 214, 0.88)",
+          },
+          "&.Mui-focused fieldset": {
+            color: darkMode
+              ? "rgba(89, 190, 236, 0.88)"
+              : "rgba(52, 154, 214, 0.88)",
+          },
+        },
+        // "& .MuiInputLabel-root": {
+        //   color: "primary.form",
+        // },
         "&:hover .MuiInputLabel-root": {
-          color: darkMode ? "rgba(89, 190, 236, 0.88)" : "rgba(52, 154, 214, 0.88)"
+          color: darkMode
+            ? "rgba(89, 190, 236, 0.88)"
+            : "rgba(52, 154, 214, 0.88)",
         },
         "& .Mui-focused": {
-          color: darkMode ? "rgba(89, 190, 236, 0.88)" : "rgba(52, 154, 214, 0.88)"
+          color: darkMode
+            ? "rgba(89, 190, 236, 0.88)"
+            : "rgba(52, 154, 214, 0.88)",
         },
       }}
     />
