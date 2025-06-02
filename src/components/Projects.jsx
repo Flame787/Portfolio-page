@@ -70,9 +70,9 @@ export default function Projects() {
         gutterBottom
         sx={{
           mt: 10,
-          mb: 4,
+          mb: 6,
           textAlign: "center",
-          color: "primary.title",
+          // color: "primary.title",
           fontFamily: "TheSeasons-Regular, serif",
         }}
         // fontFamily={"Kenfolg Serif"}
@@ -80,7 +80,7 @@ export default function Projects() {
         Projects
       </Typography>
 
-      <Typography
+      {/* <Typography
         sx={{
           mb: 6,
           textAlign: "center",
@@ -89,7 +89,7 @@ export default function Projects() {
         }}
       >
         Here are some of my projects:
-      </Typography>
+      </Typography> */}
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>

@@ -35,7 +35,13 @@ export default function Contact({ darkMode }) {
           id="aboutme"
           variant="h4"
           gutterBottom
-          sx={{ mt: 6, mb: 4, textAlign: "center", color: "primary.title" }}
+          sx={{
+            mt: 6,
+            mb: 4,
+            // fontSize: "2.3rem",
+            textAlign: "center",
+            // color: "primary.title",
+          }}
           fontFamily={"TheSeasons-Regular, serif"}
         >
           About me
@@ -95,12 +101,12 @@ export default function Contact({ darkMode }) {
         </Grid>
 
         <Typography
-          variant="h5"
+          variant="h4"
           gutterBottom
           sx={{ mt: 6, mb: 4, textAlign: "center" }}
           fontFamily={"TheSeasons-Regular, serif"}
         >
-          Technologies
+          My Skills
         </Typography>
         <Box
           id="technologies"
@@ -126,7 +132,6 @@ export default function Contact({ darkMode }) {
           <button className="round">Material-UI</button>
           <button className="round">Express.js</button>
           <button className="round">EmailJS</button>
-          <button className="round">Scaledrone Websocket</button>
           <button className="round">Git</button>
           <button className="round">GitHub</button>
           <button className="round">Webpack</button>
@@ -135,16 +140,27 @@ export default function Contact({ darkMode }) {
           <button className="round">HTML</button>
           <button className="round">CSS</button>
           <button className="round">Visual Studio Code</button>
+
+          <button className="round">Agile</button>
+          <button className="round">Python - basic</button>
+          <button className="round">PC hardware</button>
+          <button className="round">MS Office</button>
+          <button className="round">Problem solving</button>
+          <button className="round">Organisation skills</button>
+          <button className="round">Mentoring</button>
+          <button className="round">English</button>
+          <button className="round">German</button>
         </Box>
 
-        <Typography
+        {/* <Typography
           variant="h5"
           gutterBottom
           sx={{ mt: 6, mb: 4, textAlign: "center" }}
           fontFamily={"TheSeasons-Regular, serif"}
         >
-          Skills
+          Other Skills
         </Typography>
+        
         <Box
           id="skills"
           sx={{
@@ -156,19 +172,11 @@ export default function Contact({ darkMode }) {
             gap: 1,
           }}
         >
-          <button className="round">Agile</button>
-          <button className="round">Problem solving</button>
-          <button className="round">PC hardware</button>
-          <button className="round">MS Office</button>
-          <button className="round">Python - basic</button>
-          <button className="round">English</button>
-          <button className="round">German</button>
-          <button className="round">Mentoring</button>
-          <button className="round">Organisation skills</button>
-        </Box>
+          
+        </Box> */}
 
         <Typography
-          variant="h5"
+          variant="h4"
           gutterBottom
           sx={{ mt: 6, mb: 4, textAlign: "center" }}
           fontFamily={"TheSeasons-Regular, serif"}

@@ -211,7 +211,7 @@ export default function Home({ darkMode }) {
 
               }}
             >
-              About me
+              My Skills
             </CustomButton>
 
             <CustomButton
