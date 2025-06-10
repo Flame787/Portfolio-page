@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Box,
   Typography,
@@ -7,6 +8,7 @@ import {
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -14,6 +16,20 @@ import CustomButton from "./CustomButton";
 import CustomTypography from "./CustomTypography";
 
 export default function Projects() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#home") {
+      const el = document.getElementById("home");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -64,7 +80,7 @@ export default function Projects() {
   };
 
   return (
-    <Box id="projects" sx={{ mt: 6 }}>
+    <Box id="projects" sx={{ mt: 6, scrollMarginTop: "100px" }}>
       <Typography
         variant="h4"
         gutterBottom
@@ -191,11 +207,10 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
-                  href="https://github.com/Flame787/Chat-app-React"
-                  target="_blank"
                 >
-                  GitHub
+                  Live page
                 </CustomButton>
+
                 <CustomButton
                   variant="contained"
                   color="primary"
@@ -206,8 +221,10 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
+                  href="https://github.com/Flame787/Chat-app-React"
+                  target="_blank"
                 >
-                  Live Demo
+                  GitHub
                 </CustomButton>
               </Box>
             </CardContent>
@@ -316,10 +333,8 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
-                  href="https://github.com/Flame787/Music-app-Spotify-API"
-                  target="_blank"
                 >
-                  GitHub
+                  Live page
                 </CustomButton>
                 <CustomButton
                   variant="contained"
@@ -332,8 +347,10 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
+                  href="https://github.com/Flame787/Music-app-Spotify-API"
+                  target="_blank"
                 >
-                  Live Demo
+                  GitHub
                 </CustomButton>
               </Box>
             </CardContent>
@@ -476,10 +493,8 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
-                  href="https://github.com/Flame787/Tolkien"
-                  target="_blank"
                 >
-                  GitHub
+                  Live page
                 </CustomButton>
                 <CustomButton
                   variant="contained"
@@ -492,8 +507,10 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
+                  href="https://github.com/Flame787/Tolkien"
+                  target="_blank"
                 >
-                  Live Demo
+                  GitHub
                 </CustomButton>
               </Box>
             </CardContent>
@@ -565,6 +582,8 @@ export default function Projects() {
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
+                  component={Link}
+                  to="#home"
                   variant="contained"
                   color="primary"
                   sx={{
@@ -574,10 +593,8 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
-                  href="https://github.com/Flame787/Portfolio-page"
-                  target="_blank"
                 >
-                  GitHub
+                  Home
                 </CustomButton>
                 <CustomButton
                   variant="contained"
@@ -590,8 +607,10 @@ export default function Projects() {
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
+                  href="https://github.com/Flame787/Portfolio-page"
+                  target="_blank"
                 >
-                  Home
+                  GitHub
                 </CustomButton>
               </Box>
             </CardContent>

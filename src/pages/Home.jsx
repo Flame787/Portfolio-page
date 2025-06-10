@@ -21,7 +21,7 @@ export default function Home({ darkMode }) {
   }, [location]);
 
   return (
-    <Container id="home">
+    <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
         variant="h4"
         gutterBottom
@@ -49,7 +49,7 @@ export default function Home({ darkMode }) {
       <Typography
         sx={{
           mt: 1,
-          mb: 4,
+          mb: 6,
           textAlign: "center",
           fontFamily: "Mulish-Extralight, sans-serif",
           fontSize: "1.2rem",
