@@ -1,4 +1,5 @@
 import { Box, Container, Typography, Link, Grid } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 // import Grid from '@mui/material/Grid';
 import { GitHub, LinkedIn, Email } from "@mui/icons-material";
 
@@ -30,15 +31,11 @@ export default function Footer({ darkMode }) {
             alignItems="center"
           >
             <img
-              // src={darkMode ? "/logo3.png" : "/logo7.png"}
-              // src="/logo3.png"
               src="/Marina-transparent.png"
               alt="logo"
               style={{
                 width: "120px",
-                // minWidth: "60px",
                 height: "auto",
-                // borderRadius: "16px",
                 borderRadius: "4px",
                 display: "inline-block",
                 margin: "0 4px",
@@ -56,6 +53,7 @@ export default function Footer({ darkMode }) {
             <Link
               href="https://github.com/Flame787"
               target="_blank"
+              title="GitHub"
               sx={{ color: "white", mx: 2 }}
             >
               <GitHub fontSize="large" />
@@ -63,12 +61,17 @@ export default function Footer({ darkMode }) {
             <Link
               href="https://www.linkedin.com/in/marina-brezovic-210b583b"
               target="_blank"
+              title="LinkedIn"
               sx={{ color: "white", mx: 2 }}
             >
               <LinkedIn fontSize="large" />
             </Link>
             <Link
-              href="mailto:mbrezovic77@gmail.com"
+              // href="mailto:mbrezovic77@gmail.com"
+              // component={Link}
+              component={RouterLink}
+              to="/contact#contactme"
+              title="Email"
               sx={{ color: "white", mx: 2 }}
             >
               <Email fontSize="large" />

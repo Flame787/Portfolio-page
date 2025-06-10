@@ -215,22 +215,6 @@ export default function Home({ darkMode }) {
             </CustomButton>
 
             <CustomButton
-              component={Link}
-              to="/contact#contactme"
-              variant="contained"
-              color="primary"
-              size="large"
-              sx={{
-                fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.07em",
-                fontSize: "1rem",
-                textTransform: "none",
-              }}
-            >
-              Contact
-            </CustomButton>
-
-            <CustomButton
               variant="contained"
               color="primary"
               size="large"
@@ -245,6 +229,23 @@ export default function Home({ darkMode }) {
             >
               GitHub
             </CustomButton>
+
+            <CustomButton
+              component={Link}
+              to="/contact#contactme"
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.07em",
+                fontSize: "1rem",
+                textTransform: "none",
+              }}
+            >
+              Contact
+            </CustomButton>
+            
           </Box>
         </Grid>
       </Grid>

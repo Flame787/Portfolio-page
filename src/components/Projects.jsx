@@ -183,8 +183,8 @@ export default function Projects() {
               </CustomTypography>
               <CustomTypography>
                 After entering a username and selecting an avatar, users can
-                choose from themed chat rooms where they can interact with
-                currently active participants.
+                choose from 7 themed chat rooms where they can interact with
+                other currently active participants.
               </CustomTypography>
               <CustomTypography>
                 The app supports: browsing chat history, using emojis (via
@@ -312,7 +312,7 @@ export default function Projects() {
                 Express.js is used on the backend for Spotify authentication.
                 The app also features 16 different visual themes (styled
                 entirely with SCSS), letting users personalize their experience
-                with ease.
+                with one click.
               </CustomTypography>
 
               <CustomTypography>
@@ -388,7 +388,7 @@ export default function Projects() {
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
-              Tolkien info page with OpenLibrary API
+              Tolkien Info Page with OpenLibrary API
             </Typography>
             <CardMedia>
               <Box
@@ -464,16 +464,15 @@ export default function Projects() {
               <CustomTypography>
                 A fan-made landing page dedicated to J. R. R. Tolkien’s legacy,
                 featuring biographical information, his published works,
-                illustrations and external resources.
+                book illustrations and external resources.
               </CustomTypography>
               <CustomTypography>
                 One of my earlier projects, recently refreshed with improved
                 layout and updated code.
               </CustomTypography>
               <CustomTypography>
-                The application integrates with the Open Library API to fetch
-                and display books authored by Tolkien, allowing users to explore
-                and sort them by current ratings.
+                The application integrates with the Open Library API to fetch info about
+                books authored by Tolkien, and sorts them by current ratings on Open Library.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
@@ -547,7 +546,7 @@ export default function Projects() {
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
-              Portfolio page
+              Developer Portfolio
             </Typography>
             <CardMedia
               component="img"
@@ -557,8 +556,8 @@ export default function Projects() {
             />
             <CardContent>
               <CustomTypography>
-                Portfolio Page is a personal showcase built with React, designed
-                to present web development projects in a clean, responsive, and
+                This Developer Portfolio is a personal showcase built with React, designed
+                to present my web development projects in a clean, responsive, and
                 user-friendly layout.
               </CustomTypography>
               <CustomTypography>
@@ -567,8 +566,8 @@ export default function Projects() {
                 users to get in touch directly via a built-in contact form.
               </CustomTypography>
               <CustomTypography>
-                The app also features theme switching, allowing users to
-                personalize the visual experience. This single-page application
+                The app also supports theme switching, allowing users to
+                personalize the visual experience by choosing a black or white theme. This single-page application
                 is fully responsive and optimized for accessibility and
                 performance across devices.
               </CustomTypography>
@@ -619,7 +618,7 @@ export default function Projects() {
       </Grid>
 
       {/* Button to the Contact page */}
-      <Box sx={{ mt: 3, mb: 4, textAlign: "center" }}>
+      {/* <Box sx={{ mt: 3, mb: 4, textAlign: "center" }}>
         <CustomButton
           component={Link}
           to="/contact"
@@ -636,7 +635,7 @@ export default function Projects() {
         >
           Contact Me
         </CustomButton>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

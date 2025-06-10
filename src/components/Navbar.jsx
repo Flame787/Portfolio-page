@@ -178,7 +178,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
               onClick={() => setMobileOpen(false)}
             >
               <ListItemText
-                primary="CONTACT"
+                primary="ABOUT"
                 sx={{ color: "primary.title3" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
@@ -238,7 +238,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             },
           }}
         >
-          Contact
+          About
         </Button>
         {darkMode ? (
           <Brightness2Icon sx={{ mx: 1 }} />
