@@ -111,10 +111,11 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           sx={{
             ml: 3.5,
             flexGrow: 1,
-            fontSize: scrolled ? {xs: "0.9em", sm: "1rem", md: "1.1rem", lg: "1.25rem"} : {xs: "1em", sm: "1.1rem", md: "1.25rem", lg: "1.35rem"},
+            fontSize: scrolled
+              ? { xs: "0.9em", sm: "1rem", md: "1.1rem", lg: "1.25rem" }
+              : { xs: "1em", sm: "1.1rem", md: "1.25rem", lg: "1.35rem" },
             transition: "font-size 0.3s ease",
             letterSpacing: "0.03em",
-           
           }}
         >
           Developer Portfolio
@@ -143,7 +144,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             <ListItem
               button
               component={Link}
-              to="/"
+              to="/#home"
               onClick={() => setMobileOpen(false)}
             >
               <ListItemText
@@ -157,6 +158,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             </ListItem>
             <ListItem
               button
+              component={Link}
+              to="/#projects"
               onClick={() => {
                 handleProjectsClick();
                 setMobileOpen(false);
@@ -197,7 +200,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           sx={{
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
-            fontSize: {xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem"},
+            fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -214,7 +217,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           sx={{
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
-            fontSize: {xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem"},
+            fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
             borderBottom: "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
@@ -230,7 +233,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           sx={{
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
-            fontSize: {xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem"},
+            fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
 
             borderBottom: "1px solid transparent",
             "&:hover": {
