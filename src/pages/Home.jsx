@@ -37,7 +37,12 @@ export default function Home({ darkMode }) {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 8, mb: 4, textAlign: "center" }}
+        sx={{ mt: 8, mb: 4, textAlign: "center", fontSize: {
+            xs: "1.8rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2.2rem",
+          }, }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         {/* gutterBottom - adds margin under h3-element */}

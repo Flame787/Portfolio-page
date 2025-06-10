@@ -48,7 +48,6 @@ export default function ContactForm({ darkMode }) {
     <Box
       component="form"
       onSubmit={sendEmail}
-      
       sx={{
         backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
         maxWidth: 500,
@@ -68,9 +67,19 @@ export default function ContactForm({ darkMode }) {
     >
       {/* <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}> */}
       <Typography
-        variant="h4"
+        // variant="h4"
         gutterBottom
-        sx={{ mt: 4, mb: 4, textAlign: "center" }}
+        sx={{
+          mt: 4,
+          mb: 4,
+          textAlign: "center",
+          fontSize: {
+            xs: "1.6rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2rem",
+          },
+        }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         Contact me:

@@ -90,6 +90,12 @@ export default function Projects() {
           textAlign: "center",
           // color: "primary.title",
           fontFamily: "TheSeasons-Regular, serif",
+          fontSize: {
+            xs: "1.8rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2rem",
+          },
         }}
         // fontFamily={"Kenfolg Serif"}
       >

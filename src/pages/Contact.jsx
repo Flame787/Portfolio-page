@@ -1,21 +1,78 @@
 import { Container, Typography, Box, Grid } from "@mui/material";
 import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import CustomTypography from "../components/CustomTypography";
 
-export default function Contact({ darkMode }) {
-  const location = useLocation();
+const skills = [
+  "React",
+  "JavaScript",
+  "external APIs",
+  "Scaledrone Websocket",
+  "React Router",
+  "Redux",
+  "Bootstrap",
+  "SCSS",
+  "Material-UI",
+  "Express.js",
+  "EmailJS",
+  "Git",
+  "GitHub",
+  "Webpack",
+  "Vite",
+  "Jira",
+  "HTML",
+  "CSS",
+  "Visual Studio Code",
+  "Agile",
+  "Python - basic",
+  "PC hardware",
+  "MS Office",
+  "Problem solving",
+  "Organisation skills",
+  "Mentoring",
+  "English",
+  "German",
+];
 
-  // useEffect(() => {
-  //   if (location.hash === "#about") {
-  //     const aboutSection = document.getElementById("about");
-  //     if (aboutSection) {
-  //       aboutSection.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }
-  // }, [location]);
+export default function Contact({ darkMode }) {
+  //
+  const [visibleIndexes, setVisibleIndexes] = useState([]);
+  const [triggered, setTriggered] = useState(false);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !triggered) {
+          setTriggered(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (boxRef.current) {
+      observer.observe(boxRef.current);
+    }
+
+    return () => {
+      if (boxRef.current) observer.unobserve(boxRef.current);
+    };
+  }, [triggered]);
+
+  useEffect(() => {
+    if (triggered) {
+      skills.forEach((_, i) => {
+        setTimeout(() => {
+          setVisibleIndexes((prev) => [...prev, i]);
+        }, i * 150);
+      });
+    }
+  }, [triggered]);
+
+  // enable scrolling:
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
@@ -32,7 +89,7 @@ export default function Contact({ darkMode }) {
     <Container id="about" sx={{ scrollMarginTop: "100px" }}>
       <Typography
         id="aboutme"
-        variant="h4"
+        // variant="h4"
         gutterBottom
         sx={{
           scrollMarginTop: "100px",
@@ -41,6 +98,12 @@ export default function Contact({ darkMode }) {
           // fontSize: "2.3rem",
           textAlign: "center",
           // color: "primary.title",
+          fontSize: {
+            xs: "1.6rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2rem",
+          },
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
@@ -101,26 +164,48 @@ export default function Contact({ darkMode }) {
       </Grid>
 
       <Typography
-        variant="h4"
+        // variant="h4"
         gutterBottom
-        sx={{ mt: 6, mb: 4, textAlign: "center"}}
+        sx={{
+          mt: 6,
+          mb: 4,
+          textAlign: "center",
+          fontSize: {
+            xs: "1.6rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2rem",
+          },
+        }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         My Skills
       </Typography>
       <Box
         id="skills"
+        ref={boxRef}
         sx={{
           mt: 2,
-          mb: 2,
+          mb: 10,
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
           gap: 1,
-          scrollMarginTop: "170px" 
+          scrollMarginTop: "170px",
         }}
       >
-        <button className="round" sx={{ color: "primary.form" }}>
+        {skills.map((skill, i) => (
+          <button
+            key={skill}
+            className={`round skill-button ${
+              visibleIndexes.includes(i) ? "fade-in" : ""
+            }`}
+          >
+            {skill}
+          </button>
+        ))}
+
+        {/* <button className="round" sx={{ color: "primary.form" }}>
           React
         </button>
         <button className="round">JavaScript</button>
@@ -150,7 +235,7 @@ export default function Contact({ darkMode }) {
         <button className="round">Organisation skills</button>
         <button className="round">Mentoring</button>
         <button className="round">English</button>
-        <button className="round">German</button>
+        <button className="round">German</button> */}
       </Box>
 
       {/* <Typography
@@ -177,9 +262,19 @@ export default function Contact({ darkMode }) {
         </Box> */}
 
       <Typography
-        variant="h4"
+        // variant="h4"
         gutterBottom
-        sx={{ mt: 6, mb: 4, textAlign: "center" }}
+        sx={{
+          mt: 6,
+          mb: 4,
+          textAlign: "center",
+          fontSize: {
+            xs: "1.6rem",
+            sm: "1.8rem",
+            md: "2rem",
+            lg: "2rem",
+          },
+        }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         My GitHub Activity
@@ -196,7 +291,7 @@ export default function Contact({ darkMode }) {
         ></img>
       </Box>
 
-      <Box sx={{ mt: 3, mb: 8, textAlign: "center" }}>
+      <Box sx={{ mt: 3, mb: 10, textAlign: "center" }}>
         <CustomButton
           variant="contained"
           color="primary"

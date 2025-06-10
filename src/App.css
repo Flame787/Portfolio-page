@@ -152,6 +152,17 @@ html {
   width: 6%;
 }
 
+.skill-button {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.skill-button.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (min-width: 2100px) {
   .navbar-wavy::before {
     background-size: 100% calc(2vw + 74px);
