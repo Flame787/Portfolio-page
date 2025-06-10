@@ -103,13 +103,13 @@ export default function Contact({ darkMode }) {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 6, mb: 4, textAlign: "center" }}
+        sx={{ mt: 6, mb: 4, textAlign: "center"}}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         My Skills
       </Typography>
       <Box
-        id="technologies"
+        id="skills"
         sx={{
           mt: 2,
           mb: 2,
@@ -117,6 +117,7 @@ export default function Contact({ darkMode }) {
           justifyContent: "center",
           flexWrap: "wrap",
           gap: 1,
+          scrollMarginTop: "170px" 
         }}
       >
         <button className="round" sx={{ color: "primary.form" }}>
