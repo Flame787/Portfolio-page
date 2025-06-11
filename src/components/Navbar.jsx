@@ -57,6 +57,17 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
     }
   }, [location]);
 
+   useEffect(() => {
+    if (location.hash === "#home") {
+      const el = document.getElementById("home");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const handleHomeClick = () => {
     if (window.location.pathname === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -67,6 +78,42 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
       }, 100);
     }
   };
+
+  // current page stays selected in Nabvar:
+
+  // const isHome = location.pathname === "/";
+
+  const isProjects = location.pathname === "/" && location.hash === "#projects";
+
+  const isAbout =
+    (location.pathname === "/contact" && location.hash === "#aboutme") ||
+    location.hash === "#contactme" ||
+    location.hash === "#skills";
+
+//  const isHome =
+//   (location.pathname === "/") ||
+//     ( location.hash === "#home") ||
+//   (!isProjects &&
+//   !isAbout);
+
+  const isHome =
+  (location.pathname === "/" && (location.hash === "" || location.hash === "#home")) 
+
+  // const isHome =
+  //   (location.pathname === "/" && location.hash === "") || (location.hash === "#home") ||
+  //   (!isProjects && !isAbout);
+  // const isHome =
+  //   (location.pathname === "/" &&
+  //     (location.hash === "" || location.hash === "#home")) ||
+  //   (!isProjects && !isAbout && location.pathname === "/");
+
+  // const isHome =
+  // (location.pathname === "/" && location.hash === "") ||
+  // // (location.pathname === "/" && location.hash === "#home") ||
+  // (location.pathname === "/" && !isProjects && !isAbout);
+
+  console.log("pathname:", location.pathname);
+  console.log("hash:", location.hash);
 
   return (
     // <AppBar position="static" color="primary">
@@ -201,7 +248,10 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
-            borderBottom: "1px solid transparent",
+            borderBottom:
+              isHome 
+                ? "3px solid #4cc9f0"
+                : "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
             },
@@ -218,7 +268,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
-            borderBottom: "1px solid transparent",
+            borderBottom: isProjects
+              ? "3px solid #4cc9f0"
+              : "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
             },
@@ -235,7 +287,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
 
-            borderBottom: "1px solid transparent",
+            borderBottom: isAbout
+              ? "3px solid #4cc9f0"
+              : "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
             },
