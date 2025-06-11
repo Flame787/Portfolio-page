@@ -14,8 +14,8 @@ export default function Home({ darkMode }) {
   // setting fade-in-state to true (only once, when component renders):
   useEffect(() => {
     setTimeout(() => setShowsubTitle(true), 200);
-    setTimeout(() => setShowImage(true), 600);
-    setTimeout(() => setShowText(true), 1000);
+    setTimeout(() => setShowImage(true), 500);
+    setTimeout(() => setShowText(true), 800);
   }, []);
 
   // enable scrolling to the Projects-section from other pages, like Contact:

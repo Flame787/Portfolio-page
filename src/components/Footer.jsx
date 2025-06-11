@@ -14,10 +14,18 @@ export default function Footer({ darkMode }) {
           {/* Left Section: Info */}
           {/* <Grid xs={12} sm={6}> */}
           <Grid size={{ xs: 12, sm: 4 }}>
-            <Typography variant="body2" align="left" sx={{ mt: 2, fontFamily: "Mulish-Extralight, sans-serif" }}>
+            <Typography
+              variant="body2"
+              align="left"
+              sx={{ mt: 2, fontFamily: "Mulish-Extralight, sans-serif" }}
+            >
               © {new Date().getFullYear()} Marina Brezovic. All Rights Reserved.
             </Typography>
-            <Typography variant="body2" align="left" sx={{ mt: 1, fontFamily: "Mulish-Extralight, sans-serif" }}>
+            <Typography
+              variant="body2"
+              align="left"
+              sx={{ mt: 1, fontFamily: "Mulish-Extralight, sans-serif" }}
+            >
               This page was built with React and MUI.
             </Typography>
           </Grid>
@@ -56,7 +64,7 @@ export default function Footer({ darkMode }) {
               title="GitHub"
               sx={{ color: "white", mx: 2 }}
             >
-              <GitHub fontSize="large" />
+              <GitHub fontSize="large" className="hovered" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/marina-brezovic-210b583b"
@@ -64,7 +72,7 @@ export default function Footer({ darkMode }) {
               title="LinkedIn"
               sx={{ color: "white", mx: 2 }}
             >
-              <LinkedIn fontSize="large" />
+              <LinkedIn fontSize="large" className="hovered" />
             </Link>
             <Link
               // href="mailto:mbrezovic77@gmail.com"
@@ -74,7 +82,7 @@ export default function Footer({ darkMode }) {
               title="Email"
               sx={{ color: "white", mx: 2 }}
             >
-              <Email fontSize="large" />
+              <Email fontSize="large" className="hovered" />
             </Link>
           </Grid>
         </Grid>

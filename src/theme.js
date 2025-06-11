@@ -16,6 +16,7 @@ export const darkTheme = createTheme({
       button: "rgba(19, 145, 203, 0.88)",
       button2: "rgba(16, 115, 161, 0.88)",
       form: "rgba(89, 190, 236, 0.88)",
+ 
     },
     background: {
       // default: "#121212",

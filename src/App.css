@@ -136,8 +136,12 @@ html {
   font-size: 0.9rem;
 }
 
-.round:hover {
+/* .round:hover {
   color: rgba(160, 221, 249, 0.88);
+} */
+
+.hovered:hover {
+  color: #61dafb;
 }
 
 .github-chart {
@@ -204,7 +208,6 @@ html {
     width: 8%;
   }
 }
-
 
 @media (max-width: 960px) {
   .my-logo {

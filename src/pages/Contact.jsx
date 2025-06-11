@@ -179,7 +179,7 @@ export default function Contact({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-        My Skills
+        My skills
       </Typography>
       <Box
         id="skills"
@@ -277,7 +277,7 @@ export default function Contact({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-        My GitHub Activity
+        My GitHub activity
       </Typography>
       <Box
         id="github-activity"
