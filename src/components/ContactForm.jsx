@@ -4,6 +4,8 @@ import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
+import SendIcon from '@mui/icons-material/Send';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function ContactForm({ darkMode }) {
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
@@ -82,7 +84,7 @@ export default function ContactForm({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-        Contact me:
+         Contact me:
       </Typography>
       <CustomTextField
         label="Your Email Address"
@@ -144,7 +146,7 @@ export default function ContactForm({ darkMode }) {
         color="primary"
         // size="large"
       >
-        Send
+        Send <SendIcon sx={{ ml: 0.5, fontSize: "0.8rem" }} />
       </CustomButton>
     </Box>
   );

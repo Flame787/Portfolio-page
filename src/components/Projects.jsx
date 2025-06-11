@@ -12,6 +12,7 @@ import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomButton from "./CustomButton";
 import CustomTypography from "./CustomTypography";
 
@@ -214,7 +215,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                   }}
                 >
-                  Live page
+                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
 
                 <CustomButton
@@ -230,7 +231,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
                 >
-                  GitHub
+                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -340,7 +341,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                   }}
                 >
-                  Live page
+                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
                 <CustomButton
                   variant="contained"
@@ -356,7 +357,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
                 >
-                  GitHub
+                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -499,7 +500,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                   }}
                 >
-                  Live page
+                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
                 <CustomButton
                   variant="contained"
@@ -515,7 +516,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
                 >
-                  GitHub
+                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -615,7 +616,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
                 >
-                  GitHub
+                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>

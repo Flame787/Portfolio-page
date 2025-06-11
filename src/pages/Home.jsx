@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import { Container, Typography, Grid, Box, Fade } from "@mui/material";
 import { Link } from "react-router-dom";
 import CustomButton from "../components/CustomButton";
+// import IconButton from "@mui/material/IconButton";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Projects from "../components/Projects";
 
 export default function Home({ darkMode }) {
@@ -37,12 +39,17 @@ export default function Home({ darkMode }) {
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ mt: 8, mb: 4, textAlign: "center", fontSize: {
+        sx={{
+          mt: 8,
+          mb: 4,
+          textAlign: "center",
+          fontSize: {
             xs: "1.8rem",
             sm: "1.8rem",
             md: "2rem",
             lg: "2.2rem",
-          }, }}
+          },
+        }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
         {/* gutterBottom - adds margin under h3-element */}
@@ -249,8 +256,9 @@ export default function Home({ darkMode }) {
                 }}
                 href="https://github.com/Flame787"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                GitHub
+                GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
               </CustomButton>
 
               <CustomButton

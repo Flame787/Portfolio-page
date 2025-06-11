@@ -3,6 +3,7 @@ import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomTypography from "../components/CustomTypography";
 
 const skills = [
@@ -304,7 +305,7 @@ export default function Contact({ darkMode }) {
           href="https://github.com/Flame787"
           target="_blank"
         >
-          Github
+          Github <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
         </CustomButton>
       </Box>
       <Box id="contactme">
