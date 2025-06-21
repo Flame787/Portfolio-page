@@ -486,15 +486,15 @@ export default function Projects() {
                 code.
               </CustomTypography>
               <CustomTypography>
-                The application integrates with the Open Library API to fetch
-                info about books authored by Tolkien, and sorts them according to their current
-                ratings on Open Library.
+                The app integrates with the Open Library API to fetch info about
+                books authored by Tolkien, and sorts books according to their
+                current ratings on Open Library.
               </CustomTypography>
               <CustomTypography>
-                This app allows users to vote for their favorite book, with
-                results stored locally in the browser. Voting results are
-                visually displayed using Chart.js, and users can also send
-                emails directly from the page via EmailJS.
+                It also allows users to vote for their favorite Tolkien's book, counting
+                the results (stored locally in the browser), and visually
+                displaying them with Chart.js. Users can also send emails
+                directly from the page via EmailJS.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
