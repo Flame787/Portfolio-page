@@ -18,6 +18,7 @@ const skills = [
   "Material-UI",
   "Express.js",
   "EmailJS",
+  "Chart.js",
   "Git",
   "GitHub",
   "Webpack",

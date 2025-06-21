@@ -17,7 +17,6 @@ import CustomButton from "./CustomButton";
 import CustomTypography from "./CustomTypography";
 
 export default function Projects() {
-
   const location = useLocation();
 
   useEffect(() => {
@@ -464,28 +463,46 @@ export default function Projects() {
                       borderRadius: 4,
                     }}
                   />
+                  <Box
+                    component="img"
+                    src="/Tolkien5.png"
+                    alt="Slide 5"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
                 </Slider>
               </Box>
             </CardMedia>
             <CardContent>
               <CustomTypography>
                 A fan-made landing page dedicated to J. R. R. Tolkien’s legacy,
-                featuring biographical information, his published works,
-                book illustrations and external resources.
+                featuring biographical information, his published works, book
+                illustrations and external resources. One of my earlier
+                projects, recently refreshed with improved layout and updated
+                code.
               </CustomTypography>
               <CustomTypography>
-                One of my earlier projects, recently refreshed with improved
-                layout and updated code.
+                The application integrates with the Open Library API to fetch
+                info about books authored by Tolkien, and sorts them according to their current
+                ratings on Open Library.
               </CustomTypography>
               <CustomTypography>
-                The application integrates with the Open Library API to fetch info about
-                books authored by Tolkien, and sorts them by current ratings on Open Library.
+                This app allows users to vote for their favorite book, with
+                results stored locally in the browser. Voting results are
+                visually displayed using Chart.js, and users can also send
+                emails directly from the page via EmailJS.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
                 <button className="round">JavaScript</button>
                 <button className="round">Bootstrap</button>
                 <button className="round">external API</button>
+                <button className="round">EmailJS</button>
+                <button className="round">Chart.js</button>
               </CustomTypography>
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
@@ -563,9 +580,9 @@ export default function Projects() {
             />
             <CardContent>
               <CustomTypography>
-                This Developer Portfolio is a personal showcase built with React, designed
-                to present my web development projects in a clean, responsive, and
-                user-friendly layout.
+                This Developer Portfolio is a personal showcase built with
+                React, designed to present my web development projects in a
+                clean, responsive, and user-friendly layout.
               </CustomTypography>
               <CustomTypography>
                 It uses React Router for seamless navigation, Material UI for
@@ -574,9 +591,9 @@ export default function Projects() {
               </CustomTypography>
               <CustomTypography>
                 The app also supports theme switching, allowing users to
-                personalize the visual experience by choosing a black or white theme. This single-page application
-                is fully responsive and optimized for accessibility and
-                performance across devices.
+                personalize the visual experience by choosing a black or white
+                theme. This single-page application is fully responsive and
+                optimized for accessibility and performance across devices.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
