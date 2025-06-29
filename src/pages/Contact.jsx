@@ -68,7 +68,7 @@ export default function Contact({ darkMode }) {
       skills.forEach((_, i) => {
         setTimeout(() => {
           setVisibleIndexes((prev) => [...prev, i]);
-        }, i * 150);
+        }, i * 100);
       });
     }
   }, [triggered]);
@@ -165,6 +165,29 @@ export default function Contact({ darkMode }) {
         </Box>
       </Grid>
 
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: 6,
+        }}
+      >
+        <Box
+          component="img"
+          // src={darkMode ? "/732.png" : "/730.png"}
+          // src="/Contact-me.png"
+          src={darkMode ? "/skills4.png" : "/skills-light.png"}
+          alt="code"
+          sx={{
+            width: "10%",
+            minWidth: "108px",
+            borderRadius: "6px",
+            // borderRadius: "270px",
+            boxShadow:
+              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+          }}
+        />
+      </Grid>
       <Typography
         // variant="h4"
         gutterBottom
@@ -183,6 +206,7 @@ export default function Contact({ darkMode }) {
       >
         My skills
       </Typography>
+
       <Box
         id="skills"
         ref={boxRef}

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Grid } from "@mui/material";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
-import SendIcon from '@mui/icons-material/Send';
-import EmailIcon from '@mui/icons-material/Email';
+import SendIcon from "@mui/icons-material/Send";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function ContactForm({ darkMode }) {
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
@@ -67,6 +67,30 @@ export default function ContactForm({ darkMode }) {
           "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
       }}
     >
+      <Grid
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: 2
+        }}
+      >
+        <Box
+          component="img"
+          // src={darkMode ? "/732.png" : "/730.png"}
+          // src="/Contact-me.png"
+          src={darkMode ? "/Contact-me-dark3.png" : "/Contact-me-light.png"}
+          alt="code"
+          sx={{
+            width: "25%",
+            minWidth: "108px",
+            borderRadius: "6px",
+            // borderRadius: "270px",
+            boxShadow:
+              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+          }}
+        />
+      </Grid>
+
       {/* <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}> */}
       <Typography
         // variant="h4"
@@ -84,8 +108,9 @@ export default function ContactForm({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-         Contact me:
+        Contact me:
       </Typography>
+
       <CustomTextField
         label="Your Email Address"
         name="from_email"
@@ -129,6 +154,7 @@ export default function ContactForm({ darkMode }) {
           onChange={handleCaptchaChange}
         />
       </Box>
+
       <CustomButton
         type="submit"
         variant="contained"
