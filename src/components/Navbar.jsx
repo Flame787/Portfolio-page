@@ -112,8 +112,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
   // // (location.pathname === "/" && location.hash === "#home") ||
   // (location.pathname === "/" && !isProjects && !isAbout);
 
-  console.log("pathname:", location.pathname);
-  console.log("hash:", location.hash);
+  // console.log("pathname:", location.pathname);
+  // console.log("hash:", location.hash);
 
   return (
     // <AppBar position="static" color="primary">

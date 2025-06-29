@@ -244,7 +244,7 @@ export default function Home({ darkMode }) {
                   textTransform: "none",
                 }}
               >
-                My Skills
+                My skills
               </CustomButton>
 
               <CustomButton

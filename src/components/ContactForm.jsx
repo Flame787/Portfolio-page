@@ -86,7 +86,7 @@ export default function ContactForm({ darkMode }) {
             borderRadius: "6px",
             // borderRadius: "270px",
             boxShadow:
-              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
           }}
         />
       </Grid>

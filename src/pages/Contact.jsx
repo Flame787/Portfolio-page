@@ -6,13 +6,13 @@ import { useLocation } from "react-router-dom";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomTypography from "../components/CustomTypography";
 
-const skills = [
+const mySkills = [
   "React",
   "JavaScript",
-  "external APIs",
-  "Scaledrone Websocket",
+  "API integrations",
   "React Router",
   "Redux",
+  "Scaledrone Websocket",
   "Bootstrap",
   "SCSS",
   "Material-UI",
@@ -27,6 +27,7 @@ const skills = [
   "HTML",
   "CSS",
   "Visual Studio Code",
+  "Canva",
   "Agile",
   "Python - basic",
   "PC hardware",
@@ -39,10 +40,14 @@ const skills = [
 ];
 
 export default function Contact({ darkMode }) {
-  //
+  //new - for tracking the state of skills:
+  const [skills, setSkills] = useState(mySkills);
+
   const [visibleIndexes, setVisibleIndexes] = useState([]);
   const [triggered, setTriggered] = useState(false);
   const boxRef = useRef(null);
+
+  const timeoutsRef = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,18 +65,57 @@ export default function Contact({ darkMode }) {
 
     return () => {
       if (boxRef.current) observer.unobserve(boxRef.current);
+      // clear timouts when component unmounts:
+      timeoutsRef.current.forEach(clearTimeout);
     };
   }, [triggered]);
 
+  // new - animation:
+  const runAnimation = () => {
+    setVisibleIndexes([]);
+    timeoutsRef.current.forEach(clearTimeout);
+    timeoutsRef.current = [];
+
+    skills.forEach((_, i) => {
+      const timeoutId = setTimeout(() => {
+        setVisibleIndexes((prev) => [...prev, i]);
+      }, i * 100);
+      timeoutsRef.current.push(timeoutId);
+    });
+  };
+
+  // useEffect(() => {
+  //   if (triggered) {
+  //     skills.forEach((_, i) => {
+  //       setTimeout(() => {
+  //         setVisibleIndexes((prev) => [...prev, i]);
+  //       }, i * 100);
+  //     });
+  //   }
+  // }, [triggered]);
+
+  // when triggered becomes true or skills change and triggered is true:
   useEffect(() => {
     if (triggered) {
-      skills.forEach((_, i) => {
-        setTimeout(() => {
-          setVisibleIndexes((prev) => [...prev, i]);
-        }, i * 100);
-      });
+      runAnimation();
     }
-  }, [triggered]);
+  }, [triggered, skills]);
+
+  // sort alfabetically - ascending and show animation if element is visible:
+  const sortAsc = () => {
+    const sorted = [...skills].sort((a, b) => a.localeCompare(b));
+    setSkills(sorted);
+  };
+
+  // sort alfabetically - descending and show animation if element is visible:
+  const sortDesc = () => {
+    const sorted = [...skills].sort((a, b) => b.localeCompare(a));
+    setSkills(sorted);
+  };
+
+  const resetOrder = () => {
+    setSkills(mySkills);
+  };
 
   // enable scrolling:
   const location = useLocation();
@@ -169,13 +213,11 @@ export default function Contact({ darkMode }) {
         sx={{
           display: "flex",
           justifyContent: "center",
-          mt: 6,
+          mt: 8,
         }}
       >
         <Box
           component="img"
-          // src={darkMode ? "/732.png" : "/730.png"}
-          // src="/Contact-me.png"
           src={darkMode ? "/skills4.png" : "/skills-light.png"}
           alt="code"
           sx={{
@@ -184,7 +226,7 @@ export default function Contact({ darkMode }) {
             borderRadius: "6px",
             // borderRadius: "270px",
             boxShadow:
-              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
           }}
         />
       </Grid>
@@ -193,7 +235,7 @@ export default function Contact({ darkMode }) {
         gutterBottom
         sx={{
           mt: 6,
-          mb: 4,
+          mb: 6,
           textAlign: "center",
           fontSize: {
             xs: "1.6rem",
@@ -206,6 +248,22 @@ export default function Contact({ darkMode }) {
       >
         My skills
       </Typography>
+
+      <Box sx={{ mb: 4, textAlign: "center" }}>
+        <CustomButton onClick={sortAsc} sx={{ color: "white" }}>
+          Sort A-Z
+        </CustomButton>
+        <CustomButton onClick={sortDesc} sx={{ ml: 4, color: "white" }}>
+          Sort Z-A
+        </CustomButton>
+        <CustomButton
+          variant="outlined"
+          onClick={resetOrder}
+          sx={{ ml: 4, color: "white" }}
+        >
+          Reset
+        </CustomButton>
+      </Box>
 
       <Box
         id="skills"
