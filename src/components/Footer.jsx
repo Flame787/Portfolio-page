@@ -13,7 +13,21 @@ export default function Footer({ darkMode }) {
         <Grid container spacing={3} justifyContent="space-between">
           {/* Left Section: Info */}
           {/* <Grid xs={12} sm={6}> */}
-          <Grid size={{ xs: 12, sm: 4 }}>
+          <Grid
+            size={{ xs: 12, sm: 4 }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: {
+                xs: "center",
+                sm: "flex-start",
+              },
+              textAlign: {
+                xs: "center",
+                sm: "left",
+              },
+            }}
+          >
             <Typography
               variant="body2"
               align="left"
@@ -55,8 +69,14 @@ export default function Footer({ darkMode }) {
           <Grid
             size={{ xs: 12, sm: 4 }}
             display="flex"
-            justifyContent="flex-end"
+            // justifyContent="flex-end"
             alignItems="center"
+            sx={{
+              justifyContent: {
+                xs: "center",
+                sm: "flex-end",
+              },
+            }}
           >
             <Link
               href="https://github.com/Flame787"
@@ -75,7 +95,7 @@ export default function Footer({ darkMode }) {
               <LinkedIn fontSize="large" className="hovered" />
             </Link>
             <Link
-              // href="mailto:mbrezovic77@gmail.com"
+              // href="mailto:...@gmail.com"
               // component={Link}
               component={RouterLink}
               to="/contact#contactme"

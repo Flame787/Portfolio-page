@@ -233,7 +233,7 @@ export default function Home({ darkMode }) {
             >
               <CustomButton
                 component={Link}
-                to="/contact#skills"
+                to="/contact#skillsicon"
                 variant="contained"
                 color="primary"
                 size="large"

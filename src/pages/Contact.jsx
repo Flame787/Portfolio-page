@@ -65,7 +65,7 @@ export default function Contact({ darkMode }) {
 
     return () => {
       if (boxRef.current) observer.unobserve(boxRef.current);
-      // clear timouts when component unmounts:
+      // clear timeouts when component unmounts:
       timeoutsRef.current.forEach(clearTimeout);
     };
   }, [triggered]);
@@ -217,6 +217,7 @@ export default function Contact({ darkMode }) {
         }}
       >
         <Box
+          id="skillsicon"
           component="img"
           src={darkMode ? "/skills4.png" : "/skills-light.png"}
           alt="code"
@@ -227,6 +228,7 @@ export default function Contact({ darkMode }) {
             // borderRadius: "270px",
             boxShadow:
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
+            scrollMarginTop: "90px",  // redirects from 'My skills'-button exactly before starting of the Skills-icon
           }}
         />
       </Grid>
@@ -275,7 +277,7 @@ export default function Contact({ darkMode }) {
           justifyContent: "center",
           flexWrap: "wrap",
           gap: 1,
-          scrollMarginTop: "170px",
+          scrollMarginTop: "170px", // not used anymore
         }}
       >
         {skills.map((skill, i) => (

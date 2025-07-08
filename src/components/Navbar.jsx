@@ -88,7 +88,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
   const isAbout =
     (location.pathname === "/contact" && location.hash === "#aboutme") ||
     location.hash === "#contactme" ||
-    location.hash === "#skills";
+    location.hash === "#skillsicon";
 
 //  const isHome =
 //   (location.pathname === "/") ||

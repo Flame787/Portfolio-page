@@ -102,16 +102,6 @@ export default function Projects() {
         Projects
       </Typography>
 
-      {/* <Typography
-        sx={{
-          mb: 6,
-          textAlign: "center",
-          fontFamily: "Mulish-Extralight, sans-serif",
-          fontSize: "1.2rem",
-        }}
-      >
-        Here are some of my projects:
-      </Typography> */}
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
@@ -421,7 +411,7 @@ export default function Projects() {
                 <Slider {...settings}>
                   <Box
                     component="img"
-                    src="/Tolkien1.png"
+                    src="/Tolkien01.png"
                     alt="Slide 1"
                     sx={{
                       width: "100%",
@@ -432,7 +422,7 @@ export default function Projects() {
                   />
                   <Box
                     component="img"
-                    src="/Tolkien2.png"
+                    src="/Tolkien02.png"
                     alt="Slide 2"
                     sx={{
                       width: "100%",
@@ -443,7 +433,7 @@ export default function Projects() {
                   />
                   <Box
                     component="img"
-                    src="/Tolkien3.png"
+                    src="/Tolkien03.png"
                     alt="Slide 3"
                     sx={{
                       width: "100%",
@@ -454,7 +444,7 @@ export default function Projects() {
                   />
                   <Box
                     component="img"
-                    src="/Tolkien4.png"
+                    src="/Tolkien04.png"
                     alt="Slide 4"
                     sx={{
                       width: "100%",
@@ -465,8 +455,41 @@ export default function Projects() {
                   />
                   <Box
                     component="img"
-                    src="/Tolkien5.png"
+                    src="/Tolkien05.png"
                     alt="Slide 5"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien06.png"
+                    alt="Slide 6"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien07.png"
+                    alt="Slide 7"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/Tolkien08.png"
+                    alt="Slide 8"
                     sx={{
                       width: "100%",
                       height: { xs: 150, sm: 250, md: 350, lg: 450 },
@@ -572,12 +595,148 @@ export default function Projects() {
             >
               Developer Portfolio
             </Typography>
-            <CardMedia
+            {/* <CardMedia
               component="img"
               height="140"
               image="https://via.placeholder.com/300"
               alt="Project 4"
-            />
+            /> */}
+            <CardMedia>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: {
+                    xs: 220,
+                    sm: 320,
+                    md: 420,
+                    lg: 520,
+                  },
+                  overflow: "hidden",
+                  pl: 4,
+                  pr: 4,
+                  "& .slick-dots li button:before": {
+                    fontSize: "12px",
+                    color: "#34a8d9",
+                  },
+                  "& .slick-dots li.slick-active button:before": {
+                    color: "#34a8d9",
+                  },
+                }}
+              >
+                <Slider {...settings}>
+                  <Box
+                    component="img"
+                    src="/portfolio01.png"
+                    alt="Slide 1"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio2.png"
+                    alt="Slide 2"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio3.png"
+                    alt="Slide 3"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio4.png"
+                    alt="Slide 4"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio5.png"
+                    alt="Slide 5"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio6.png"
+                    alt="Slide 6"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio7.png"
+                    alt="Slide 7"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio8.png"
+                    alt="Slide 8"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio09.png"
+                    alt="Slide 9"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/portfolio10.png"
+                    alt="Slide 10"
+                    sx={{
+                      width: "100%",
+                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                      objectFit: "contain",
+                      borderRadius: 4,
+                    }}
+                  />
+                </Slider>
+              </Box>
+            </CardMedia>
             <CardContent>
               <CustomTypography>
                 This Developer Portfolio is a personal showcase built with
