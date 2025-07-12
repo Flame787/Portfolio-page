@@ -50,24 +50,34 @@ export default function Contact({ darkMode }) {
   const timeoutsRef = useRef([]);
 
   useEffect(() => {
+    const node = boxRef.current;
+    if (!node || triggered) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !triggered) {
+        if (entry.isIntersecting) {
           setTriggered(true);
         }
       },
       { threshold: 0.3 }
     );
+    observer.observe(node);
 
-    if (boxRef.current) {
-      observer.observe(boxRef.current);
-    }
+    // if (boxRef.current) {
+    //   observer.observe(boxRef.current);
+    // }
+
+    //   return () => {
+    //     if (boxRef.current) observer.unobserve(boxRef.current);
+    //     // clear timeouts when component unmounts:
+    //     timeoutsRef.current.forEach(clearTimeout);
+    //   };
+    // }, [triggered]);
 
     return () => {
-      if (boxRef.current) observer.unobserve(boxRef.current);
-      // clear timeouts when component unmounts:
+      observer.unobserve(node);
       timeoutsRef.current.forEach(clearTimeout);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [triggered]);
 
   // new - animation:
@@ -228,7 +238,7 @@ export default function Contact({ darkMode }) {
             // borderRadius: "270px",
             boxShadow:
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
-            scrollMarginTop: "90px",  // redirects from 'My skills'-button exactly before starting of the Skills-icon
+            scrollMarginTop: "90px", // redirects from 'My skills'-button exactly before starting of the Skills-icon
           }}
         />
       </Grid>
@@ -290,62 +300,7 @@ export default function Contact({ darkMode }) {
             {skill}
           </button>
         ))}
-
-        {/* <button className="round" sx={{ color: "primary.form" }}>
-          React
-        </button>
-        <button className="round">JavaScript</button>
-        <button className="round">external APIs</button>
-        <button className="round">Scaledrone Websocket</button>
-        <button className="round">React Router</button>
-        <button className="round">Redux</button>
-        <button className="round">Bootstrap</button>
-        <button className="round">SCSS</button>
-        <button className="round">Material-UI</button>
-        <button className="round">Express.js</button>
-        <button className="round">EmailJS</button>
-        <button className="round">Git</button>
-        <button className="round">GitHub</button>
-        <button className="round">Webpack</button>
-        <button className="round">Vite</button>
-        <button className="round">Jira</button>
-        <button className="round">HTML</button>
-        <button className="round">CSS</button>
-        <button className="round">Visual Studio Code</button>
-
-        <button className="round">Agile</button>
-        <button className="round">Python - basic</button>
-        <button className="round">PC hardware</button>
-        <button className="round">MS Office</button>
-        <button className="round">Problem solving</button>
-        <button className="round">Organisation skills</button>
-        <button className="round">Mentoring</button>
-        <button className="round">English</button>
-        <button className="round">German</button> */}
       </Box>
-
-      {/* <Typography
-          variant="h5"
-          gutterBottom
-          sx={{ mt: 6, mb: 4, textAlign: "center" }}
-          fontFamily={"TheSeasons-Regular, serif"}
-        >
-          Other Skills
-        </Typography>
-        
-        <Box
-          id="skills"
-          sx={{
-            mt: 2,
-            mb: 2,
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 1,
-          }}
-        >
-          
-        </Box> */}
 
       <Typography
         // variant="h4"
