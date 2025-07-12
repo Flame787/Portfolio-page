@@ -1,7 +1,7 @@
 import { Container, Typography, Box, Grid } from "@mui/material";
 import CustomButton from "../components/CustomButton";
 import ContactForm from "../components/ContactForm";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomTypography from "../components/CustomTypography";
@@ -81,7 +81,7 @@ export default function Contact({ darkMode }) {
   }, [triggered]);
 
   // new - animation:
-  const runAnimation = () => {
+  const runAnimation = useCallback(() => {
     setVisibleIndexes([]);
     timeoutsRef.current.forEach(clearTimeout);
     timeoutsRef.current = [];
@@ -92,7 +92,7 @@ export default function Contact({ darkMode }) {
       }, i * 100);
       timeoutsRef.current.push(timeoutId);
     });
-  };
+  }, [skills]);
 
   // useEffect(() => {
   //   if (triggered) {
@@ -109,7 +109,7 @@ export default function Contact({ darkMode }) {
     if (triggered) {
       runAnimation();
     }
-  }, [triggered, skills]);
+  }, [triggered, runAnimation]);
 
   // sort alfabetically - ascending and show animation if element is visible:
   const sortAsc = () => {
