@@ -5,7 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
 import SendIcon from "@mui/icons-material/Send";
-import EmailIcon from "@mui/icons-material/Email";
+
 
 export default function ContactForm({ darkMode }) {
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
