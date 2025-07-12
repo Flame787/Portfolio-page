@@ -57,7 +57,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
     }
   }, [location]);
 
-   useEffect(() => {
+  useEffect(() => {
     if (location.hash === "#home") {
       const el = document.getElementById("home");
       if (el) {
@@ -90,37 +90,14 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
     location.hash === "#contactme" ||
     location.hash === "#skillsicon";
 
-//  const isHome =
-//   (location.pathname === "/") ||
-//     ( location.hash === "#home") ||
-//   (!isProjects &&
-//   !isAbout);
-
   const isHome =
-  (location.pathname === "/" && (location.hash === "" || location.hash === "#home")) 
-
-  // const isHome =
-  //   (location.pathname === "/" && location.hash === "") || (location.hash === "#home") ||
-  //   (!isProjects && !isAbout);
-  // const isHome =
-  //   (location.pathname === "/" &&
-  //     (location.hash === "" || location.hash === "#home")) ||
-  //   (!isProjects && !isAbout && location.pathname === "/");
-
-  // const isHome =
-  // (location.pathname === "/" && location.hash === "") ||
-  // // (location.pathname === "/" && location.hash === "#home") ||
-  // (location.pathname === "/" && !isProjects && !isAbout);
-
-  // console.log("pathname:", location.pathname);
-  // console.log("hash:", location.hash);
+    location.pathname === "/" &&
+    (location.hash === "" || location.hash === "#home");
 
   return (
-    // <AppBar position="static" color="primary">
     <AppBar
       position="sticky"
       color="primary"
-      // sx={{ top: 0, transition: "all 0.3s ease", zIndex: 1100 }}
       sx={{
         top: 0,
         backdropFilter: "blur(10px)",
@@ -139,8 +116,6 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         }}
       >
         <img
-          // src={darkMode ? "/logo3.png" : "/logo7.png"}
-          // src="/wave3.png"
           src="/Marina-transparent.png"
           alt="logo"
           className="my-logo"
@@ -248,10 +223,9 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             display: { xs: "none", sm: "inline-block" },
             fontFamily: "Mulish-Extralight, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
-            borderBottom:
-              isHome 
-                ? "3px solid #4cc9f0"
-                : "1px solid transparent",
+            borderBottom: isHome
+              ? "3px solid #4cc9f0"
+              : "1px solid transparent",
             "&:hover": {
               borderBottom: "3px solid rgba(76, 201, 254, 0.4)",
             },
@@ -260,7 +234,6 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           Home
         </Button>
 
-        {/* <Button color="inherit" component={Link} to="#projects"> */}
         <Button
           color="inherit"
           onClick={handleProjectsClick}

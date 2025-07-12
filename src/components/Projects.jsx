@@ -30,6 +30,8 @@ export default function Projects() {
     }
   }, [location]);
 
+  // arrows for previous/next picture in carousel:
+
   function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -88,7 +90,6 @@ export default function Projects() {
           mt: 10,
           mb: 6,
           textAlign: "center",
-          // color: "primary.title",
           fontFamily: "TheSeasons-Regular, serif",
           fontSize: {
             xs: "1.8rem",
@@ -97,18 +98,14 @@ export default function Projects() {
             lg: "2rem",
           },
         }}
-        // fontFamily={"Kenfolg Serif"}
       >
         Projects
       </Typography>
-
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
         <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
-          {/* <Grid size={{ xs: 12 }}> */}
-          {/* <Grid item xs={12}> */}
           <Card
             sx={{
               width: "100%",
@@ -140,12 +137,6 @@ export default function Projects() {
             >
               React Chat App with Scaledrone Websocket
             </Typography>
-            {/* <CardMedia
-              component="img"
-              height="140"
-              image="https://via.placeholder.com/300"
-              alt="Project 1"
-            /> */}
 
             <Box sx={{ px: 4 }}>
               <Box
@@ -228,9 +219,8 @@ export default function Projects() {
         </Grid>
 
         {/* Project 2 */}
-        {/* <Grid size={{ xs: 12 }}> */}
+
         <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
-          {/* <Grid item xs={12}> */}
           <Card
             sx={{
               width: "100%",
@@ -246,7 +236,6 @@ export default function Projects() {
               },
             }}
           >
-            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
               variant="h6"
               gutterBottom
@@ -261,12 +250,7 @@ export default function Projects() {
             >
               Music Search App powered by Spotify API
             </Typography>
-            {/* <CardMedia
-              component="img"
-              height="140"
-              image="https://via.placeholder.com/300"
-              alt="Project 2"
-            /> */}
+
             <Box sx={{ px: 4 }}>
               <Box
                 sx={{
@@ -325,7 +309,7 @@ export default function Projects() {
                   sx={{
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -339,7 +323,7 @@ export default function Projects() {
                     ml: 2,
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -354,9 +338,8 @@ export default function Projects() {
         </Grid>
 
         {/* Project 3 */}
-        {/* <Grid size={{ xs: 12 }}> */}
+
         <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
-          {/* <Grid item xs={12}> */}
           <Card
             sx={{
               maxWidth: "100%",
@@ -514,10 +497,10 @@ export default function Projects() {
                 current ratings on Open Library.
               </CustomTypography>
               <CustomTypography>
-                It also allows users to vote for their favorite Tolkien's book, counting
-                the results (stored locally in the browser), and visually
-                displaying them with Chart.js. Users can also send emails
-                directly from the page via EmailJS.
+                It also allows users to vote for their favorite Tolkien's book,
+                counting the results (stored locally in the browser), and
+                visually displaying them with Chart.js. Users can also send
+                emails directly from the page via EmailJS.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
@@ -535,7 +518,7 @@ export default function Projects() {
                   sx={{
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -549,7 +532,7 @@ export default function Projects() {
                     ml: 2,
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -564,7 +547,7 @@ export default function Projects() {
         </Grid>
 
         {/* Project 4 */}
-        {/* <Grid size={{ xs: 12 }}> */}
+
         <Grid item xs={12} sx={{ mb: 6 }}>
           <Card
             sx={{
@@ -595,12 +578,7 @@ export default function Projects() {
             >
               Developer Portfolio
             </Typography>
-            {/* <CardMedia
-              component="img"
-              height="140"
-              image="https://via.placeholder.com/300"
-              alt="Project 4"
-            /> */}
+
             <CardMedia>
               <Box
                 sx={{
@@ -771,7 +749,7 @@ export default function Projects() {
                   sx={{
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -785,7 +763,7 @@ export default function Projects() {
                     ml: 2,
                     fontSize: "1rem",
                     textTransform: "none",
-                    // fontFamily: "Marcellus-Regular, serif",
+
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
                   }}
@@ -799,26 +777,6 @@ export default function Projects() {
           </Card>
         </Grid>
       </Grid>
-
-      {/* Button to the Contact page */}
-      {/* <Box sx={{ mt: 3, mb: 4, textAlign: "center" }}>
-        <CustomButton
-          component={Link}
-          to="/contact"
-          variant="contained"
-          color="primary"
-          size="large"
-          sx={{
-            fontSize: "1rem",
-            textTransform: "none",
-            // fontFamily: "Marcellus-Regular, serif",
-            fontFamily: "TheSeasons-Regular, serif",
-            letterSpacing: "0.07em",
-          }}
-        >
-          Contact Me
-        </CustomButton>
-      </Box> */}
     </Box>
   );
 }

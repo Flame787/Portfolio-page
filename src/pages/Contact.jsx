@@ -50,10 +50,9 @@ export default function Contact({ darkMode }) {
   const timeoutsRef = useRef([]);
 
   useEffect(() => {
-    // fetch real DOM-node. 
-    // If not avail., just return. 
-    // If avail., IntersectionObserver API is created to follow when element has entered the user viewport.
-    // threshold: 0.3 - when 30% of element is visible, callback is started. 
+    // fetch real DOM-node. If not avail., just return.
+    // If avail., then an IntersectionObserver API is created to follow when element has entered the user viewport.
+    // threshold: 0.3 - when 30% of element is visible, callback is started.
     // Callback gets 'entry' and we check if entry.isIntersecting is true - if yes, then change state: setTriggered(true).
     const node = boxRef.current;
     if (!node || triggered) return;
@@ -68,7 +67,6 @@ export default function Contact({ darkMode }) {
     observer.observe(node);
     // connecting observer with real DOM-element to track it's visibility (when the element gets into user viewport)
 
-    
     // if (boxRef.current) {
     //   observer.observe(boxRef.current);
     // }
@@ -84,7 +82,7 @@ export default function Contact({ darkMode }) {
       observer.unobserve(node);
       timeoutsRef.current.forEach(clearTimeout);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // previously, eslint issue:
   }, [triggered]);
 
   // new (runAnimation-function is memorized until 'skills' changes, and doesn't have to be recreated on each render)
@@ -119,13 +117,13 @@ export default function Contact({ darkMode }) {
     }
   }, [triggered, runAnimation]);
 
-  // sort alfabetically - ascending and show animation if element is visible:
+  // sort alfabetically - ascending & show animation if element is visible:
   const sortAsc = () => {
     const sorted = [...skills].sort((a, b) => a.localeCompare(b));
     setSkills(sorted);
   };
 
-  // sort alfabetically - descending and show animation if element is visible:
+  // sort alfabetically - descending & show animation if element is visible:
   const sortDesc = () => {
     const sorted = [...skills].sort((a, b) => b.localeCompare(a));
     setSkills(sorted);
@@ -159,9 +157,9 @@ export default function Contact({ darkMode }) {
           scrollMarginTop: "100px",
           mt: 6,
           mb: 4,
-          // fontSize: "2.3rem",
+
           textAlign: "center",
-          // color: "primary.title",
+
           fontSize: {
             xs: "1.6rem",
             sm: "1.8rem",
@@ -243,7 +241,7 @@ export default function Contact({ darkMode }) {
             width: "10%",
             minWidth: "108px",
             borderRadius: "6px",
-            // borderRadius: "270px",
+
             boxShadow:
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
             scrollMarginTop: "90px", // redirects from 'My skills'-button exactly before starting of the Skills-icon
@@ -251,7 +249,6 @@ export default function Contact({ darkMode }) {
         />
       </Grid>
       <Typography
-        // variant="h4"
         gutterBottom
         sx={{
           mt: 6,
@@ -311,7 +308,6 @@ export default function Contact({ darkMode }) {
       </Box>
 
       <Typography
-        // variant="h4"
         gutterBottom
         sx={{
           mt: 6,

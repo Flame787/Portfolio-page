@@ -108,24 +108,22 @@ export default function ContactForm({ darkMode }) {
       >
         <Box
           component="img"
-          // src={darkMode ? "/732.png" : "/730.png"}
-          // src="/Contact-me.png"
+
           src={darkMode ? "/Contact-me-dark3.png" : "/Contact-me-light.png"}
           alt="code"
           sx={{
             width: "25%",
             minWidth: "108px",
             borderRadius: "6px",
-            // borderRadius: "270px",
+
             boxShadow:
               "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 2px 5px 0 rgba(76, 201, 254, 0.19)",
           }}
         />
       </Grid>
 
-      {/* <Typography variant="h5" fontFamily={"Kenfolg Serif"} mb={2} sx={{ textAlign: "center", color: "primary.title" }}> */}
+      
       <Typography
-        // variant="h4"
         gutterBottom
         sx={{
           mt: 4,
@@ -206,7 +204,7 @@ export default function ContactForm({ darkMode }) {
           mx: "auto",
         }}
         color="primary"
-        // size="large"
+      
       >
         Send <SendIcon sx={{ ml: 0.5, fontSize: "0.8rem" }} />
       </CustomButton>
@@ -224,7 +222,7 @@ npm install emailjs-com -> deprecated: The SDK name changed: npm install @emailj
 https://dashboard.emailjs.com/admin/
 
 - Email Services: 
-here is my email & Service ID
+my email & Service ID
 - if existing email is not working - cannot send test-email (after longer period of time):
 -> click on Disconnect,
 then https://myaccount.google.com/permissions - find EmailJS on the list, remove permissions from EmailJS,
@@ -233,8 +231,8 @@ go through Gmail permissions steps again, enable to send test-email
 -> email will work again (and be added to Gmail permissions automatically)
 
 - Email Templates: 
-easy to edit a template in which we receive the email from the page. 
-- Important: each 'name:'-value from the email-form in React must be the same like the variables in the template.
+editing a template in which we receive the email from the page. 
+- Important: each 'name:'-value from the email-form in React must be the same as the variables in the template.
 - Important: include name: 'from_email' both as input-field in form (required), and in received-email-template.
 - example of my template: 
 
@@ -275,12 +273,15 @@ https://www.google.com/recaptcha/admin
 - select label of my current project (my portfolio contact form)
 - Settings (right gear wheel)
 - Domains: Add a domain
-- a domain should be added without http/..., just domain - examples:
+- a domain should be added without http/..., just domain name - examples:
   localhost
   my-app.netlify.app
   my-app.vercel.app
   myportfolio.com
 -Save
+
+*When app is deployed on Netlify or some other public or private domain, 
+add manually this new domain name (without http...) to 'domains' on Recaptcha dashboard. 
 
 Captcha token expires after 2 min. 
 
@@ -289,7 +290,8 @@ https://dashboard.emailjs.com/admin/
 - Account
 - Security (up right)
 - Domains
-** currently no domains are set - not mandatory, but it could be restricted to 'localhost/3000' or some other domain.
+** initially no domains are set - not mandatory, but it could be restricted to 'localhost/3000' or some other domain.
 Domain includes schema, host and port if present - different than on reCaptcha page.
+
 
  */

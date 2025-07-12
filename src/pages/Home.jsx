@@ -52,8 +52,6 @@ export default function Home({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-        {/* gutterBottom - adds margin under h3-element */}
-        {/* sx={{ mt: 6 }} - adding style: margin-top: 6 x 8px = 48px */}
         Hi, I´m{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
           Marina
@@ -119,14 +117,13 @@ export default function Home({ darkMode }) {
           >
             <Box
               component="img"
-              // src={darkMode ? "/732.png" : "/730.png"}
               src={darkMode ? "/Dev-port3.png" : "/Dev-port7.png"}
               alt="code"
               sx={{
                 width: "100%",
                 maxWidth: "487px",
                 borderRadius: "16px",
-                // borderRadius: "270px",
+
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               }}
@@ -144,7 +141,6 @@ export default function Home({ darkMode }) {
             sx={{
               flexBasis: "50%",
               ml: { xs: 2, sm: 2, md: 0, lg: 0 },
-              // ml: { xs: 5, sm: 5, md: 5, lg: 5 },
               mr: { xs: 2, sm: 2, md: 0, lg: 0 },
               backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
               borderRadius: 4,
@@ -197,7 +193,6 @@ export default function Home({ darkMode }) {
               color="text.secondary"
               sx={{
                 marginBottom: 1,
-                // fontFamily: "Lato-Light, sans-serif",
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "1rem",
                 textAlign: "justify",
@@ -211,9 +206,7 @@ export default function Home({ darkMode }) {
               color="text.secondary"
               sx={{
                 marginBottom: 1,
-                // fontFamily: "Lato-Light, sans-serif",
                 fontFamily: "Mulish-Extralight, sans-serif",
-                // fontSize: "1.03rem",
                 fontSize: "1rem",
                 textAlign: "justify",
               }}

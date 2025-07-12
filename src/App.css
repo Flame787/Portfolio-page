@@ -125,7 +125,7 @@ html {
   border: 1px solid;
   border-radius: 4px;
   padding: 5px 10px;
-  /* color: rgba(35, 142, 192, 0.88); */
+
   color: rgba(67, 172, 220, 0.88);
   background-color: rgba(204, 229, 240, 0.075);
   margin: 10px 4px;
@@ -135,10 +135,6 @@ html {
   font-weight: bold;
   font-size: 0.9rem;
 }
-
-/* .round:hover {
-  color: rgba(160, 221, 249, 0.88);
-} */
 
 .hovered:hover {
   color: #61dafb;

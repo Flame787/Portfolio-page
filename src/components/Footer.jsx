@@ -12,7 +12,7 @@ export default function Footer({ darkMode }) {
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
           {/* Left Section: Info */}
-          {/* <Grid xs={12} sm={6}> */}
+    
           <Grid
             size={{ xs: 12, sm: 4 }}
             sx={{
@@ -69,7 +69,6 @@ export default function Footer({ darkMode }) {
           <Grid
             size={{ xs: 12, sm: 4 }}
             display="flex"
-            // justifyContent="flex-end"
             alignItems="center"
             sx={{
               justifyContent: {
