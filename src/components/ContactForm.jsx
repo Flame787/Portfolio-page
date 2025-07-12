@@ -7,6 +7,7 @@ import CustomTextField from "./CustomTextField";
 import SendIcon from "@mui/icons-material/Send";
 
 export default function ContactForm({ darkMode }) {
+  // removed old process.env variables:
   // const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
   const [captchaToken, setCaptchaToken] = useState(null);
