@@ -50,6 +50,11 @@ export default function Contact({ darkMode }) {
   const timeoutsRef = useRef([]);
 
   useEffect(() => {
+    // fetch real DOM-node. 
+    // If not avail., just return. 
+    // If avail., IntersectionObserver API is created to follow when element has entered the user viewport.
+    // threshold: 0.3 - when 30% of element is visible, callback is started. 
+    // Callback gets 'entry' and we check if entry.isIntersecting is true - if yes, then change state: setTriggered(true).
     const node = boxRef.current;
     if (!node || triggered) return;
     const observer = new IntersectionObserver(
@@ -61,7 +66,9 @@ export default function Contact({ darkMode }) {
       { threshold: 0.3 }
     );
     observer.observe(node);
+    // connecting observer with real DOM-element to track it's visibility (when the element gets into user viewport)
 
+    
     // if (boxRef.current) {
     //   observer.observe(boxRef.current);
     // }
@@ -80,7 +87,8 @@ export default function Contact({ darkMode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [triggered]);
 
-  // new - animation:
+  // new (runAnimation-function is memorized until 'skills' changes, and doesn't have to be recreated on each render)
+  // -> avoid Eslint warning:
   const runAnimation = useCallback(() => {
     setVisibleIndexes([]);
     timeoutsRef.current.forEach(clearTimeout);
