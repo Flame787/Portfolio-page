@@ -166,8 +166,10 @@ export default function ContactForm({ darkMode }) {
       <CustomTextField
         label="Message"
         name="message"
-        rows={5}
         required
+        multiline
+        minRows={5}
+        maxRows={10}
         darkMode={darkMode}
         sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
       />

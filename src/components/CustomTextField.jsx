@@ -7,7 +7,11 @@ export default function CustomTextField({
   required = false,
   multiline = false,
   rows,
+  minRows,
+  maxRows,
   darkMode,
+  sx,
+  ...props
 }) {
   return (
     <TextField
@@ -19,6 +23,9 @@ export default function CustomTextField({
       margin="normal"
       multiline={multiline}
       rows={rows}
+      minRows={minRows}
+      maxRows={maxRows}
+      {...props}
       sx={{
         "& .MuiInputBase-input": {
           fontFamily: "Mulish-Extralight, sans-serif",
