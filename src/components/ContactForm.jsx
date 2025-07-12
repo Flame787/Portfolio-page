@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Typography, Box, Grid } from "@mui/material";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -6,11 +6,31 @@ import CustomButton from "./CustomButton";
 import CustomTextField from "./CustomTextField";
 import SendIcon from "@mui/icons-material/Send";
 
-
 export default function ContactForm({ darkMode }) {
-  const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+  // const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
   const [captchaToken, setCaptchaToken] = useState(null);
+
+  // new - for Netlify serverless (backend) functions:
+  const [emailConfig, setEmailConfig] = useState(null);
+  const [siteKey, setSiteKey] = useState("");
+
+  // fetch keys via Netlify function:
+  useEffect(() => {
+    fetch("/.netlify/functions/emailKeys")
+      .then((res) => res.json())
+      .then((data) => {
+        setSiteKey(data.recaptchaSiteKey);
+        setEmailConfig({
+          serviceId: data.emailJsServiceId,
+          templateId: data.emailJsTemplateId,
+          publicKey: data.emailJsPublicKey,
+        });
+      })
+      .catch((err) => {
+        console.error("Failed to fetch keys:", err);
+      });
+  }, []);
 
   const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
@@ -19,18 +39,29 @@ export default function ContactForm({ darkMode }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // NEW:
+    // recaptcha as requirement:
     if (!captchaToken) {
       alert("Please complete the CAPTCHA");
       return;
     }
 
+    if (!emailConfig) {
+      alert("Email configuration not loaded.");
+      return;
+    }
+
     emailjs
+      // .sendForm(
+      //   process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      //   process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      //   e.target,
+      //   process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      // )
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        emailConfig.serviceId,
+        emailConfig.templateId,
         e.target,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        emailConfig.publicKey
       )
       .then(
         (result) => {
@@ -71,7 +102,7 @@ export default function ContactForm({ darkMode }) {
         sx={{
           display: "flex",
           justifyContent: "center",
-          mt: 2
+          mt: 2,
         }}
       >
         <Box
@@ -140,20 +171,22 @@ export default function ContactForm({ darkMode }) {
         sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
       />
 
-      <Box
-        sx={{
-          mt: 2,
-          mb: 2,
-          fontFamily: "Mulish-Extralight, sans-serif",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <ReCAPTCHA
-          sitekey={RECAPTCHA_SITE_KEY}
-          onChange={handleCaptchaChange}
-        />
-      </Box>
+      {siteKey && (
+        <Box
+          sx={{
+            mt: 2,
+            mb: 2,
+            fontFamily: "Mulish-Extralight, sans-serif",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <ReCAPTCHA
+            sitekey={siteKey}
+            onChange={handleCaptchaChange}
+          />
+        </Box>
+      )}
 
       <CustomButton
         type="submit"
