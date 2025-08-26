@@ -625,7 +625,7 @@ export default function Projects() {
                       borderRadius: 4,
                     }}
                   />
-                  <Box
+                  {/* <Box
                     component="img"
                     src="/portfolio2.png"
                     alt="Slide 2"
@@ -635,7 +635,7 @@ export default function Projects() {
                       objectFit: "contain",
                       borderRadius: 4,
                     }}
-                  />
+                  /> */}
                   <Box
                     component="img"
                     src="/portfolio3.png"
