@@ -187,6 +187,10 @@ export default function Projects() {
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
+                  component="a"
+                  href="https://chat-app.marina-dev.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   color="primary"
                   sx={{
                     fontSize: "1rem",
@@ -305,6 +309,10 @@ export default function Projects() {
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
+                  component="a"
+                  href="https://music-app.marina-dev.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   color="primary"
                   sx={{
                     fontSize: "1rem",
@@ -514,6 +522,10 @@ export default function Projects() {
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
                   variant="contained"
+                  component="a"
+                  href="https://tolkien.marina-dev.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   color="primary"
                   sx={{
                     fontSize: "1rem",
