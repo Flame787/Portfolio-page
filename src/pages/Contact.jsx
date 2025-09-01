@@ -33,10 +33,10 @@ const mySkills = [
   "PC hardware",
   "MS Office",
   "Problem solving",
-  "Organisation skills",
+  "Organisational skills",
   "Mentoring",
-  "English",
-  "German",
+  "English - C1",
+  "German - C1",
 ];
 
 export default function Contact({ darkMode }) {
