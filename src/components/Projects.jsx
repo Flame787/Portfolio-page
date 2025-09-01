@@ -247,6 +247,8 @@ export default function Projects() {
                 textAlign: "center",
                 mt: 4,
                 mb: 4,
+                ml: 4,
+                mr: 4,
                 color: "primary.title3",
                 fontSize: "1.5rem",
                 fontFamily: "Marcellus-Regular, serif",
