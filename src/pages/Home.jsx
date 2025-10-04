@@ -200,7 +200,7 @@ export default function Home({ darkMode }) {
             >
               I also apply modern libraries like React Router, Redux,
               Material-UI (MUI), or frameworks such as Bootstrap, Express.js,
-              and many other tools like SCSS, Webpack etc.
+              and many other tools like SCSS, Webpack, Vite etc.
             </Typography>
             <Typography
               color="text.secondary"
