@@ -146,8 +146,8 @@ export default function Home({ darkMode }) {
             lg={6}
             sx={{
               flexBasis: "50%",
-              ml: { xs: 2, sm: 2, md: 0, lg: 0 },
-              mr: { xs: 2, sm: 2, md: 0, lg: 0 },
+              ml: { xs: 0.3, sm: 2, md: 2, lg: 0 },
+              mr: { xs: 0.3, sm: 2, md: 2, lg: 0 },
               backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
               borderRadius: 4,
               border: "1px solid transparent",
@@ -169,7 +169,7 @@ export default function Home({ darkMode }) {
               }}
             >
               My primary focus is building scalable, responsive, and
-              user-centric web applications with React, JavaScript, and
+              user-friendly web applications with React, JavaScript, and
               TypeScript, following best practices in performance,
               accessibility, and maintainability.
             </Typography>
@@ -184,7 +184,7 @@ export default function Home({ darkMode }) {
             >
               I have experience integrating REST APIs and working with different
               frontend tools, including React Router, Redux, SCSS, Bootstrap,
-              Material UI, Vite, and Jest, alongside backend technologies such
+              Material UI, Vite, and Jest, as well as backend technologies such
               as Express.js and MySQL.
             </Typography>
             <Typography

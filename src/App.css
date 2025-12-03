@@ -142,6 +142,10 @@ html {
 
 .github-chart {
   filter: brightness(1) contrast(1.2);
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  display: block;
 }
 
 .css-qwb71x-MuiButtonBase-root-MuiIconButton-root {
@@ -205,6 +209,12 @@ html {
   }
 }
 
+@media (max-width: 1000px) {
+  .github-chart {
+    width: 90%;
+  }
+}
+
 @media (max-width: 960px) {
   .my-logo {
     width: 10%;
@@ -214,6 +224,12 @@ html {
 @media (max-width: 900px) {
   .home-picture {
     max-width: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .github-chart {
+    width: 100%;
   }
 }
 

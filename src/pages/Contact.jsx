@@ -237,10 +237,10 @@ export default function Contact({ darkMode }) {
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
             I have experience integrating REST APIs and working with a broad
             range of frontend tools, including React Router, Tanstack Query,
-            Redux, SCSS, Bootstrap, Material UI, Vite, and Jest, alongside
-            backend technologies such as Express.js and MySQL. In addition, I
-            have hands-on experience with Shell scripting and basic proficiency
-            in Python.
+            Redux, SCSS, Bootstrap, Material UI, Vite, and Jest, as well as
+            backend technologies such as Express.js and MySQL. In addition to
+            that, I have hands-on experience with Shell scripting and basic
+            proficiency in Python.
           </CustomTypography>
 
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
