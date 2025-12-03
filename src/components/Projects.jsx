@@ -99,7 +99,7 @@ export default function Projects() {
           },
         }}
       >
-        Projects
+        My projects
       </Typography>
 
       {/* Grid for project cards */}

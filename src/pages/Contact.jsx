@@ -9,38 +9,55 @@ import CustomTypography from "../components/CustomTypography";
 const mySkills = [
   "React",
   "JavaScript",
-  "API integrations",
+  "TypeScript",
   "React Router",
+  "TanStack Query",
   "Redux",
-  "Websockets - Scaledrone",
-  "HTML",
-  "CSS",
-  "Bootstrap",
-  "SCSS",
-  "Material-UI",
-  "Express.js",
   "EmailJS",
   "Chart.js",
-  "Git",
-  "GitHub",
+  "HTML",
+  "CSS",
+  "SCSS",
+  "Bootstrap",
+  "Material-UI",
+  "Jest",
+  "React Testing Library",
   "Webpack",
   "Vite",
+
+  "API integrations",
+  "Express.js",
+  "Websockets - Scaledrone",
+  "MySQL",
+  "Python - basic",
+
+  "Git",
+  "GitHub",
   "Visual Studio Code",
   "Netlify",
   "Render",
   "Cloudflare",
-  "Canva",
-  "Miro board",
-  "Agile",
-  "Python - basic",
+  "Postman",
   "IBM API Connect",
-  "PC hardware",
-  "MS Office",
-  "Jira",
+
+  "Bash scripting",
+  "PC Hardware diagnostics",
+  "MS Dynamics 365 CRM",
+  "MS Office tools",
+  "MS Teams",
   "Slack",
+  "Jira",
+  "Miro board",
+  "Canva",
+  "Agile methodologies",
+
+  "Analytical thinking",
   "Problem solving",
   "Organisational skills",
   "Mentoring",
+  "Presentation skills",
+  "Attention to detail",
+
   "English - C1",
   "German - C1",
 ];
@@ -208,25 +225,62 @@ export default function Contact({ darkMode }) {
               textAlign: "justify",
             }}
           >
-            My programming journey began three years ago, and I quickly became
-            deeply interested in front-end development.
+            My primary focus is building scalable, responsive, and user-centric
+            web applications with React, JavaScript, and TypeScript, following
+            best practices in performance, accessibility, and maintainability.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I'm enthusiastic about learning, solving problems, and creating
-            responsive, user-friendly and visually engaging web experiences.
+            Over the past few years, I have consistently advanced my programming
+            expertise through hands-on work on several full-stack projects using
+            modern JavaScript technologies.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My projects are built with React and JavaScript, often integrating
-            APIs to enhance interactivity.
+            I have experience integrating REST APIs and working with a broad
+            range of frontend tools, including React Router, Tanstack Query, Redux, SCSS,
+            Bootstrap, Material UI, Vite, and Jest, alongside backend
+            technologies such as Express.js and MySQL. In addition to web
+            development, I have hands-on experience with Shell scripting and
+            basic proficiency in Python.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I also apply modern libraries like React Router, Redux, Material-UI
-            (MUI), or frameworks such as Bootstrap, Express.js, and many other
-            tools like SCSS, Webpack etc.
+            My portfolio includes four major end-to-end projects:
+          </CustomTypography>
+          <CustomTypography
+            color="text.secondary"
+            sx={{ marginBottom: 1, marginLeft: 3 }}
+          >
+            • A real-time chat application built with React and WebSocket
+            integration
+          </CustomTypography>
+          <CustomTypography
+            color="text.secondary"
+            sx={{ marginBottom: 1, marginLeft: 3 }}
+          >
+            • A dynamic music search platform powered by the Spotify API, with
+            authentication via Express.js
+          </CustomTypography>
+          <CustomTypography
+            color="text.secondary"
+            sx={{ marginBottom: 1, marginLeft: 3 }}
+          >
+            • An interactive book information website using the Open Library
+            API, EmailJS, and Chart.js
+          </CustomTypography>
+          <CustomTypography
+            color="text.secondary"
+            sx={{ marginBottom: 1, marginLeft: 3 }}
+          >
+            • A personal developer portfolio built with React Router and
+            Material UI I planned, developed, and deployed these projects
+            independently, covering UI/UX design, programming, API integration,
+            deployment, and hosting on a custom domain.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My goal is to build scalable, modern front-end apps by following
-            best practices and writing modular, easily maintainable code.
+            I am highly motivated to create modern, scalable, and intuitive
+            digital experiences, and I bring a proactive, adaptable, and
+            problem-solving mindset to software development. I also have
+            valuable hands-on experience in project planning and effective
+            collaboration with stakeholders in an agile environment.
           </CustomTypography>
         </Box>
       </Grid>

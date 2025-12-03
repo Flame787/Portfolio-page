@@ -38,7 +38,7 @@ export default function Home({ darkMode }) {
     <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
         variant="h4"
-        gutterBottom
+        gutterBottom //
         sx={{
           mt: 8,
           mb: 4,
@@ -86,14 +86,23 @@ export default function Home({ darkMode }) {
 
       <Grid
         container
-        spacing={2}
+        // spacing={2}
         sx={{
           display: "flex",
-          alignItems: "center",
-          flexWrap: "nowrap",
+          alignItems: "stretch",
+          flexWrap: { xs: "wrap", lg: "nowrap" },
+          // alignItems: "center",
+          // flexWrap: "nowrap",
           gap: 6,
+          justifyContent: "center",
         }}
         direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
+        justifyContent={{
+          xs: "center",
+          sm: "center",
+          md: "center",
+          lg: "center",
+        }}
       >
         <Fade in={showImage} timeout={600}>
           <Grid
@@ -104,15 +113,11 @@ export default function Home({ darkMode }) {
             lg={6}
             sx={{
               display: "flex",
-
+              alignItems: "center",
               justifyContent: {
                 xs: "center",
-                lg: "flex-end",
+                lg: "center",
               },
-              flexDirection: "row",
-              flexBasis: "50%",
-              m: 0,
-              lineHeight: 0,
             }}
           >
             <Box
@@ -121,9 +126,10 @@ export default function Home({ darkMode }) {
               alt="code"
               sx={{
                 width: "100%",
-                maxWidth: "487px",
+                maxWidth: "490px",
                 borderRadius: "16px",
-
+                p: 0,
+                m: 0,
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               }}
@@ -158,12 +164,72 @@ export default function Home({ darkMode }) {
               sx={{
                 marginBottom: 1,
                 fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1rem",
+                fontSize: "0.95rem",
                 textAlign: "justify",
               }}
             >
-              My programming journey began three years ago, and I quickly became
-              deeply interested in front-end development.
+              My primary focus is building scalable, responsive, and
+              user-centric web applications with React, JavaScript, and
+              TypeScript, following best practices in performance,
+              accessibility, and maintainability.
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+              }}
+            >
+              I have experience integrating REST APIs and working with different
+              frontend tools, including React Router, Redux, SCSS, Bootstrap,
+              Material UI, Vite, and Jest, alongside backend technologies such
+              as Express.js and MySQL.
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+              }}
+            >
+              My portfolio includes four major end-to-end developed projects:
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+              }}
+            >
+              • A real-time chat application with React and WebSockets
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+              }}
+            >
+              • A music search platform with Spotify API and Express.js on backend
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+              }}
+            >
+              • A book website using the Open Library API and Chart.js
             </Typography>
             <Typography
               color="text.secondary"
@@ -174,45 +240,7 @@ export default function Home({ darkMode }) {
                 textAlign: "justify",
               }}
             >
-              I'm enthusiastic about learning, solving problems, and creating
-              responsive, user-friendly and visually engaging web experiences.
-            </Typography>
-            <Typography
-              color="text.secondary"
-              sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1rem",
-                textAlign: "justify",
-              }}
-            >
-              My projects are built with React and JavaScript, often integrating
-              APIs to enhance interactivity.
-            </Typography>
-            <Typography
-              color="text.secondary"
-              sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1rem",
-                textAlign: "justify",
-              }}
-            >
-              I also apply modern libraries like React Router, Redux,
-              Material-UI (MUI), or frameworks such as Bootstrap, Express.js,
-              and many other tools like SCSS, Webpack, Vite etc.
-            </Typography>
-            <Typography
-              color="text.secondary"
-              sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1rem",
-                textAlign: "justify",
-              }}
-            >
-              My goal is to build scalable, modern front-end apps by following
-              best practices and writing modular, easily maintainable code.
+              • A developer portfolio built with React Router and Material UI
             </Typography>
 
             <Box
@@ -237,7 +265,7 @@ export default function Home({ darkMode }) {
                   textTransform: "none",
                 }}
               >
-                My skills
+                About me
               </CustomButton>
 
               <CustomButton
