@@ -225,59 +225,27 @@ export default function Contact({ darkMode }) {
               textAlign: "justify",
             }}
           >
-            My primary focus is building scalable, responsive, and user-centric
-            web applications with React, JavaScript, and TypeScript, following
-            best practices in performance, accessibility, and maintainability.
+            I am a frontend developer specializing in React, JavaScript, and
+            TypeScript, with experience in building scalable, user-focused web
+            applications.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
             Over the past few years, I have consistently advanced my programming
-            expertise through hands-on work on several full-stack projects using
+            skills through hands-on work on several full-stack projects using
             modern JavaScript technologies.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
             I have experience integrating REST APIs and working with a broad
-            range of frontend tools, including React Router, Tanstack Query, Redux, SCSS,
-            Bootstrap, Material UI, Vite, and Jest, alongside backend
-            technologies such as Express.js and MySQL. In addition to web
-            development, I have hands-on experience with Shell scripting and
-            basic proficiency in Python.
+            range of frontend tools, including React Router, Tanstack Query,
+            Redux, SCSS, Bootstrap, Material UI, Vite, and Jest, alongside
+            backend technologies such as Express.js and MySQL. In addition, I
+            have hands-on experience with Shell scripting and basic proficiency
+            in Python.
           </CustomTypography>
-          <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            My portfolio includes four major end-to-end projects:
-          </CustomTypography>
-          <CustomTypography
-            color="text.secondary"
-            sx={{ marginBottom: 1, marginLeft: 3 }}
-          >
-            • A real-time chat application built with React and WebSocket
-            integration
-          </CustomTypography>
-          <CustomTypography
-            color="text.secondary"
-            sx={{ marginBottom: 1, marginLeft: 3 }}
-          >
-            • A dynamic music search platform powered by the Spotify API, with
-            authentication via Express.js
-          </CustomTypography>
-          <CustomTypography
-            color="text.secondary"
-            sx={{ marginBottom: 1, marginLeft: 3 }}
-          >
-            • An interactive book information website using the Open Library
-            API, EmailJS, and Chart.js
-          </CustomTypography>
-          <CustomTypography
-            color="text.secondary"
-            sx={{ marginBottom: 1, marginLeft: 3 }}
-          >
-            • A personal developer portfolio built with React Router and
-            Material UI I planned, developed, and deployed these projects
-            independently, covering UI/UX design, programming, API integration,
-            deployment, and hosting on a custom domain.
-          </CustomTypography>
+
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
             I am highly motivated to create modern, scalable, and intuitive
-            digital experiences, and I bring a proactive, adaptable, and
+            digital solutions, and I bring a proactive, adaptable, and
             problem-solving mindset to software development. I also have
             valuable hands-on experience in project planning and effective
             collaboration with stakeholders in an agile environment.
