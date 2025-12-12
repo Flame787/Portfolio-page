@@ -12,6 +12,15 @@ html {
   pointer-events: none;
 }
 
+#project1, #project2, #project3, #project4 {
+  scroll-margin-top: 80px; /* header height for a small scroll-up when navigated from from ancor link */
+}
+
+.project1234{
+  margin-left: 5px;
+}
+
+
 @font-face {
   font-family: "Kenfolg Serif";
   src: url("../public/fonts/Kenfolg.otf") format("opentype");

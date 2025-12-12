@@ -105,7 +105,7 @@ export default function Projects() {
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 1 */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project1">
           <Card
             sx={{
               width: "100%",
@@ -224,7 +224,7 @@ export default function Projects() {
 
         {/* Project 2 */}
 
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project2">
           <Card
             sx={{
               width: "100%",
@@ -349,7 +349,7 @@ export default function Projects() {
 
         {/* Project 3 */}
 
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }}>
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project3">
           <Card
             sx={{
               maxWidth: "100%",
@@ -562,7 +562,7 @@ export default function Projects() {
 
         {/* Project 4 */}
 
-        <Grid item xs={12} sx={{ mb: 6 }}>
+        <Grid item xs={12} sx={{ mb: 6 }} id="project4">
           <Card
             sx={{
               maxWidth: "100%",

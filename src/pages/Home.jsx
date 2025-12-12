@@ -205,9 +205,22 @@ export default function Home({ darkMode }) {
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "0.95rem",
                 textAlign: "justify",
+                "& a": {
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#E0FFFF",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                  "&:visited": {
+                    color: "#1EA0D9", // prevent violet color on visited link
+                  },
+                },
               }}
             >
-              • A real-time chat application with React and WebSockets
+              <a href="#project1" className="project1234">
+                - Real-time chat application with React and WebSockets
+              </a>
             </Typography>
             <Typography
               color="text.secondary"
@@ -216,9 +229,23 @@ export default function Home({ darkMode }) {
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "0.95rem",
                 textAlign: "justify",
+                "& a": {
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#E0FFFF",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                  "&:visited": {
+                    color: "#1EA0D9", // prevent violet color on visited link
+                  },
+                },
               }}
             >
-              • A music search platform with Spotify API and Express.js on backend
+              <a href="#project2" className="project1234">
+                - Music search platform with Spotify API and Express.js on
+                backend
+              </a>
             </Typography>
             <Typography
               color="text.secondary"
@@ -227,9 +254,22 @@ export default function Home({ darkMode }) {
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "0.95rem",
                 textAlign: "justify",
+                "& a": {
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#E0FFFF",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                  "&:visited": {
+                    color: "#1EA0D9", // prevent violet color on visited link
+                  },
+                },
               }}
             >
-              • A book website using the Open Library API and Chart.js
+              <a href="#project3" className="project1234">
+                - Book website using the Open Library API and Chart.js
+              </a>
             </Typography>
             <Typography
               color="text.secondary"
@@ -238,9 +278,22 @@ export default function Home({ darkMode }) {
                 fontFamily: "Mulish-Extralight, sans-serif",
                 fontSize: "0.95rem",
                 textAlign: "justify",
+                "& a": {
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#E0FFFF",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                  "&:visited": {
+                    color: "#1EA0D9", // prevent violet color on visited link
+                  },
+                },
               }}
             >
-              • A developer portfolio built with React Router and Material UI
+              <a href="#project4" className="project1234">
+                - Developer portfolio built with React Router and Material UI
+              </a>
             </Typography>
 
             <Box
