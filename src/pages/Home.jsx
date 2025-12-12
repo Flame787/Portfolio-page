@@ -236,7 +236,7 @@ export default function Home({ darkMode }) {
               sx={{
                 marginBottom: 1,
                 fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1rem",
+                fontSize: "0.95rem",
                 textAlign: "justify",
               }}
             >

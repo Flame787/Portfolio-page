@@ -36,7 +36,6 @@ const mySkills = [
   "Visual Studio Code",
   "Netlify",
   "Render",
-  "Cloudflare",
   "Postman",
   "IBM API Connect",
 
@@ -44,7 +43,6 @@ const mySkills = [
   "PC Hardware diagnostics",
   "MS Dynamics 365 CRM",
   "MS Office tools",
-  "MS Teams",
   "Slack",
   "Jira",
   "Miro board",
