@@ -208,7 +208,10 @@ export default function Home({ darkMode }) {
                 "& a": {
                   textDecoration: "none",
                   cursor: "pointer",
-                  color: "#E0FFFF",
+                  color: "#1EA0D9",
+                  "&:link": {
+                    color: "#1EA0D9",
+                  },
                   "&:hover": {
                     textDecoration: "underline",
                   },
@@ -232,7 +235,10 @@ export default function Home({ darkMode }) {
                 "& a": {
                   textDecoration: "none",
                   cursor: "pointer",
-                  color: "#E0FFFF",
+                  color: "#1EA0D9",
+                  "&:link": {
+                    color: "#1EA0D9",
+                  },
                   "&:hover": {
                     textDecoration: "underline",
                   },
@@ -257,7 +263,10 @@ export default function Home({ darkMode }) {
                 "& a": {
                   textDecoration: "none",
                   cursor: "pointer",
-                  color: "#E0FFFF",
+                  color: "#1EA0D9",
+                  "&:link": {
+                    color: "#1EA0D9",
+                  },
                   "&:hover": {
                     textDecoration: "underline",
                   },
@@ -281,7 +290,10 @@ export default function Home({ darkMode }) {
                 "& a": {
                   textDecoration: "none",
                   cursor: "pointer",
-                  color: "#E0FFFF",
+                  color: "#1EA0D9",
+                  "&:link": {
+                    color: "#1EA0D9",
+                  },
                   "&:hover": {
                     textDecoration: "underline",
                   },
