@@ -149,7 +149,11 @@ export default function Projects() {
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
         {/* Project 0 */}
-        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project0">
+        <Grid
+          size={{ xs: 12, sm: 12, md: 12 }}
+          sx={{ mb: 6, scrollMarginTop: "80px" }}
+          id="project0"
+        >
           <Card
             sx={{
               width: "100%",
