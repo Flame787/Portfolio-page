@@ -10,6 +10,7 @@ const mySkills = [
   "React",
   "JavaScript",
   "TypeScript",
+  "Next.js",
   "React Router",
   "TanStack Query",
   "Redux",
@@ -234,7 +235,7 @@ export default function Contact({ darkMode }) {
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
             I have experience integrating REST APIs and working with a broad
-            range of frontend tools, including React Router, Tanstack Query,
+            range of frontend tools, including React Router, TanStack Query,
             Redux, SCSS, Bootstrap, Material UI, Vite, and Jest, as well as
             backend technologies such as Express.js and MySQL. In addition to
             that, I have hands-on experience with Shell scripting and basic

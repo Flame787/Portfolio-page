@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useEffect } from "react";
 import {
   Box,
+  Modal,
   Typography,
   Card,
   CardContent,
@@ -29,6 +31,48 @@ export default function Projects() {
       }
     }
   }, [location]);
+
+  // each picture from carusel can be selected and made bigger - turned into Modal:
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const images1 = [
+    "/011.png",
+    "/012.png",
+    "/013.png",
+    "/014.png",
+    "/015.png",
+    "/016.png",
+    "/017.png",
+    "/018.png",
+    "/019.png",
+    "/020.png",
+    "/021.png",
+    "/022.png",
+  ];
+
+  const images2 = [
+    "/Tolkien01.png",
+    "/Tolkien02.png",
+    "/Tolkien03.png",
+    "/Tolkien04.png",
+    "/Tolkien05.png",
+    "/Tolkien06.png",
+    "/Tolkien07.png",
+    "/Tolkien08.png",
+  ];
+
+  const images3 = [
+    "/portfolio1.png",
+    "/portfolio2.png",
+    "/portfolio3.png",
+    "/portfolio4.png",
+    "/portfolio5.png",
+    "/portfolio6.png",
+    "/portfolio7.png",
+    "/portfolio8.png",
+    "/portfolio9.png",
+    "/portfolio10.png",
+  ];
 
   // arrows for previous/next picture in carousel:
 
@@ -104,6 +148,149 @@ export default function Projects() {
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
+        {/* Project 0 */}
+        <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project0">
+          <Card
+            sx={{
+              width: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              border: "1px solid transparent",
+              "&:hover": {
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              },
+            }}
+          >
+            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                textAlign: "center",
+                mt: 4,
+                mb: 4,
+                color: "primary.title3",
+                fontFamily: "TheSeasons-Regular, serif",
+                letterSpacing: "0.05em",
+                fontSize: "1.5rem",
+              }}
+            >
+              Full
+              <Box
+                component="span"
+                sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
+              >
+                -
+              </Box>
+              Stack Shop App with React, Express.js and MySQL database
+            </Typography>
+
+            <CardMedia>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: {
+                    xs: 220 + 20,
+                    sm: 320 + 30,
+                    md: 420 + 40,
+                    lg: 520,
+                  },
+                  overflow: "hidden",
+                  pl: 4,
+                  pr: 4,
+                  pb: { xs: 0, sm: 0, md: 0 },
+                  "& .slick-dots": {
+                    bottom: -50,
+                  },
+                  "& .slick-dots li button:before": {
+                    fontSize: "12px",
+                    color: "#34a8d9",
+                  },
+                  "& .slick-dots li.slick-active button:before": {
+                    color: "#34a8d9",
+                  },
+                }}
+              >
+                <Slider {...settings}>
+                  {images1.map((src, i) => (
+                    <Box
+                      key={i}
+                      component="img"
+                      // src="/011.png"
+                      //  alt="Slide 1"
+                      src={src}
+                      alt={`Slide ${i + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                        objectFit: "contain",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setSelectedImage(selectedImage === src ? null : src)
+                      }
+                    />
+                  ))}
+                </Slider>
+              </Box>
+            </CardMedia>
+
+            {/*  */}
+            <CardContent>
+              <CustomTypography>
+                Full-stack e-commerce application built with React on the
+                frontend and Express.js/Node.js on the backend, using MySQL as
+                the database.
+              </CustomTypography>
+
+              <CustomTypography>
+                Implements advanced routing with React Router, data fetching and
+                caching with TanStack Query, global state management with
+                Context API and Redux Toolkit, and modular architecture built
+                for scalability.
+              </CustomTypography>
+              <CustomTypography>
+                Includes product sorting (by price and alphabetically),
+                category-based filtering and shopping cart logic. Soon will also
+                include payment and delivery options, user authentication via
+                JWT, and a separate admin panel with editing options and
+                business charts.
+              </CustomTypography>
+              <CustomTypography>
+                Technologies:
+                <button className="round">React</button>
+                <button className="round">React Router</button>
+                <button className="round">Redux Toolkit</button>
+                <button className="round">TanStack Query</button>
+                <button className="round">Express.js</button>
+                <button className="round">MySQL</button>
+              </CustomTypography>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+                <CustomButton
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    ml: 2,
+                    fontSize: "1rem",
+                    textTransform: "none",
+                    fontFamily: "TheSeasons-Regular, serif",
+                    letterSpacing: "0.07em",
+                  }}
+                  href="https://github.com/Flame787/Shop-app"
+                  target="_blank"
+                >
+                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                </CustomButton>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
         {/* Project 1 */}
         <Grid size={{ xs: 12, sm: 12, md: 12 }} sx={{ mb: 6 }} id="project1">
           <Card
@@ -384,14 +571,18 @@ export default function Projects() {
                 sx={{
                   width: "100%",
                   height: {
-                    xs: 220,
-                    sm: 320,
-                    md: 420,
+                    xs: 220 + 20,
+                    sm: 320 + 30,
+                    md: 420 + 40,
                     lg: 520,
                   },
                   overflow: "hidden",
                   pl: 4,
                   pr: 4,
+                  pb: { xs: 0, sm: 0, md: 0 },
+                  "& .slick-dots": {
+                    bottom: -50,
+                  },
                   "& .slick-dots li button:before": {
                     fontSize: "12px",
                     color: "#34a8d9",
@@ -402,94 +593,24 @@ export default function Projects() {
                 }}
               >
                 <Slider {...settings}>
-                  <Box
-                    component="img"
-                    src="/Tolkien01.png"
-                    alt="Slide 1"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien02.png"
-                    alt="Slide 2"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien03.png"
-                    alt="Slide 3"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien04.png"
-                    alt="Slide 4"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien05.png"
-                    alt="Slide 5"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien06.png"
-                    alt="Slide 6"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien07.png"
-                    alt="Slide 7"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/Tolkien08.png"
-                    alt="Slide 8"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
+                  {images2.map((src, i) => (
+                    <Box
+                      key={i}
+                      component="img"
+                      src={src}
+                      alt={`Slide ${i + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                        objectFit: "contain",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setSelectedImage(selectedImage === src ? null : src)
+                      }
+                    />
+                  ))}
                 </Slider>
               </Box>
             </CardMedia>
@@ -598,14 +719,18 @@ export default function Projects() {
                 sx={{
                   width: "100%",
                   height: {
-                    xs: 220,
-                    sm: 320,
-                    md: 420,
+                    xs: 220 + 20,
+                    sm: 320 + 30,
+                    md: 420 + 40,
                     lg: 520,
                   },
                   overflow: "hidden",
                   pl: 4,
                   pr: 4,
+                  pb: { xs: 0, sm: 0, md: 0 },
+                  "& .slick-dots": {
+                    bottom: -50,
+                  },
                   "& .slick-dots li button:before": {
                     fontSize: "12px",
                     color: "#34a8d9",
@@ -616,116 +741,24 @@ export default function Projects() {
                 }}
               >
                 <Slider {...settings}>
-                  <Box
-                    component="img"
-                    src="/portfolio01.png"
-                    alt="Slide 1"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  {/* <Box
-                    component="img"
-                    src="/portfolio2.png"
-                    alt="Slide 2"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  /> */}
-                  <Box
-                    component="img"
-                    src="/portfolio3.png"
-                    alt="Slide 3"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio4.png"
-                    alt="Slide 4"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio5.png"
-                    alt="Slide 5"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio6.png"
-                    alt="Slide 6"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio7.png"
-                    alt="Slide 7"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio8.png"
-                    alt="Slide 8"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio09.png"
-                    alt="Slide 9"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
-                  <Box
-                    component="img"
-                    src="/portfolio10.png"
-                    alt="Slide 10"
-                    sx={{
-                      width: "100%",
-                      height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                      objectFit: "contain",
-                      borderRadius: 4,
-                    }}
-                  />
+                  {images3.map((src, i) => (
+                    <Box
+                      key={i}
+                      component="img"
+                      src={src}
+                      alt={`Slide ${i + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                        objectFit: "contain",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setSelectedImage(selectedImage === src ? null : src)
+                      }
+                    />
+                  ))}
                 </Slider>
               </Box>
             </CardMedia>
@@ -791,6 +824,31 @@ export default function Projects() {
           </Card>
         </Grid>
       </Grid>
+
+      {/* Lightbox modal */}
+      <Modal
+        open={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          component="img"
+          src={selectedImage}
+          alt="Selected"
+          sx={{
+            maxWidth: "90%",
+            maxHeight: "90%",
+            objectFit: "contain",
+            borderRadius: 2,
+            cursor: "pointer",
+          }}
+          onClick={() => setSelectedImage(null)}
+        />
+      </Modal>
     </Box>
   );
 }

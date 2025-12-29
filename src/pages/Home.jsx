@@ -196,7 +196,34 @@ export default function Home({ darkMode }) {
                 textAlign: "justify",
               }}
             >
-              My portfolio includes four major end-to-end developed projects:
+              My portfolio includes five major end-to-end developed projects:
+            </Typography>
+            <Typography
+              color="text.secondary"
+              sx={{
+                marginBottom: 1,
+                fontFamily: "Mulish-Extralight, sans-serif",
+                fontSize: "0.95rem",
+                textAlign: "justify",
+                "& a": {
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  color: "#1EA0D9",
+                  "&:link": {
+                    color: "#1EA0D9",
+                  },
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                  "&:visited": {
+                    color: "#1EA0D9", // prevent violet color on visited link
+                  },
+                },
+              }}
+            >
+              <a href="#project0" className="project1234">
+                - Full-stack shop app with React, Express.js and MySQL database
+              </a>
             </Typography>
             <Typography
               color="text.secondary"
