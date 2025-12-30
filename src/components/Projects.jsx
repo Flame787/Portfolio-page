@@ -34,6 +34,9 @@ export default function Projects() {
 
   // each picture from carusel can be selected and made bigger - turned into Modal:
   const [selectedImage, setSelectedImage] = useState(null);
+  // operator ?: checks if selectedImage === src. If currently selected img is same as the one it was clicked on, it sets selectedImage to null.
+  // -> this means the Modal is closing, becuase selected img is not existing anymore.
+  // -> if image is not the same, it will open a new Modal with this image, and set 'src' to the 'src' of that image.
 
   const images1 = [
     "/011.png",
@@ -177,6 +180,8 @@ export default function Projects() {
                 textAlign: "center",
                 mt: 4,
                 mb: 4,
+                ml: 4,
+                mr: 4,
                 color: "primary.title3",
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.05em",
@@ -186,11 +191,13 @@ export default function Projects() {
               Full
               <Box
                 component="span"
-                sx={{ fontFamily: "Mulish-Extralight, sans-serif" }}
+                sx={{
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                }}
               >
                 -
               </Box>
-              Stack Shop App with React, Express.js and MySQL database
+              Stack Shop App with React, Express.js and MySQL
             </Typography>
 
             <CardMedia>
@@ -259,11 +266,11 @@ export default function Projects() {
                 for scalability.
               </CustomTypography>
               <CustomTypography>
-                Includes product sorting (by price and alphabetically),
-                category-based filtering and shopping cart logic. Soon will also
-                include payment and delivery options, user authentication via
-                JWT, and a separate admin panel with editing options and
-                business charts.
+                Includes category-based filtering, product sorting (by price or
+                alphabetical order), search by keyword, and shopping cart logic.
+                Soon it will also include payment and delivery options, user
+                authentication via JWT, and a separate admin panel with editing
+                options and business charts.
               </CustomTypography>
               <CustomTypography>
                 Technologies:
@@ -320,6 +327,8 @@ export default function Projects() {
                 textAlign: "center",
                 mt: 4,
                 mb: 4,
+                ml: 4,
+                mr: 4,
                 color: "primary.title3",
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.05em",
@@ -563,6 +572,8 @@ export default function Projects() {
                 textAlign: "center",
                 mt: 4,
                 mb: 4,
+                ml: 4,
+                mr: 4,
                 color: "primary.title3",
                 fontSize: "1.5rem",
                 fontFamily: "Marcellus-Regular, serif",

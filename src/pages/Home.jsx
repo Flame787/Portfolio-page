@@ -182,9 +182,9 @@ export default function Home({ darkMode }) {
                 textAlign: "justify",
               }}
             >
-              I have experience integrating REST APIs and working with different
-              frontend tools, including React Router, Redux, SCSS, Bootstrap,
-              Material UI, Vite, and Jest, as well as backend technologies such
+              I have experience working with different frontend tools, including
+              React Router, Redux, TanStack Query, Next.js, SCSS, Bootstrap,
+              Material UI, Vite and Jest, as well as backend technologies such
               as Express.js and MySQL.
             </Typography>
             <Typography
@@ -196,7 +196,7 @@ export default function Home({ darkMode }) {
                 textAlign: "justify",
               }}
             >
-              My portfolio includes five major end-to-end developed projects:
+              My portfolio includes five major projects:
             </Typography>
             <Typography
               color="text.secondary"
