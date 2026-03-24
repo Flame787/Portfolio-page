@@ -345,6 +345,10 @@ export default function Projects() {
                     textTransform: "none",
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                   href="https://github.com/Flame787/Shop-app"
                   target="_blank"
@@ -459,6 +463,10 @@ export default function Projects() {
                     textTransform: "none",
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                 >
                   Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
@@ -473,6 +481,10 @@ export default function Projects() {
                     textTransform: "none",
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
@@ -592,6 +604,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                 >
                   Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
@@ -606,6 +622,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
@@ -749,6 +769,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                 >
                   Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
@@ -763,6 +787,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
@@ -900,6 +928,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                 >
                   Home
@@ -914,6 +946,10 @@ export default function Projects() {
 
                     fontFamily: "TheSeasons-Regular, serif",
                     letterSpacing: "0.07em",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.03)",
+                    },
                   }}
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"

@@ -300,16 +300,42 @@ export default function Contact({ darkMode }) {
       </Typography>
 
       <Box sx={{ mb: 4, textAlign: "center" }}>
-        <CustomButton onClick={sortAsc} sx={{ color: "white" }}>
+        <CustomButton
+          onClick={sortAsc}
+          sx={{
+            color: "white",
+            transition: "transform 0.25s ease, border 0.25s ease",
+            "&:hover": {
+              transform: "scale(1.03)",
+            },
+          }}
+        >
           Sort A-Z
         </CustomButton>
-        <CustomButton onClick={sortDesc} sx={{ ml: 4, color: "white" }}>
+        <CustomButton
+          onClick={sortDesc}
+          sx={{
+            ml: 4,
+            color: "white",
+            transition: "transform 0.25s ease, border 0.25s ease",
+            "&:hover": {
+              transform: "scale(1.03)",
+            },
+          }}
+        >
           Sort Z-A
         </CustomButton>
         <CustomButton
           variant="outlined"
           onClick={resetOrder}
-          sx={{ ml: 4, color: "white" }}
+          sx={{
+            ml: 4,
+            color: "white",
+            transition: "transform 0.25s ease, border 0.25s ease",
+            "&:hover": {
+              transform: "scale(1.03)",
+            },
+          }}
         >
           Reset
         </CustomButton>
@@ -378,6 +404,10 @@ export default function Contact({ darkMode }) {
             textTransform: "none",
             fontFamily: "TheSeasons-Regular, serif",
             letterSpacing: "0.07em",
+            transition: "transform 0.25s ease, border 0.25s ease",
+            "&:hover": {
+              transform: "scale(1.03)",
+            },
           }}
           href="https://github.com/Flame787"
           target="_blank"

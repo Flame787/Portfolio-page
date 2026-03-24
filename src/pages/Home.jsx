@@ -188,8 +188,15 @@ export default function Home({ darkMode }) {
                 //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 // },
                 p: 3.7,
-                pl: 5,
-                pr: 5,
+                pl: {
+                  xs: 3,
+                  md: 5,
+                },
+                pr: {
+                  xs: 3,
+                  md: 5,
+                },
+
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.25s ease, border 0.25s ease",
@@ -205,8 +212,8 @@ export default function Home({ darkMode }) {
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
-                    xs: "0.95rem",
-                    md: "1rem",
+                    xs: "1rem",
+                    md: "1.1rem",
                   },
                   textAlign: "center",
                 }}
@@ -241,6 +248,10 @@ export default function Home({ darkMode }) {
                     letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
+                     transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   }}
                 >
                   About me
@@ -257,6 +268,10 @@ export default function Home({ darkMode }) {
                     letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
+                     transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   }}
                 >
                   Contact me
@@ -279,8 +294,14 @@ export default function Home({ darkMode }) {
                 //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 // },
                 p: 3.7,
-                pl: 5,
-                pr: 5,
+                pl: {
+                  xs: 4,
+                  md: 5,
+                },
+                pr: {
+                  xs: 4,
+                  md: 5,
+                },
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.25s ease, border 0.25s ease",
@@ -296,8 +317,8 @@ export default function Home({ darkMode }) {
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
-                    xs: "0.95rem",
-                    md: "1rem",
+                    xs: "1rem",
+                    md: "1.1rem",
                   },
                   textAlign: "center",
                 }}
@@ -335,6 +356,10 @@ export default function Home({ darkMode }) {
                     textTransform: "none",
                     display: "flex",
                     textAlign: "center",
+                     transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   }}
                 >
                   Skills and technologies
@@ -402,6 +427,10 @@ export default function Home({ darkMode }) {
               <Typography
                 color="text.secondary"
                 sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
@@ -451,6 +480,10 @@ export default function Home({ darkMode }) {
               <Typography
                 color="text.secondary"
                 sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
@@ -500,6 +533,10 @@ export default function Home({ darkMode }) {
               <Typography
                 color="text.secondary"
                 sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
@@ -548,6 +585,10 @@ export default function Home({ darkMode }) {
               <Typography
                 color="text.secondary"
                 sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
@@ -596,6 +637,10 @@ export default function Home({ darkMode }) {
               <Typography
                 color="text.secondary"
                 sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
@@ -655,6 +700,10 @@ export default function Home({ darkMode }) {
                   letterSpacing: "0.07em",
                   fontSize: "1rem",
                   textTransform: "none",
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                 }}
               >
                 Projects
@@ -669,6 +718,10 @@ export default function Home({ darkMode }) {
                   letterSpacing: "0.07em",
                   fontSize: "1rem",
                   textTransform: "none",
+                   transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
                 }}
                 href="https://github.com/Flame787"
                 target="_blank"

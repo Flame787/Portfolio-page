@@ -205,6 +205,10 @@ export default function ContactForm({ darkMode }) {
           textTransform: "none",
           display: "block",
           mx: "auto",
+           transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
         }}
         color="primary"
       >
