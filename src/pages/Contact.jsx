@@ -259,7 +259,7 @@ export default function Contact({ darkMode }) {
           mt: 8,
         }}
       >
-        <Box
+        <Box 
           id="skillsicon"
           component="img"
           src={darkMode ? "/skills4.png" : "/skills-light.png"}
@@ -275,7 +275,7 @@ export default function Contact({ darkMode }) {
           }}
         />
       </Grid>
-      <Typography
+      <Typography 
         gutterBottom
         sx={{
           mt: 6,
@@ -290,7 +290,7 @@ export default function Contact({ darkMode }) {
         }}
         fontFamily={"TheSeasons-Regular, serif"}
       >
-        My skills
+        Skills and technologies
       </Typography>
 
       <Box sx={{ mb: 4, textAlign: "center" }}>

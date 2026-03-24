@@ -5,19 +5,30 @@ import { Link } from "react-router-dom";
 import CustomButton from "../components/CustomButton";
 // import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ForumIcon from "@mui/icons-material/Forum";
+import HeadphonesIcon from "@mui/icons-material/Headphones";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import LaptopIcon from "@mui/icons-material/Laptop";
+// import ApartmentIcon from "@mui/icons-material/Apartment";
+
 import Projects from "../components/Projects";
 
 export default function Home({ darkMode }) {
   // fade-in animation:
   const [showSubTitle, setShowsubTitle] = useState(false);
   const [showImage, setShowImage] = useState(false);
-  const [showText, setShowText] = useState(false);
+  const [showText1, setShowText1] = useState(false);
+  const [showText2, setShowText2] = useState(false);
+  const [showText3, setShowText3] = useState(false);
 
   // setting fade-in-state to true (only once, when component renders):
   useEffect(() => {
     setTimeout(() => setShowsubTitle(true), 200);
     setTimeout(() => setShowImage(true), 500);
-    setTimeout(() => setShowText(true), 800);
+    setTimeout(() => setShowText1(true), 800);
+    setTimeout(() => setShowText2(true), 1000);
+    setTimeout(() => setShowText3(true), 1200);
   }, []);
 
   // enable scrolling to the Projects-section from other pages, like Contact:
@@ -84,40 +95,28 @@ export default function Home({ darkMode }) {
         </Box>
       </Fade>
 
+      {/* container for both main illustration (left) and text boxes (right): */}
       <Grid
         container
-        // spacing={2}
         sx={{
-          display: "flex",
-          alignItems: "stretch",
-          flexWrap: { xs: "wrap", lg: "nowrap" },
-          // alignItems: "center",
-          // flexWrap: "nowrap",
-          gap: 6,
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr",
+            lg: "1fr 1fr",
+          },
+          columnGap: 4,
+          rowGap: 4,
+          alignItems: "center",
           justifyContent: "center",
-        }}
-        direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
-        justifyContent={{
-          xs: "center",
-          sm: "center",
-          md: "center",
-          lg: "center",
+          gap: 6,
         }}
       >
+        {/* LEFT SIDE — IMAGE */}
         <Fade in={showImage} timeout={600}>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={6}
-            lg={6}
+          <Box
             sx={{
               display: "flex",
-              alignItems: "center",
-              justifyContent: {
-                xs: "center",
-                lg: "center",
-              },
+              justifyContent: "center",
             }}
           >
             <Box
@@ -126,28 +125,210 @@ export default function Home({ darkMode }) {
               alt="code"
               sx={{
                 width: "100%",
-                maxWidth: "490px",
+                // maxWidth: "500px",
+                maxWidth: { xs: "100%", sm: "80%", md: "50%", lg: "100%" },
                 borderRadius: "16px",
-                p: 0,
-                m: 0,
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               }}
             />
-          </Grid>
+          </Box>
         </Fade>
 
-        <Fade in={showText} timeout={600}>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={6}
-            lg={6}
+        {/* RIGHT SIDE — 2 TEXTBOXES */}
+        <Box
+          size={{ xs: 12, sm: 12, md: 12 }}
+          sx={{
+            // maxWidth: { xs: "80%", sm: "80%", md: "500px" },
+
+            margin: "0 auto",
+            wordWrap: "break-word",
+            display: "flex",
+            width: "100%",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 5,
+          }}
+        >
+          {/* TEXTBOX 1 */}
+          <Fade in={showText1} timeout={600}>
+            <Box
+              sx={{
+                // width: 500,
+                width: "100%",
+                maxWidth: { xs: "100%", sm: "100%", md: "100%" },
+                // height: 226,
+                backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
+                borderRadius: 4,
+                border: "1px solid transparent",
+                "&:hover": {
+                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                },
+                p: 3.7,
+                pl: 5,
+                pr: 5,
+                boxShadow:
+                  "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              }}
+            >
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: {
+                    xs: "0.95rem",
+                    md: "1rem",
+                  },
+                  textAlign: "center",
+                }}
+              >
+                Building <strong>scalable</strong> and{" "}
+                <strong>user-friendly</strong> web applications with{" "}
+                <strong>React</strong> and <strong>TypeScript</strong>. <br /><br />
+                Following best practices to ensure <strong>
+                  performance
+                </strong>, <strong>accessibility</strong> and{" "}
+                <strong>maintainability</strong>.
+              </Typography>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  mt: 3,
+                  flexWrap: "wrap",
+                  gap: 2,
+                }}
+              >
+                <CustomButton
+                  component={Link}
+                  to="/contact"
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  sx={{
+                    fontFamily: "TheSeasons-Regular, serif",
+                    letterSpacing: "0.07em",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
+                >
+                  About me
+                </CustomButton>
+
+                <CustomButton
+                  component={Link}
+                  to="/contact#contactme"
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  sx={{
+                    fontFamily: "TheSeasons-Regular, serif",
+                    letterSpacing: "0.07em",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                  }}
+                >
+                  Contact me
+                </CustomButton>
+              </Box>
+            </Box>
+          </Fade>
+
+          {/* TEXTBOX 2 */}
+          <Fade in={showText2} timeout={600}>
+            <Box
+              sx={{
+                width: "100%",
+                maxWidth: { xs: "100%", sm: "100%", md: "100%" },
+                // height: 226,
+                backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
+                borderRadius: 4,
+                border: "1px solid transparent",
+                "&:hover": {
+                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                },
+                p: 3.7,
+                pl: 5,
+                pr: 5,
+                boxShadow:
+                  "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              }}
+            >
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: {
+                    xs: "0.95rem",
+                    md: "1rem",
+                  },
+                  textAlign: "center",
+                }}
+              >
+                Experienced with diverse frontend and backend technologies:{" "}
+                <br />
+                <strong>React Router</strong>, <strong>Redux</strong>,{" "}
+                <strong>React Query</strong>, <strong>Next.js</strong>,{" "}
+                <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
+                <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
+                <strong>Vite</strong>, <strong>Jest</strong>,{" "}
+                <strong>Vitest</strong>, <br />
+                <strong>Express.js</strong> and <strong>MySQL</strong>.
+              </Typography>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  mt: 3,
+                  flexWrap: "wrap",
+                  gap: 2,
+                }}
+              >
+                <CustomButton
+                  component={Link}
+                  to="/contact#skillsicon"
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  sx={{
+                    fontFamily: "TheSeasons-Regular, serif",
+                    letterSpacing: "0.07em",
+                    fontSize: "1rem",
+                    textTransform: "none",
+                    display: "flex",
+                    textAlign: "center",
+                  }}
+                >
+                  Skills and technologies
+                </CustomButton>
+              </Box>
+            </Box>
+          </Fade>
+        </Box>
+      </Grid>
+
+      {/* TEXTBOX 3 - below the picture and 2 smaller textboxes */}
+
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          mt: {
+            xs: 6,
+            md: 10,
+          },
+        }}
+      >
+        <Fade in={showText3} timeout={600}>
+          <Box
             sx={{
-              flexBasis: "50%",
-              ml: { xs: 0.3, sm: 2, md: 2, lg: 0 },
-              mr: { xs: 0.3, sm: 2, md: 2, lg: 0 },
+              width: "100%",
               backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
               borderRadius: 4,
               border: "1px solid transparent",
@@ -155,6 +336,8 @@ export default function Home({ darkMode }) {
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
               p: 3.7,
+              pl: 5,
+              pr: 5,
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
             }}
@@ -162,178 +345,242 @@ export default function Home({ darkMode }) {
             <Typography
               color="text.secondary"
               sx={{
-                marginBottom: 1,
+                marginBottom: 3,
                 fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
+                fontSize: "1.2rem",
+                textAlign: "center",
               }}
             >
-              My primary focus is building scalable, responsive, and
-              user-friendly web applications with React, JavaScript, and
-              TypeScript, following best practices in performance,
-              accessibility, and maintainability.
+              Check out my latest <strong>projects</strong>:
             </Typography>
-            <Typography
-              color="text.secondary"
+
+            <Box
               sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              I have experience working with different frontend tools, including
-              React Router, Redux, TanStack Query, Next.js, SCSS, Bootstrap,
-              Material UI, Vite and Jest, as well as backend technologies such
-              as Express.js and MySQL.
-            </Typography>
-            <Typography
-              color="text.secondary"
-              sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-              }}
-            >
-              My portfolio includes five major projects:
-            </Typography>
-            <Typography
-              color="text.secondary"
-              sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-                "& a": {
-                  textDecoration: "none",
-                  cursor: "pointer",
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: "1rem",
+                  textAlign: "justify",
                   color: "#1EA0D9",
-                  "&:link": {
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
                     color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
                   },
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                  "&:visited": {
-                    color: "#1EA0D9", // prevent violet color on visited link
-                  },
-                },
-              }}
-            >
-              <a href="#project0" className="project1234">
-                - Full-stack shop app with React, Express.js and MySQL database
-              </a>
-            </Typography>
-            <Typography
-              color="text.secondary"
+                }}
+              >
+                <ShoppingCartIcon
+                  sx={{
+                    fontSize: "1rem",
+                    verticalAlign: "middle",
+                    mb: 0.5,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project0" className="project1234">
+                  <strong>Full-stack shop app</strong> - React, Express.js and
+                  MySQL database
+                </a>
+              </Typography>
+            </Box>
+
+            <Box
               sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-                "& a": {
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  color: "#1EA0D9",
-                  "&:link": {
-                    color: "#1EA0D9",
-                  },
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                  "&:visited": {
-                    color: "#1EA0D9", // prevent violet color on visited link
-                  },
-                },
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <a href="#project1" className="project1234">
-                - Real-time chat application with React and WebSockets
-              </a>
-            </Typography>
-            <Typography
-              color="text.secondary"
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <ForumIcon
+                  sx={{
+                    fontSize: "1rem",
+                    verticalAlign: "middle",
+                    mb: 0.6,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project1" className="project1234">
+                  <strong>Real-time chat application</strong> - React and
+                  WebSockets
+                </a>
+              </Typography>
+            </Box>
+
+            <Box
               sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-                "& a": {
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  color: "#1EA0D9",
-                  "&:link": {
-                    color: "#1EA0D9",
-                  },
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                  "&:visited": {
-                    color: "#1EA0D9", // prevent violet color on visited link
-                  },
-                },
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <a href="#project2" className="project1234">
-                - Music search platform with Spotify API and Express.js on
-                backend
-              </a>
-            </Typography>
-            <Typography
-              color="text.secondary"
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <HeadphonesIcon
+                  sx={{
+                    fontSize: "1rem",
+                    verticalAlign: "middle",
+                    mb: 0.6,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project2" className="project1234">
+                  <strong>Music search platform</strong> - JavaScript, Spotify
+                  API and Express.js
+                </a>
+              </Typography>
+            </Box>
+            <Box
               sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-                "& a": {
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  color: "#1EA0D9",
-                  "&:link": {
-                    color: "#1EA0D9",
-                  },
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                  "&:visited": {
-                    color: "#1EA0D9", // prevent violet color on visited link
-                  },
-                },
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <a href="#project3" className="project1234">
-                - Book website using the Open Library API and Chart.js
-              </a>
-            </Typography>
-            <Typography
-              color="text.secondary"
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <MenuBookIcon
+                  sx={{
+                    fontSize: "1rem",
+                    verticalAlign: "middle",
+                    mb: 0.6,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project3" className="project1234">
+                  <strong>Book website</strong> - JavaScript, Open Library API
+                  and Chart.js
+                </a>
+              </Typography>
+            </Box>
+            <Box
               sx={{
-                marginBottom: 1,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "0.95rem",
-                textAlign: "justify",
-                "& a": {
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  color: "#1EA0D9",
-                  "&:link": {
-                    color: "#1EA0D9",
-                  },
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                  "&:visited": {
-                    color: "#1EA0D9", // prevent violet color on visited link
-                  },
-                },
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <a href="#project4" className="project1234">
-                - Developer portfolio built with React Router and Material UI
-              </a>
-            </Typography>
+              <Typography
+                color="text.secondary"
+                sx={{
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <LaptopIcon
+                  sx={{
+                    fontSize: "1rem",
+                    verticalAlign: "middle",
+                    mb: 0.3,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project4" className="project1234">
+                  <strong>Developer portfolio</strong> - React Router and
+                  Material UI
+                </a>
+              </Typography>
+            </Box>
 
             <Box
               sx={{
@@ -346,7 +593,7 @@ export default function Home({ darkMode }) {
             >
               <CustomButton
                 component={Link}
-                to="/contact"
+                to="/#projects"
                 variant="contained"
                 color="primary"
                 size="large"
@@ -357,7 +604,7 @@ export default function Home({ darkMode }) {
                   textTransform: "none",
                 }}
               >
-                About me
+                Projects
               </CustomButton>
 
               <CustomButton
@@ -376,26 +623,10 @@ export default function Home({ darkMode }) {
               >
                 GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
               </CustomButton>
-
-              <CustomButton
-                component={Link}
-                to="/contact#contactme"
-                variant="contained"
-                color="primary"
-                size="large"
-                sx={{
-                  fontFamily: "TheSeasons-Regular, serif",
-                  letterSpacing: "0.07em",
-                  fontSize: "1rem",
-                  textTransform: "none",
-                }}
-              >
-                Contact
-              </CustomButton>
             </Box>
-          </Grid>
+          </Box>
         </Fade>
-      </Grid>
+      </Box>
 
       {/* Projects section */}
       <Projects />

@@ -134,7 +134,10 @@ export default function Projects() {
         variant="h4"
         gutterBottom
         sx={{
-          mt: 10,
+          mt: {
+            xs: 5,
+            md: 10,
+          },
           mb: 6,
           textAlign: "center",
           fontFamily: "TheSeasons-Regular, serif",
@@ -188,6 +191,15 @@ export default function Projects() {
                 fontSize: "1.5rem",
               }}
             >
+              SmartSpace Studio{" "}
+              <Box
+                component="span"
+                sx={{
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                }}
+              >
+                -
+              </Box>{" "}
               Full
               <Box
                 component="span"
@@ -197,7 +209,7 @@ export default function Projects() {
               >
                 -
               </Box>
-              Stack Shop App with React, Express.js and MySQL
+              stack shop app with React, Express.js and MySQL
             </Typography>
 
             <CardMedia>
@@ -335,7 +347,7 @@ export default function Projects() {
                 fontSize: "1.5rem",
               }}
             >
-              React Chat App with Scaledrone Websocket
+              React chat app with Scaledrone Websocket
             </Typography>
 
             <Box sx={{ px: 4 }}>
@@ -366,7 +378,7 @@ export default function Projects() {
             <CardContent>
               <CustomTypography>
                 This real-time chat application is built with React and powered
-                by the Scaledrone WebSocket for live communication.
+                by the Scaledrone Websocket for live communication.
               </CustomTypography>
               <CustomTypography>
                 After entering a username and selecting an avatar, users can
@@ -454,7 +466,7 @@ export default function Projects() {
                 fontFamily: "Marcellus-Regular, serif",
               }}
             >
-              Music Search App powered by Spotify API
+              Music Domain - Music search app powered by Spotify API
             </Typography>
 
             <Box sx={{ px: 4 }}>
