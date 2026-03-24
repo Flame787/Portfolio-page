@@ -62,7 +62,7 @@ export default function ContactForm({ darkMode }) {
         emailConfig.serviceId,
         emailConfig.templateId,
         e.target,
-        emailConfig.publicKey
+        emailConfig.publicKey,
       )
       .then(
         (result) => {
@@ -73,7 +73,7 @@ export default function ContactForm({ darkMode }) {
         (error) => {
           console.log("Failed to send email:", error.text);
           alert("Failed to send email. Please try again later.");
-        }
+        },
       );
     setCaptchaToken(null);
   };
@@ -97,6 +97,13 @@ export default function ContactForm({ darkMode }) {
         },
         boxShadow:
           "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+
+           transition: "transform 0.25s ease, border 0.25s ease",
+        "&:hover": {
+          transform: "scale(1.03)",
+          border: "1.3px solid rgba(76, 201, 254, 0.4)",
+        },
+       
       }}
     >
       <Grid
@@ -104,11 +111,11 @@ export default function ContactForm({ darkMode }) {
           display: "flex",
           justifyContent: "center",
           mt: 2,
+          
         }}
       >
         <Box
           component="img"
-
           src={darkMode ? "/Contact-me-dark3.png" : "/Contact-me-light.png"}
           alt="code"
           sx={{
@@ -122,7 +129,6 @@ export default function ContactForm({ darkMode }) {
         />
       </Grid>
 
-      
       <Typography
         gutterBottom
         sx={{
@@ -182,10 +188,7 @@ export default function ContactForm({ darkMode }) {
             justifyContent: "center",
           }}
         >
-          <ReCAPTCHA
-            sitekey={siteKey}
-            onChange={handleCaptchaChange}
-          />
+          <ReCAPTCHA sitekey={siteKey} onChange={handleCaptchaChange} />
         </Box>
       )}
 
@@ -204,7 +207,6 @@ export default function ContactForm({ darkMode }) {
           mx: "auto",
         }}
         color="primary"
-      
       >
         Send <SendIcon sx={{ ml: 0.5, fontSize: "0.8rem" }} />
       </CustomButton>

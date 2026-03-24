@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import {
   Box,
   Modal,
@@ -37,6 +37,39 @@ export default function Projects() {
   // operator ?: checks if selectedImage === src. If currently selected img is same as the one it was clicked on, it sets selectedImage to null.
   // -> this means the Modal is closing, becuase selected img is not existing anymore.
   // -> if image is not the same, it will open a new Modal with this image, and set 'src' to the 'src' of that image.
+
+  // Animation for project titles, triggered when title gets into viewport:
+
+  // const titleRef = useRef(null);
+  // const [animateTitle, setAnimateTitle] = useState(false);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll("[data-animate-title]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // setAnimateTitle(true);
+            entry.target.classList.add("slide-up-fade");
+            // observer.disconnect(); // animation only once
+          } else {
+            // setAnimateTitle(false);    // reset animation when title is not in viewport anymore
+            entry.target.classList.remove("slide-up-fade");
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    // if (titleRef.current) {
+    //   observer.observe(titleRef.current);
+    // }
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const images1 = [
     "/011.png",
@@ -166,19 +199,27 @@ export default function Projects() {
               margin: "0 auto",
               wordWrap: "break-word",
               borderRadius: 4,
-              transition: "border 0.3s ease",
+              // transition: "border 0.3s ease",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
+                transform: "scale(1.03)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
+              // ref={titleRef}
+              data-animate-title
               variant="h6"
               gutterBottom
+              // className={animateTitle ? "slide-up-fade" : ""}
               sx={{
                 textAlign: "center",
                 mt: 4,
@@ -189,6 +230,7 @@ export default function Projects() {
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.05em",
                 fontSize: "1.5rem",
+                opacity: 0,
               }}
             >
               SmartSpace Studio{" "}
@@ -322,19 +364,26 @@ export default function Projects() {
               margin: "0 auto",
               wordWrap: "break-word",
               borderRadius: 4,
-              transition: "border 0.3s ease",
+              // transition: "border 0.3s ease",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
+                transform: "scale(1.03)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
             {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
             <Typography
+              data-animate-title
               variant="h6"
               gutterBottom
+              // className={animateTitle ? "slide-up-fade" : ""}
               sx={{
                 textAlign: "center",
                 mt: 4,
@@ -345,6 +394,7 @@ export default function Projects() {
                 fontFamily: "TheSeasons-Regular, serif",
                 letterSpacing: "0.05em",
                 fontSize: "1.5rem",
+                opacity: 0,
               }}
             >
               React chat app with Scaledrone Websocket
@@ -443,16 +493,23 @@ export default function Projects() {
               margin: "0 auto",
               wordWrap: "break-word",
               borderRadius: 4,
-              transition: "border 0.3s ease",
+              // transition: "border 0.3s ease",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
+                transform: "scale(1.03)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
             <Typography
+              data-animate-title
+              // className={animateTitle ? "slide-up-fade" : ""}
               variant="h6"
               gutterBottom
               sx={{
@@ -464,6 +521,7 @@ export default function Projects() {
                 color: "primary.title3",
                 fontSize: "1.5rem",
                 fontFamily: "Marcellus-Regular, serif",
+                opacity: 0,
               }}
             >
               Music Domain - Music search app powered by Spotify API
@@ -568,16 +626,23 @@ export default function Projects() {
               margin: "0 auto",
               wordWrap: "break-word",
               borderRadius: 4,
-              transition: "border 0.3s ease",
+              // transition: "border 0.3s ease",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
+                transform: "scale(1.03)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
             <Typography
+              data-animate-title
+              // className={animateTitle ? "slide-up-fade" : ""}
               variant="h6"
               gutterBottom
               sx={{
@@ -589,6 +654,7 @@ export default function Projects() {
                 color: "primary.title3",
                 fontSize: "1.5rem",
                 fontFamily: "Marcellus-Regular, serif",
+                opacity: 0,
               }}
             >
               Tolkien Info Page with OpenLibrary API
@@ -717,16 +783,23 @@ export default function Projects() {
               margin: "0 auto",
               wordWrap: "break-word",
               borderRadius: 4,
-              transition: "border 0.3s ease",
+              // transition: "border 0.3s ease",
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
+                transform: "scale(1.03)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
           >
             <Typography
+              data-animate-title
+              // className={animateTitle ? "slide-up-fade" : ""}
               variant="h6"
               gutterBottom
               sx={{
@@ -736,6 +809,7 @@ export default function Projects() {
                 color: "primary.title3",
                 fontSize: "1.5rem",
                 fontFamily: "Marcellus-Regular, serif",
+                opacity: 0,
               }}
             >
               Developer Portfolio

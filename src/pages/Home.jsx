@@ -17,18 +17,18 @@ import Projects from "../components/Projects";
 export default function Home({ darkMode }) {
   // fade-in animation:
   const [showSubTitle, setShowsubTitle] = useState(false);
-  const [showImage, setShowImage] = useState(false);
+  // const [showImage, setShowImage] = useState(false);
   const [showText1, setShowText1] = useState(false);
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
 
   // setting fade-in-state to true (only once, when component renders):
   useEffect(() => {
-    setTimeout(() => setShowsubTitle(true), 200);
-    setTimeout(() => setShowImage(true), 500);
-    setTimeout(() => setShowText1(true), 800);
-    setTimeout(() => setShowText2(true), 1000);
-    setTimeout(() => setShowText3(true), 1200);
+    setTimeout(() => setShowsubTitle(true), 400);
+    // setTimeout(() => setShowImage(true), 500);
+    setTimeout(() => setShowText1(true), 700);
+    setTimeout(() => setShowText2(true), 900);
+    setTimeout(() => setShowText3(true), 1100);
   }, []);
 
   // enable scrolling to the Projects-section from other pages, like Contact:
@@ -49,6 +49,8 @@ export default function Home({ darkMode }) {
     <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
         variant="h4"
+        className="flip-scale-2-hor-bottom"
+        style={{ animationDirection: "reverse" }}
         gutterBottom //
         sx={{
           mt: 8,
@@ -68,19 +70,25 @@ export default function Home({ darkMode }) {
           Marina
         </Box>
       </Typography>
+
       <Fade in={showSubTitle} timeout={600}>
         <Box>
           <Typography
+            // className="scale-up-center"
             sx={{
               mt: 4,
               mb: 1,
               textAlign: "center",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1.2rem",
+              animation:
+                "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+              animationDelay: "0.7s",
             }}
           >
             a front-end developer passionate about creating
           </Typography>
+
           <Typography
             sx={{
               mt: 1,
@@ -88,6 +96,9 @@ export default function Home({ darkMode }) {
               textAlign: "center",
               fontFamily: "Mulish-Extralight, sans-serif",
               fontSize: "1.2rem",
+              animation:
+                "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+              animationDelay: "0.7s",
             }}
           >
             interactive, API-driven interfaces with React and modern JavaScript.
@@ -100,6 +111,7 @@ export default function Home({ darkMode }) {
         container
         sx={{
           display: "grid",
+          // transform: "none",
           gridTemplateColumns: {
             xs: "1fr",
             lg: "1fr 1fr",
@@ -112,28 +124,38 @@ export default function Home({ darkMode }) {
         }}
       >
         {/* LEFT SIDE — IMAGE */}
-        <Fade in={showImage} timeout={600}>
+        {/* <Fade in={showImage} timeout={600}> */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            transition: "transform 0.25s ease, border 0.25s ease",
+            "&:hover": {
+              transform: "scale(1.03)",
+              // border: "1.3px solid rgba(76, 201, 254, 0.4)",
+            },
+          }}
+        >
           <Box
+            component="img"
+            src={darkMode ? "/Dev-port3.png" : "/Dev-port7.png"}
+            alt="code"
             sx={{
-              display: "flex",
-              justifyContent: "center",
+              width: "100%",
+              // maxWidth: "500px",
+              maxWidth: { xs: "100%", sm: "80%", md: "50%", lg: "100%" },
+              borderRadius: "16px",
+
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              display: "block",
+              // animation: "flip-scale-up-hor 1.2s linear reverse both",
+
+              animation: "hero-image-flip-strong 1s ease-out both",
             }}
-          >
-            <Box
-              component="img"
-              src={darkMode ? "/Dev-port3.png" : "/Dev-port7.png"}
-              alt="code"
-              sx={{
-                width: "100%",
-                // maxWidth: "500px",
-                maxWidth: { xs: "100%", sm: "80%", md: "50%", lg: "100%" },
-                borderRadius: "16px",
-                boxShadow:
-                  "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
-              }}
-            />
-          </Box>
-        </Fade>
+          />
+        </Box>
+        {/* </Fade> */}
 
         {/* RIGHT SIDE — 2 TEXTBOXES */}
         <Box
@@ -162,14 +184,19 @@ export default function Home({ darkMode }) {
                 backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
                 borderRadius: 4,
                 border: "1px solid transparent",
-                "&:hover": {
-                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
-                },
+                // "&:hover": {
+                //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                // },
                 p: 3.7,
                 pl: 5,
                 pr: 5,
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                transition: "transform 0.25s ease, border 0.25s ease",
+                "&:hover": {
+                  transform: "scale(1.03)",
+                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                },
               }}
             >
               <Typography
@@ -186,7 +213,8 @@ export default function Home({ darkMode }) {
               >
                 Building <strong>scalable</strong> and{" "}
                 <strong>user-friendly</strong> web applications with{" "}
-                <strong>React</strong> and <strong>TypeScript</strong>. <br /><br />
+                <strong>React</strong> and <strong>TypeScript</strong>. <br />
+                <br />
                 Following best practices to ensure <strong>
                   performance
                 </strong>, <strong>accessibility</strong> and{" "}
@@ -247,14 +275,19 @@ export default function Home({ darkMode }) {
                 backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
                 borderRadius: 4,
                 border: "1px solid transparent",
-                "&:hover": {
-                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
-                },
+                // "&:hover": {
+                //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                // },
                 p: 3.7,
                 pl: 5,
                 pr: 5,
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                transition: "transform 0.25s ease, border 0.25s ease",
+                "&:hover": {
+                  transform: "scale(1.03)",
+                  border: "1.3px solid rgba(76, 201, 254, 0.4)",
+                },
               }}
             >
               <Typography
@@ -332,14 +365,19 @@ export default function Home({ darkMode }) {
               backgroundColor: !darkMode && "rgba(237, 250, 254, 0.6)",
               borderRadius: 4,
               border: "1px solid transparent",
-              "&:hover": {
-                border: "1.3px solid rgba(76, 201, 254, 0.4)",
-              },
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
               p: 3.7,
               pl: 5,
               pr: 5,
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+              transition: "transform 0.25s ease, border 0.25s ease",
+              "&:hover": {
+                transform: "scale(1.03)",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              },
             }}
           >
             <Typography
@@ -366,8 +404,11 @@ export default function Home({ darkMode }) {
                 sx={{
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: "1rem",
-                  textAlign: "justify",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
                   color: "#1EA0D9",
                   "& a": {
                     textDecoration: "none",
@@ -394,8 +435,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project0" className="project1234">
-                  <strong>Full-stack shop app</strong> - React, Express.js and
-                  MySQL database
+                  <strong>Full-stack shop app</strong> - React, Redux Toolkit,
+                  React Query, Express.js and MySQL database
                 </a>
               </Typography>
             </Box>
@@ -412,8 +453,11 @@ export default function Home({ darkMode }) {
                 sx={{
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: "1rem",
-                  textAlign: "justify",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
                   color: "#1EA0D9",
                   "& a": {
                     textDecoration: "none",
@@ -440,8 +484,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project1" className="project1234">
-                  <strong>Real-time chat application</strong> - React and
-                  WebSockets
+                  <strong>Real-time chat application</strong> - React, Spotify
+                  API and Scaledrone WebSocket
                 </a>
               </Typography>
             </Box>
@@ -458,8 +502,11 @@ export default function Home({ darkMode }) {
                 sx={{
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: "1rem",
-                  textAlign: "justify",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
                   color: "#1EA0D9",
                   "& a": {
                     textDecoration: "none",
@@ -487,7 +534,7 @@ export default function Home({ darkMode }) {
                 />{" "}
                 <a href="#project2" className="project1234">
                   <strong>Music search platform</strong> - JavaScript, Spotify
-                  API and Express.js
+                  API, SCSS and Express.js
                 </a>
               </Typography>
             </Box>
@@ -503,8 +550,11 @@ export default function Home({ darkMode }) {
                 sx={{
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: "1rem",
-                  textAlign: "justify",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
                   color: "#1EA0D9",
                   "& a": {
                     textDecoration: "none",
@@ -548,8 +598,11 @@ export default function Home({ darkMode }) {
                 sx={{
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: "1rem",
-                  textAlign: "justify",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
                   color: "#1EA0D9",
                   "& a": {
                     textDecoration: "none",

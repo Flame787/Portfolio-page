@@ -84,7 +84,7 @@ export default function Contact({ darkMode }) {
           setTriggered(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     observer.observe(node);
     // connecting observer with real DOM-element to track it's visibility (when the element gets into user viewport)
@@ -206,6 +206,11 @@ export default function Contact({ darkMode }) {
           borderRadius: 4,
           boxShadow:
             "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+          transition: "transform 0.25s ease, border 0.25s ease",
+          "&:hover": {
+            transform: "scale(1.03)",
+            border: "1.3px solid rgba(76, 201, 254, 0.4)",
+          },
         }}
       >
         <Box
@@ -246,8 +251,9 @@ export default function Contact({ darkMode }) {
             I am highly motivated to create modern, scalable, and intuitive
             digital solutions, and I bring a proactive, adaptable, and
             problem-solving mindset to software development. I also have
-            valuable hands-on experience in project planning and effective
-            collaboration with stakeholders in an agile environment.
+            valuable experience in project planning, work in cross‑functional
+            teams and effective collaboration with stakeholders in an agile
+            environment.
           </CustomTypography>
         </Box>
       </Grid>
@@ -259,7 +265,7 @@ export default function Contact({ darkMode }) {
           mt: 8,
         }}
       >
-        <Box 
+        <Box
           id="skillsicon"
           component="img"
           src={darkMode ? "/skills4.png" : "/skills-light.png"}
@@ -275,7 +281,7 @@ export default function Contact({ darkMode }) {
           }}
         />
       </Grid>
-      <Typography 
+      <Typography
         gutterBottom
         sx={{
           mt: 6,
