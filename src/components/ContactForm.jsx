@@ -92,9 +92,9 @@ export default function ContactForm({ darkMode }) {
         borderRadius: 4,
 
         border: "1px solid transparent",
-        "&:hover": {
-          border: "1.3px solid rgba(76, 201, 254, 0.4)",
-        },
+        // "&:hover": {
+        //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+        // },
         boxShadow:
           "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
 
