@@ -190,7 +190,9 @@ export default function Contact({ darkMode }) {
             lg: "2rem",
           },
         }}
-        fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"TheSeasons-Regular, serif"}
+        fontFamily={"Cabin, sans-serif"}
+        fontWeight="600"
       >
         About me
       </Typography>
@@ -206,7 +208,7 @@ export default function Contact({ darkMode }) {
           // },
           borderRadius: 4,
           boxShadow:
-            "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+            "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
           transition: "transform 0.25s ease, border 0.25s ease",
           "&:hover": {
             transform: "scale(1.03)",
@@ -230,7 +232,7 @@ export default function Contact({ darkMode }) {
               textAlign: "justify",
             }}
           >
-            I am a frontend developer specializing in React, JavaScript, and
+            I am frontend developer specialized in React, JavaScript, and
             TypeScript, with experience in building scalable, user-focused web
             applications.
           </CustomTypography>
@@ -295,7 +297,9 @@ export default function Contact({ darkMode }) {
             lg: "2rem",
           },
         }}
-        fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"TheSeasons-Regular, serif"}
+        fontFamily={"Cabin, sans-serif"}
+        fontWeight="600"
       >
         Skills and technologies
       </Typography>
@@ -304,6 +308,9 @@ export default function Contact({ darkMode }) {
         <CustomButton
           onClick={sortAsc}
           sx={{
+            fontFamily: "Cabin, sans-serif",
+            fontSize: "1rem",
+            letterSpacing: "0.02em",
             color: "white",
             transition: "transform 0.25s ease, border 0.25s ease",
             "&:hover": {
@@ -316,6 +323,9 @@ export default function Contact({ darkMode }) {
         <CustomButton
           onClick={sortDesc}
           sx={{
+            fontFamily: "Cabin, sans-serif",
+            fontSize: "1rem",
+            letterSpacing: "0.02em",
             ml: 4,
             color: "white",
             transition: "transform 0.25s ease, border 0.25s ease",
@@ -330,6 +340,9 @@ export default function Contact({ darkMode }) {
           variant="outlined"
           onClick={resetOrder}
           sx={{
+            fontFamily: "Cabin, sans-serif",
+            fontSize: "1rem",
+            letterSpacing: "0.02em",
             ml: 4,
             color: "white",
             transition: "transform 0.25s ease, border 0.25s ease",
@@ -380,7 +393,9 @@ export default function Contact({ darkMode }) {
             lg: "2rem",
           },
         }}
-        fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"TheSeasons-Regular, serif"}
+        fontFamily={"Cabin, sans-serif"}
+        fontWeight="500"
       >
         My GitHub activity
       </Typography>
@@ -400,20 +415,23 @@ export default function Contact({ darkMode }) {
         <CustomButton
           variant="contained"
           color="primary"
+          size="large"
           sx={{
+            // fontFamily: "Mulish-Extralight, sans-serif",
+            fontFamily: "Cabin, sans-serif",
+            letterSpacing: "0.02em",
             fontSize: "1rem",
             textTransform: "none",
-            fontFamily: "TheSeasons-Regular, serif",
-            letterSpacing: "0.07em",
             transition: "transform 0.25s ease, border 0.25s ease",
             "&:hover": {
-              transform: "scale(1.03)",
+              transform: "scale(1.02)",
             },
           }}
           href="https://github.com/Flame787"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          Github <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+          GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
         </CustomButton>
       </Box>
       <Box id="contactme">

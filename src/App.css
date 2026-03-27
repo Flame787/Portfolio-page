@@ -12,14 +12,17 @@ html {
   pointer-events: none;
 }
 
-#project1, #project2, #project3, #project4, #project5 {
+#project1,
+#project2,
+#project3,
+#project4,
+#project5 {
   scroll-margin-top: 80px; /* header height for a small scroll-up when navigated from from ancor link */
 }
 
-.project1234{
+.project1234 {
   margin-left: 5px;
 }
-
 
 @font-face {
   font-family: "Kenfolg Serif";
@@ -168,7 +171,9 @@ html {
 .skill-button {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .skill-button.fade-in {
@@ -202,7 +207,6 @@ html {
 .App-link {
   color: #61dafb;
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -265,27 +269,27 @@ html {
 
 .flip-scale-2-hor-bottom {
   -webkit-animation: flip-scale-2-hor-bottom 1s linear both;
-          animation: flip-scale-2-hor-bottom 1s linear both;
+  animation: flip-scale-2-hor-bottom 1s linear both;
 }
 
 @-webkit-keyframes flip-scale-2-hor-bottom {
   0% {
     -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
   }
   50% {
     -webkit-transform: translateY(50%) rotateX(90deg) scale(2);
-            transform: translateY(50%) rotateX(90deg) scale(2);
+    transform: translateY(50%) rotateX(90deg) scale(2);
     -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
   100% {
     -webkit-transform: translateY(100%) rotateX(180deg) scale(1);
-            transform: translateY(100%) rotateX(180deg) scale(1);
+    transform: translateY(100%) rotateX(180deg) scale(1);
     -webkit-transform-origin: 50% 0%;
-            transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
   }
 }
 @keyframes flip-scale-2-hor-bottom {
@@ -306,35 +310,33 @@ html {
 /* Subtitle animation - Animista */
 
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
-
 
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
-
 /* Image animation - Animista */
-
 
 @keyframes hero-image-flip-strong {
   0% {
@@ -379,7 +381,6 @@ html {
   animation: slide-up-fade 0.9s ease-out forwards;
 }
 
-
-
-
-
+/* .css-16qopci-MuiTypography-root {
+  font-family: "Cabin, sans-serif" !important;
+} */

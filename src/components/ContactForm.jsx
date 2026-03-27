@@ -96,14 +96,13 @@ export default function ContactForm({ darkMode }) {
         //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
         // },
         boxShadow:
-          "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                  "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
 
-           transition: "transform 0.25s ease, border 0.25s ease",
+        transition: "transform 0.25s ease, border 0.25s ease",
         "&:hover": {
           transform: "scale(1.02)",
           border: "1.3px solid rgba(76, 201, 254, 0.4)",
         },
-       
       }}
     >
       <Grid
@@ -111,7 +110,6 @@ export default function ContactForm({ darkMode }) {
           display: "flex",
           justifyContent: "center",
           mt: 2,
-          
         }}
       >
         <Box
@@ -142,7 +140,9 @@ export default function ContactForm({ darkMode }) {
             lg: "2rem",
           },
         }}
-        fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"TheSeasons-Regular, serif"}
+        fontFamily={"Cabin, sans-serif"}
+        fontWeight="500"
       >
         Contact me:
       </Typography>
@@ -198,21 +198,20 @@ export default function ContactForm({ darkMode }) {
         sx={{
           mt: 4,
           mb: 3,
-
-          fontFamily: "TheSeasons-Regular, serif",
-          letterSpacing: "0.07em",
+          fontFamily: "Cabin, sans-serif",
+          letterSpacing: "0.03em",
           fontSize: "1rem",
           textTransform: "none",
           display: "block",
           mx: "auto",
-           transition: "transform 0.25s ease, border 0.25s ease",
-                  "&:hover": {
-                    transform: "scale(1.02)",
-                  },
+          transition: "transform 0.25s ease, border 0.25s ease",
+          "&:hover": {
+            transform: "scale(1.02)",
+          },
         }}
         color="primary"
       >
-        Send <SendIcon sx={{ ml: 0.5, fontSize: "0.8rem" }} />
+        SEND <SendIcon sx={{ ml: 0.5, fontSize: "0.8rem" }} />
       </CustomButton>
     </Box>
   );

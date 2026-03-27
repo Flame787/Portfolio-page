@@ -54,18 +54,22 @@ export default function Home({ darkMode }) {
         gutterBottom //
         sx={{
           mt: 8,
-          mb: 4,
+          mb: 1,
           textAlign: "center",
           fontSize: {
             xs: "1.8rem",
             sm: "1.8rem",
             md: "2rem",
-            lg: "2.2rem",
+            lg: "2.4rem",
           },
         }}
-        fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"TheSeasons-Regular, serif"}
+        // fontFamily={"Mulish-Extralight"}
+        fontFamily={"Cabin, sans-serif"}
+        fontWeight="600"
+        fontStyle="normal"
       >
-        Hi, I´m{" "}
+        Hi, I'm{" "}
         <Box component="span" sx={{ color: "primary.title" }}>
           Marina
         </Box>
@@ -77,24 +81,45 @@ export default function Home({ darkMode }) {
             // className="scale-up-center"
             sx={{
               mt: 4,
-              mb: 1,
+              mb: 2,
               textAlign: "center",
-              fontFamily: "Mulish-Extralight, sans-serif",
-              fontSize: "1.2rem",
+              // fontFamily: "Mulish-Extralight, sans-serif",
+              fontFamily: "Cabin, sans-serif",
+              // fontWeight: "500",
+              // fontSize: "1.8rem",
+              fontSize: {
+                xs: "1.4rem",
+                sm: "1.6rem",
+                md: "1.8rem",
+                lg: "2rem",
+              },
+              // fontSize: {
+              //   xs: "1.2rem",
+              //   sm: "1.2rem",
+              //   md: "1.4rem",
+              //   lg: "1.6rem",
+              // },
+              //  fontWeight: "600",
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
               animationDelay: "0.6s",
             }}
           >
-            front-end developer
+            frontend developer
           </Typography>
           <Typography
             sx={{
-              mt: 1,
-              mb: 1,
+              mt: 2,
+              mb: 2,
               textAlign: "center",
-              fontFamily: "Mulish-Extralight, sans-serif",
-              fontSize: "1.2rem",
+              fontFamily: "Cabin, sans-serif",
+              // fontSize: "1.4rem",
+              fontSize: {
+                xs: "1.2rem",
+                sm: "1.2rem",
+                md: "1.4rem",
+                lg: "1.6rem",
+              },
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
               animationDelay: "0.8s",
@@ -105,11 +130,17 @@ export default function Home({ darkMode }) {
 
           <Typography
             sx={{
-              mt: 1,
-              mb: 6,
+              mt: 2,
+              mb: 8,
               textAlign: "center",
-              fontFamily: "Mulish-Extralight, sans-serif",
-              fontSize: "1.2rem",
+              fontFamily: "Cabin, sans-serif",
+              // fontSize: "1.4rem",
+              fontSize: {
+                xs: "1.2rem",
+                sm: "1.2rem",
+                md: "1.4rem",
+                lg: "1.6rem",
+              },
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
               animationDelay: "1.0s",
@@ -212,7 +243,7 @@ export default function Home({ darkMode }) {
                 },
 
                 boxShadow:
-                  "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                  "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.6s ease",
                 "&:hover": {
                   transform: "scale(1.02)",
@@ -258,8 +289,14 @@ export default function Home({ darkMode }) {
                   color="primary"
                   size="large"
                   sx={{
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // fontFamily: "Mulish-Extralight, sans-serif",
+                    // fontFamily: "Lato, sans-serif",
+                    // fontWeight: 600,
+                    fontFamily: "Cabin, sans-serif",
+                    fontWeight: "500",
+                    letterSpacing: "0.02em",
+                    // letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
                     transition: "transform 0.25s ease, border 0.25s ease",
@@ -268,7 +305,7 @@ export default function Home({ darkMode }) {
                     },
                   }}
                 >
-                  About me
+                  ABOUT ME
                 </CustomButton>
 
                 <CustomButton
@@ -278,8 +315,13 @@ export default function Home({ darkMode }) {
                   color="primary"
                   size="large"
                   sx={{
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // fontFamily: "Mulish-Extralight, sans-serif",
+                    // fontFamily: "Lato, sans-serif",
+                    fontFamily: "Cabin, sans-serif",
+                    fontWeight: "500",
+                    letterSpacing: "0.02em",
+                    // letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
                     transition: "transform 0.25s ease, border 0.25s ease",
@@ -288,7 +330,7 @@ export default function Home({ darkMode }) {
                     },
                   }}
                 >
-                  Contact me
+                  CONTACT ME
                 </CustomButton>
               </Box>
             </Box>
@@ -317,7 +359,7 @@ export default function Home({ darkMode }) {
                   md: 5,
                 },
                 boxShadow:
-                  "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                   "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.6s ease, border 1s ease",
                 "&:hover": {
                   transform: "scale(1.02)",
@@ -365,8 +407,12 @@ export default function Home({ darkMode }) {
                   color="primary"
                   size="large"
                   sx={{
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // fontFamily: "Mulish-Extralight, sans-serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    fontWeight: "500",
+                    letterSpacing: "0.02em",
                     fontSize: "1rem",
                     textTransform: "none",
                     display: "flex",
@@ -377,7 +423,7 @@ export default function Home({ darkMode }) {
                     },
                   }}
                 >
-                  Skills and technologies
+                  SKILLS AND TECHNOLOGIES
                 </CustomButton>
               </Box>
             </Box>
@@ -412,7 +458,7 @@ export default function Home({ darkMode }) {
               pl: 5,
               pr: 5,
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                  "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               transition: "transform 0.6s ease, border 1s ease",
               "&:hover": {
                 transform: "scale(1.02)",
@@ -424,12 +470,14 @@ export default function Home({ darkMode }) {
               color="text.secondary"
               sx={{
                 marginBottom: 3,
-                fontFamily: "Mulish-Extralight, sans-serif",
-                fontSize: "1.2rem",
+                // fontFamily: "Mulish-Extralight, sans-serif",
+                fontFamily: "Cabin, sans-serif",
+                fontSize: "1.6rem",
+                fontWeight: "500",
                 textAlign: "center",
               }}
             >
-              Check out my latest <strong>projects</strong>:
+              Check out my latest projects:
             </Typography>
 
             <Box
@@ -437,6 +485,9 @@ export default function Home({ darkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "4px",
+                paddingBottom: "8px",
               }}
             >
               <Typography
@@ -490,6 +541,9 @@ export default function Home({ darkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "10px",
+                paddingBottom: "8px",
               }}
             >
               <Typography
@@ -543,6 +597,9 @@ export default function Home({ darkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "10px",
+                paddingBottom: "8px",
               }}
             >
               <Typography
@@ -595,6 +652,9 @@ export default function Home({ darkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "10px",
+                paddingBottom: "8px",
               }}
             >
               <Typography
@@ -647,6 +707,9 @@ export default function Home({ darkMode }) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                // borderBottom: "1px solid rgba(237, 250, 254, 0.3)",
+                paddingTop: "10px",
+                paddingBottom: "8px",
               }}
             >
               <Typography
@@ -711,8 +774,9 @@ export default function Home({ darkMode }) {
                 color="primary"
                 size="large"
                 sx={{
-                  fontFamily: "TheSeasons-Regular, serif",
-                  letterSpacing: "0.07em",
+                  // fontFamily: "TheSeasons-Regular, serif",
+                  fontFamily: "Cabin, sans-serif",
+                  letterSpacing: "0.02em",
                   fontSize: "1rem",
                   textTransform: "none",
                   transition: "transform 0.25s ease, border 0.25s ease",
@@ -721,7 +785,7 @@ export default function Home({ darkMode }) {
                   },
                 }}
               >
-                Projects
+                PROJECTS
               </CustomButton>
 
               <CustomButton
@@ -729,8 +793,9 @@ export default function Home({ darkMode }) {
                 color="primary"
                 size="large"
                 sx={{
-                  fontFamily: "TheSeasons-Regular, serif",
-                  letterSpacing: "0.07em",
+                  // fontFamily: "Mulish-Extralight, sans-serif",
+                  fontFamily: "Cabin, sans-serif",
+                  letterSpacing: "0.02em",
                   fontSize: "1rem",
                   textTransform: "none",
                   transition: "transform 0.25s ease, border 0.25s ease",
@@ -742,7 +807,7 @@ export default function Home({ darkMode }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
               </CustomButton>
             </Box>
           </Box>

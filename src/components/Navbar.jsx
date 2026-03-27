@@ -129,15 +129,21 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
         ></img>
         <Typography
           variant="h6"
-          fontFamily={"TheSeasons-Regular, serif"}
+          // fontFamily={"TheSeasons-Regular, serif"}
+          // fontFamily={"Mulish-Extralight"}
+          // fontFamily={"League Spartan, sans-serif"}
+          fontFamily={"Cabin, sans-serif"}
+          fontWeight="500"
+          // fontOpticalSizing="auto"
+          fontStyle="normal"
           sx={{
             ml: 3.5,
             flexGrow: 1,
             fontSize: scrolled
               ? { xs: "0.9em", sm: "1rem", md: "1.1rem", lg: "1.25rem" }
-              : { xs: "1em", sm: "1.1rem", md: "1.25rem", lg: "1.35rem" },
+              : { xs: "1em", sm: "1.1rem", md: "1.25rem", lg: "1.45rem" },
             transition: "font-size 0.3s ease",
-            letterSpacing: "0.03em",
+            // letterSpacing: "0.04em",
           }}
         >
           Developer Portfolio
@@ -221,7 +227,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           to="/"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Mulish-Extralight, sans-serif",
+            // fontFamily: "Mulish-Extralight, sans-serif",
+            fontFamily: "Cabin, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
             borderBottom: isHome
               ? "3px solid #4cc9f0"
@@ -239,7 +246,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           onClick={handleProjectsClick}
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Mulish-Extralight, sans-serif",
+            // fontFamily: "Mulish-Extralight, sans-serif",
+            fontFamily: "Cabin, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
             borderBottom: isProjects
               ? "3px solid #4cc9f0"
@@ -257,7 +265,8 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           to="/contact#aboutme"
           sx={{
             display: { xs: "none", sm: "inline-block" },
-            fontFamily: "Mulish-Extralight, sans-serif",
+            // fontFamily: "Mulish-Extralight, sans-serif",
+            fontFamily: "Cabin, sans-serif",
             fontSize: { xs: "0.8em", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
 
             borderBottom: isAbout

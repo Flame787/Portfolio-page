@@ -173,7 +173,8 @@ export default function Projects() {
           },
           mb: 6,
           textAlign: "center",
-          fontFamily: "TheSeasons-Regular, serif",
+          // fontFamily: "TheSeasons-Regular, serif",
+          fontFamily: "Cabin, sans-serif",
           fontSize: {
             xs: "1.8rem",
             sm: "1.8rem",
@@ -201,7 +202,7 @@ export default function Projects() {
               borderRadius: 4,
               // transition: "border 0.3s ease",
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               // "&:hover": {
               //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -222,36 +223,20 @@ export default function Projects() {
               // className={animateTitle ? "slide-up-fade" : ""}
               sx={{
                 textAlign: "center",
-                mt: 4,
+                mt: 6,
                 mb: 4,
                 ml: 4,
                 mr: 4,
                 color: "primary.title3",
-                fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.05em",
-                fontSize: "1.5rem",
+                // fontFamily: "TheSeasons-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
+                fontSize: "1.6rem",
                 opacity: 0,
               }}
             >
-              SmartSpace Studio{" "}
-              <Box
-                component="span"
-                sx={{
-                  fontFamily: "Mulish-Extralight, sans-serif",
-                }}
-              >
-                -
-              </Box>{" "}
-              Full
-              <Box
-                component="span"
-                sx={{
-                  fontFamily: "Mulish-Extralight, sans-serif",
-                }}
-              >
-                -
-              </Box>
-              stack shop app with React, Express.js and MySQL
+              SmartSpace Studio - Full - stack shop app with React, Express.js
+              and MySQL
             </Typography>
 
             <CardMedia>
@@ -307,26 +292,26 @@ export default function Projects() {
 
             {/*  */}
             <CardContent>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Full-stack e-commerce application built with React on the
                 frontend and Express.js/Node.js on the backend, using MySQL as
                 the database.
               </CustomTypography>
 
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Implements advanced routing with React Router, data fetching and
                 caching with TanStack Query, global state management with
                 Context API and Redux Toolkit, and modular architecture built
                 for scalability.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Includes category-based filtering, product sorting (by price or
                 alphabetical order), search by keyword, and shopping cart logic.
                 Soon it will also include payment and delivery options, user
                 authentication via JWT, and a separate admin panel with editing
                 options and business charts.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Technologies:
                 <button className="round">React</button>
                 <button className="round">React Router</button>
@@ -341,10 +326,13 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
@@ -353,7 +341,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Shop-app"
                   target="_blank"
                 >
-                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -370,7 +358,7 @@ export default function Projects() {
               borderRadius: 4,
               // transition: "border 0.3s ease",
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               // "&:hover": {
               //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -390,14 +378,15 @@ export default function Projects() {
               // className={animateTitle ? "slide-up-fade" : ""}
               sx={{
                 textAlign: "center",
-                mt: 4,
+                mt: 6,
                 mb: 4,
                 ml: 4,
                 mr: 4,
                 color: "primary.title3",
-                fontFamily: "TheSeasons-Regular, serif",
-                letterSpacing: "0.05em",
-                fontSize: "1.5rem",
+                // fontFamily: "TheSeasons-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
+                fontSize: "1.6rem",
                 opacity: 0,
               }}
             >
@@ -430,21 +419,21 @@ export default function Projects() {
               </Box>
             </Box>
             <CardContent>
-              <CustomTypography>
+              <CustomTypography sx={{ pt: 2, pl: 6, pr: 6 }}>
                 This real-time chat application is built with React and powered
                 by the Scaledrone Websocket for live communication.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 After entering a username and selecting an avatar, users can
                 choose from 7 themed chat rooms where they can interact with
                 other currently active participants.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 The app supports: browsing chat history, using emojis (via
                 emoji-picker-react), sending GIFs (via the Giphy API), and
                 uploading files (handled through Supabase).
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Technologies:
                 <button className="round">React</button>
                 <button className="round">Scaledrone Websocket</button>
@@ -459,17 +448,20 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   color="primary"
                   sx={{
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
                     },
                   }}
                 >
-                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  LIVE PAGE <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
 
                 <CustomButton
@@ -477,10 +469,13 @@ export default function Projects() {
                   color="primary"
                   sx={{
                     ml: 2,
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
@@ -489,7 +484,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Chat-app-React"
                   target="_blank"
                 >
-                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -507,7 +502,7 @@ export default function Projects() {
               borderRadius: 4,
               // transition: "border 0.3s ease",
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               // "&:hover": {
               //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -526,13 +521,15 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 4,
+                mt: 6,
                 mb: 4,
                 ml: 4,
                 mr: 4,
                 color: "primary.title3",
-                fontSize: "1.5rem",
-                fontFamily: "Marcellus-Regular, serif",
+                fontSize: "1.6rem",
+                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
                 opacity: 0,
               }}
             >
@@ -565,25 +562,25 @@ export default function Projects() {
             </Box>
 
             <CardContent>
-              <CustomTypography>
+              <CustomTypography sx={{ pt: 2, pl: 6, pr: 6 }}>
                 Music Domain is a dynamic music search application that allows
                 users to explore artists, albums, and songs using real-time data
                 from the Spotify API.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Users can search for music artists, songs, and albums, listen to
                 30-second previews of individual tracks or full albums, like and
                 save tracks to a favorites playlist, and access full songs or
                 artist details via external Spotify links.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Express.js is used on the backend for Spotify authentication.
                 The app also features 16 different visual themes (styled
                 entirely with SCSS), letting users personalize their experience
                 with one click.
               </CustomTypography>
 
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Technologies:
                 <button className="round">JavaScript</button>
                 <button className="round">SCSS</button>
@@ -599,29 +596,35 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   color="primary"
                   sx={{
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
 
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
                     },
                   }}
                 >
-                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  LIVE PAGE <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
                 <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{
                     ml: 2,
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
 
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
@@ -630,7 +633,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Music-app-Spotify-API"
                   target="_blank"
                 >
-                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -648,7 +651,7 @@ export default function Projects() {
               borderRadius: 4,
               // transition: "border 0.3s ease",
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               // "&:hover": {
               //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -667,17 +670,19 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 4,
+                mt: 6,
                 mb: 4,
                 ml: 4,
                 mr: 4,
                 color: "primary.title3",
-                fontSize: "1.5rem",
-                fontFamily: "Marcellus-Regular, serif",
+                fontSize: "1.6rem",
+                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
                 opacity: 0,
               }}
             >
-              Tolkien Info Page with OpenLibrary API
+              Tolkien info page with OpenLibrary API
             </Typography>
             <CardMedia>
               <Box
@@ -728,25 +733,25 @@ export default function Projects() {
               </Box>
             </CardMedia>
             <CardContent>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 A fan-made landing page dedicated to J. R. R. Tolkien’s legacy,
                 featuring biographical information, his published works, book
                 illustrations and external resources. One of my earlier
                 projects, recently refreshed with improved layout and updated
                 code.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 The app integrates with the Open Library API to fetch info about
                 books authored by Tolkien, and sorts books according to their
                 current ratings on Open Library.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 It also allows users to vote for their favorite Tolkien's book,
                 counting the results (stored locally in the browser), and
                 visually displaying them with Chart.js. Users can also send
                 emails directly from the page via EmailJS.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Technologies:
                 <button className="round">JavaScript</button>
                 <button className="round">Bootstrap</button>
@@ -764,29 +769,35 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   color="primary"
                   sx={{
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
 
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
                     },
                   }}
                 >
-                  Live page <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  LIVE PAGE <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
                 <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{
                     ml: 2,
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
 
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
@@ -795,7 +806,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Tolkien"
                   target="_blank"
                 >
-                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
@@ -813,7 +824,7 @@ export default function Projects() {
               borderRadius: 4,
               // transition: "border 0.3s ease",
               boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               border: "1px solid transparent",
               // "&:hover": {
               //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
@@ -832,11 +843,15 @@ export default function Projects() {
               gutterBottom
               sx={{
                 textAlign: "center",
-                mt: 4,
+                mt: 6,
                 mb: 4,
+                ml: 4,
+                mr: 4,
                 color: "primary.title3",
-                fontSize: "1.5rem",
-                fontFamily: "Marcellus-Regular, serif",
+                fontSize: "1.6rem",
+                // fontFamily: "Marcellus-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
                 opacity: 0,
               }}
             >
@@ -892,23 +907,23 @@ export default function Projects() {
               </Box>
             </CardMedia>
             <CardContent>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 This Developer Portfolio is a personal showcase built with
                 React, designed to present my web development projects in a
                 clean, responsive, and user-friendly layout.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 It uses React Router for seamless navigation, Material UI for
                 modern and consistent design components, and EmailJS to enable
                 users to get in touch directly via a built-in contact form.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 The app also supports theme switching, allowing users to
                 personalize the visual experience by choosing a black or white
                 theme. This single-page application is fully responsive and
                 optimized for accessibility and performance across devices.
               </CustomTypography>
-              <CustomTypography>
+              <CustomTypography sx={{ pl: 6, pr: 6 }}>
                 Technologies:
                 <button className="round">React</button>
                 <button className="round">React Router</button>
@@ -923,29 +938,34 @@ export default function Projects() {
                   variant="contained"
                   color="primary"
                   sx={{
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
-
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
                     },
                   }}
                 >
-                  Home
+                  HOME
                 </CustomButton>
                 <CustomButton
                   variant="contained"
                   color="primary"
                   sx={{
                     ml: 2,
-                    fontSize: "1rem",
+                    // fontSize: "1rem",
                     textTransform: "none",
 
-                    fontFamily: "TheSeasons-Regular, serif",
-                    letterSpacing: "0.07em",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
                       transform: "scale(1.02)",
@@ -954,7 +974,7 @@ export default function Projects() {
                   href="https://github.com/Flame787/Portfolio-page"
                   target="_blank"
                 >
-                  GitHub <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
                 </CustomButton>
               </Box>
             </CardContent>
