@@ -170,7 +170,7 @@ export default function Home({ darkMode }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: 5,
+            gap: 2,
           }}
         >
           {/* TEXTBOX 1 */}
