@@ -11,6 +11,7 @@ const mySkills = [
   "JavaScript",
   "TypeScript",
   "Next.js",
+  "Node.js",
   "React Router",
   "TanStack Query",
   "Redux",

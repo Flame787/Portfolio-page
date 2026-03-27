@@ -208,7 +208,7 @@ export default function Projects() {
               // },
               transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -347,7 +347,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                   href="https://github.com/Flame787/Shop-app"
@@ -377,7 +377,7 @@ export default function Projects() {
               // },
               transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -465,7 +465,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                 >
@@ -483,7 +483,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                   href="https://github.com/Flame787/Chat-app-React"
@@ -514,7 +514,7 @@ export default function Projects() {
               // },
               transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -606,7 +606,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                 >
@@ -624,7 +624,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                   href="https://github.com/Flame787/Music-app-Spotify-API"
@@ -655,7 +655,7 @@ export default function Projects() {
               // },
               transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -771,7 +771,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                 >
@@ -789,7 +789,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                   href="https://github.com/Flame787/Tolkien"
@@ -820,7 +820,7 @@ export default function Projects() {
               // },
               transition: "transform 0.25s ease, border 0.25s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -930,7 +930,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                 >
@@ -948,7 +948,7 @@ export default function Projects() {
                     letterSpacing: "0.07em",
                     transition: "transform 0.25s ease, border 0.25s ease",
                     "&:hover": {
-                      transform: "scale(1.03)",
+                      transform: "scale(1.02)",
                     },
                   }}
                   href="https://github.com/Flame787/Portfolio-page"

@@ -26,9 +26,9 @@ export default function Home({ darkMode }) {
   useEffect(() => {
     setTimeout(() => setShowsubTitle(true), 400);
     // setTimeout(() => setShowImage(true), 500);
-    setTimeout(() => setShowText1(true), 700);
-    setTimeout(() => setShowText2(true), 900);
-    setTimeout(() => setShowText3(true), 1100);
+    setTimeout(() => setShowText1(true), 900);
+    setTimeout(() => setShowText2(true), 1100);
+    setTimeout(() => setShowText3(true), 1400);
   }, []);
 
   // enable scrolling to the Projects-section from other pages, like Contact:
@@ -83,10 +83,24 @@ export default function Home({ darkMode }) {
               fontSize: "1.2rem",
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "0.7s",
+              animationDelay: "0.6s",
             }}
           >
-            a front-end developer passionate about creating
+            front-end developer
+          </Typography>
+          <Typography
+            sx={{
+              mt: 1,
+              mb: 1,
+              textAlign: "center",
+              fontFamily: "Mulish-Extralight, sans-serif",
+              fontSize: "1.2rem",
+              animation:
+                "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+              animationDelay: "0.8s",
+            }}
+          >
+            passionate about creating interactive,
           </Typography>
 
           <Typography
@@ -98,10 +112,10 @@ export default function Home({ darkMode }) {
               fontSize: "1.2rem",
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "0.7s",
+              animationDelay: "1.0s",
             }}
           >
-            interactive, API-driven interfaces with React and modern JavaScript.
+            API-driven interfaces with React and modern JavaScript.
           </Typography>
         </Box>
       </Fade>
@@ -129,9 +143,9 @@ export default function Home({ darkMode }) {
           sx={{
             display: "flex",
             justifyContent: "center",
-            transition: "transform 0.25s ease, border 0.25s ease",
+            transition: "transform 0.6s ease, border 1s ease",
             "&:hover": {
-              transform: "scale(1.03)",
+              transform: "scale(1.02)",
               // border: "1.3px solid rgba(76, 201, 254, 0.4)",
             },
           }}
@@ -151,7 +165,7 @@ export default function Home({ darkMode }) {
               display: "block",
               // animation: "flip-scale-up-hor 1.2s linear reverse both",
 
-              animation: "hero-image-flip-strong 1s ease-out both",
+              animation: "hero-image-flip-strong 0.9s ease-out both 0.6s",
             }}
           />
         </Box>
@@ -199,9 +213,9 @@ export default function Home({ darkMode }) {
 
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
-                transition: "transform 0.25s ease, border 0.25s ease",
+                transition: "transform 0.6s ease",
                 "&:hover": {
-                  transform: "scale(1.03)",
+                  transform: "scale(1.02)",
                   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 },
               }}
@@ -225,7 +239,7 @@ export default function Home({ darkMode }) {
                 Following best practices to ensure <strong>
                   performance
                 </strong>, <strong>accessibility</strong> and{" "}
-                <strong>maintainability</strong>.
+                <strong>scalability</strong>.
               </Typography>
 
               <Box
@@ -248,10 +262,10 @@ export default function Home({ darkMode }) {
                     letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
-                     transition: "transform 0.25s ease, border 0.25s ease",
-                  "&:hover": {
-                    transform: "scale(1.03)",
-                  },
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
                   }}
                 >
                   About me
@@ -268,10 +282,10 @@ export default function Home({ darkMode }) {
                     letterSpacing: "0.07em",
                     fontSize: "1rem",
                     textTransform: "none",
-                     transition: "transform 0.25s ease, border 0.25s ease",
-                  "&:hover": {
-                    transform: "scale(1.03)",
-                  },
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
                   }}
                 >
                   Contact me
@@ -304,9 +318,9 @@ export default function Home({ darkMode }) {
                 },
                 boxShadow:
                   "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
-                transition: "transform 0.25s ease, border 0.25s ease",
+                transition: "transform 0.6s ease, border 1s ease",
                 "&:hover": {
-                  transform: "scale(1.03)",
+                  transform: "scale(1.02)",
                   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 },
               }}
@@ -331,7 +345,8 @@ export default function Home({ darkMode }) {
                 <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
                 <strong>Vite</strong>, <strong>Jest</strong>,{" "}
                 <strong>Vitest</strong>, <br />
-                <strong>Express.js</strong> and <strong>MySQL</strong>.
+                <strong>Node.js</strong>, <strong>Express.js</strong> and{" "}
+                <strong>MySQL</strong>.
               </Typography>
 
               <Box
@@ -356,10 +371,10 @@ export default function Home({ darkMode }) {
                     textTransform: "none",
                     display: "flex",
                     textAlign: "center",
-                     transition: "transform 0.25s ease, border 0.25s ease",
-                  "&:hover": {
-                    transform: "scale(1.03)",
-                  },
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
                   }}
                 >
                   Skills and technologies
@@ -398,9 +413,9 @@ export default function Home({ darkMode }) {
               pr: 5,
               boxShadow:
                 "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 20px 0 rgba(76, 201, 254, 0.19)",
-              transition: "transform 0.25s ease, border 0.25s ease",
+              transition: "transform 0.6s ease, border 1s ease",
               "&:hover": {
-                transform: "scale(1.03)",
+                transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -429,7 +444,7 @@ export default function Home({ darkMode }) {
                 sx={{
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
@@ -482,7 +497,7 @@ export default function Home({ darkMode }) {
                 sx={{
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
@@ -535,7 +550,7 @@ export default function Home({ darkMode }) {
                 sx={{
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
@@ -587,7 +602,7 @@ export default function Home({ darkMode }) {
                 sx={{
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
@@ -639,7 +654,7 @@ export default function Home({ darkMode }) {
                 sx={{
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                   marginBottom: 1,
                   fontFamily: "Mulish-Extralight, sans-serif",
@@ -702,7 +717,7 @@ export default function Home({ darkMode }) {
                   textTransform: "none",
                   transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                 }}
               >
@@ -718,9 +733,9 @@ export default function Home({ darkMode }) {
                   letterSpacing: "0.07em",
                   fontSize: "1rem",
                   textTransform: "none",
-                   transition: "transform 0.25s ease, border 0.25s ease",
+                  transition: "transform 0.25s ease, border 0.25s ease",
                   "&:hover": {
-                    transform: "scale(1.03)",
+                    transform: "scale(1.02)",
                   },
                 }}
                 href="https://github.com/Flame787"
