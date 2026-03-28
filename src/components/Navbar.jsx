@@ -143,10 +143,22 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
               ? { xs: "0.9em", sm: "1rem", md: "1.1rem", lg: "1.25rem" }
               : { xs: "0.9em", sm: "1rem", md: "1.25rem", lg: "1.45rem" },
             transition: "font-size 0.3s ease",
+
             // letterSpacing: "0.04em",
           }}
         >
-          Developer Portfolio
+          <span
+            // href="#home"
+            onClick={handleHomeClick}
+            style={{
+              // textTransform: "none",
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "inherit",
+            }}
+          >
+            Developer Portfolio
+          </span>
         </Typography>
 
         {/* Hamburger Menu, if mobile resolution: */}
