@@ -293,7 +293,7 @@ export default function Home({ darkMode }) {
                   textAlign: "center",
                 }}
               >
-                Building <strong>scalable</strong> and{" "}
+                Building <strong>modular</strong> and{" "}
                 <strong>user-friendly</strong> web applications with{" "}
                 <strong>React</strong> and <strong>TypeScript</strong>. <br />
                 Following best practices to ensure <strong>
