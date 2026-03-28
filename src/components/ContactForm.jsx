@@ -100,7 +100,7 @@ export default function ContactForm({ darkMode }) {
 
         transition: "transform 0.25s ease, border 0.25s ease",
         "&:hover": {
-          transform: "scale(1.02)",
+          // transform: "scale(1.02)",
           border: "1.3px solid rgba(76, 201, 254, 0.4)",
         },
       }}

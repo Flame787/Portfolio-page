@@ -211,7 +211,7 @@ export default function Contact({ darkMode }) {
             "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
           transition: "transform 0.25s ease, border 0.25s ease",
           "&:hover": {
-            transform: "scale(1.03)",
+            // transform: "scale(1.02)",
             border: "1.3px solid rgba(76, 201, 254, 0.4)",
           },
         }}

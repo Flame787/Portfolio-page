@@ -141,7 +141,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             flexGrow: 1,
             fontSize: scrolled
               ? { xs: "0.9em", sm: "1rem", md: "1.1rem", lg: "1.25rem" }
-              : { xs: "1em", sm: "1.1rem", md: "1.25rem", lg: "1.45rem" },
+              : { xs: "0.9em", sm: "1rem", md: "1.25rem", lg: "1.45rem" },
             transition: "font-size 0.3s ease",
             // letterSpacing: "0.04em",
           }}

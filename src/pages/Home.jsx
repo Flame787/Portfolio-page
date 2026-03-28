@@ -49,10 +49,13 @@ export default function Home({ darkMode }) {
     <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
         variant="h4"
-        className="flip-scale-2-hor-bottom"
-        style={{ animationDirection: "reverse" }}
+        // className="flip-scale-2-hor-bottom"
+        // style={{ animationDirection: "reverse" }}
         gutterBottom //
         sx={{
+          animation:
+            "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+          animationDelay: "0s",
           mt: 8,
           mb: 1,
           textAlign: "center",
@@ -70,7 +73,12 @@ export default function Home({ darkMode }) {
         fontStyle="normal"
       >
         Hi, I'm{" "}
-        <Box component="span" sx={{ color: "primary.title" }}>
+        <Box
+          className="animated-text-reveal"
+          data-text="Marina"
+          component="span"
+          // sx={{ color: "primary.title" }}
+        >
           Marina
         </Box>
       </Typography>
@@ -78,13 +86,15 @@ export default function Home({ darkMode }) {
       <Fade in={showSubTitle} timeout={600}>
         <Box sx={{ textAlign: "center" }}>
           <Typography
-            // className="scale-up-center"
-            className="animated-text-reveal"
+            className="scale-up-center"
+            // className="animated-text-reveal"
             data-text="frontend developer"
             sx={{
+              color: "primary.title",
               mt: 4,
               mb: 2,
               fontFamily: "Cabin, sans-serif",
+              fontWeight: "600",
               fontSize: {
                 xs: "1.4rem",
                 sm: "1.6rem",
@@ -94,7 +104,7 @@ export default function Home({ darkMode }) {
 
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "0.6s",
+              animationDelay: "0.2s",
             }}
           >
             frontend developer
@@ -114,7 +124,7 @@ export default function Home({ darkMode }) {
               },
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "0.8s",
+              animationDelay: "0.4s",
             }}
           >
             passionate about creating interactive,
@@ -135,7 +145,7 @@ export default function Home({ darkMode }) {
               },
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "1s",
+              animationDelay: "0.6s",
             }}
           >
             API-driven interfaces with React and modern JavaScript.
@@ -188,7 +198,7 @@ export default function Home({ darkMode }) {
               display: "block",
               // animation: "flip-scale-up-hor 1.2s linear reverse both",
 
-              animation: "hero-image-flip-strong 0.9s ease-out both 0.6s",
+              animation: "hero-image-flip-strong 0.9s ease-out both 0.5s",
             }}
           />
         </Box>
@@ -238,7 +248,7 @@ export default function Home({ darkMode }) {
                   "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.6s ease",
                 "&:hover": {
-                  transform: "scale(1.02)",
+                  // transform: "scale(1.02)",
                   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 },
               }}
@@ -275,15 +285,11 @@ export default function Home({ darkMode }) {
               >
                 <CustomButton
                   component={Link}
-                  to="/contact"
+                  to="/contact/#aboutme"
                   variant="contained"
                   color="primary"
                   size="large"
                   sx={{
-                    // fontFamily: "TheSeasons-Regular, serif",
-                    // fontFamily: "Mulish-Extralight, sans-serif",
-                    // fontFamily: "Lato, sans-serif",
-                    // fontWeight: 600,
                     fontFamily: "Cabin, sans-serif",
                     fontWeight: "500",
                     letterSpacing: "0.02em",
@@ -306,9 +312,6 @@ export default function Home({ darkMode }) {
                   color="primary"
                   size="large"
                   sx={{
-                    // fontFamily: "TheSeasons-Regular, serif",
-                    // fontFamily: "Mulish-Extralight, sans-serif",
-                    // fontFamily: "Lato, sans-serif",
                     fontFamily: "Cabin, sans-serif",
                     fontWeight: "500",
                     letterSpacing: "0.02em",
@@ -353,7 +356,7 @@ export default function Home({ darkMode }) {
                   "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.6s ease, border 1s ease",
                 "&:hover": {
-                  transform: "scale(1.02)",
+                  // transform: "scale(1.02)",
                   border: "1.3px solid rgba(76, 201, 254, 0.4)",
                 },
               }}
@@ -451,7 +454,7 @@ export default function Home({ darkMode }) {
                 "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               transition: "transform 0.6s ease, border 1s ease",
               "&:hover": {
-                transform: "scale(1.02)",
+                // transform: "scale(1.02)",
                 border: "1.3px solid rgba(76, 201, 254, 0.4)",
               },
             }}
@@ -513,9 +516,9 @@ export default function Home({ darkMode }) {
               >
                 <ShoppingCartIcon
                   sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     verticalAlign: "middle",
-                    mb: 0.5,
+                    mb: 0.6,
                     color: darkMode ? "white" : "text.secondary",
                   }}
                 />{" "}
@@ -569,7 +572,7 @@ export default function Home({ darkMode }) {
               >
                 <ForumIcon
                   sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     verticalAlign: "middle",
                     mb: 0.6,
                     color: darkMode ? "white" : "text.secondary",
@@ -625,7 +628,7 @@ export default function Home({ darkMode }) {
               >
                 <HeadphonesIcon
                   sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     verticalAlign: "middle",
                     mb: 0.6,
                     color: darkMode ? "white" : "text.secondary",
@@ -680,7 +683,7 @@ export default function Home({ darkMode }) {
               >
                 <MenuBookIcon
                   sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     verticalAlign: "middle",
                     mb: 0.6,
                     color: darkMode ? "white" : "text.secondary",
@@ -735,7 +738,7 @@ export default function Home({ darkMode }) {
               >
                 <LaptopIcon
                   sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     verticalAlign: "middle",
                     mb: 0.3,
                     color: darkMode ? "white" : "text.secondary",
