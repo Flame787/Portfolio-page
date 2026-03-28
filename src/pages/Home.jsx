@@ -45,6 +45,8 @@ export default function Home({ darkMode }) {
     }
   }, [location]);
 
+ 
+
   return (
     <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
@@ -143,7 +145,7 @@ export default function Home({ darkMode }) {
               },
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-              animationDelay: "1.0s",
+              animationDelay: "1s",
             }}
           >
             API-driven interfaces with React and modern JavaScript.
@@ -258,7 +260,7 @@ export default function Home({ darkMode }) {
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
                     xs: "1rem",
-                    md: "1.1rem",
+                    md: "1.2rem",
                   },
                   textAlign: "center",
                 }}
@@ -266,7 +268,7 @@ export default function Home({ darkMode }) {
                 Building <strong>scalable</strong> and{" "}
                 <strong>user-friendly</strong> web applications with{" "}
                 <strong>React</strong> and <strong>TypeScript</strong>. <br />
-                <br />
+               
                 Following best practices to ensure <strong>
                   performance
                 </strong>, <strong>accessibility</strong> and{" "}
@@ -359,7 +361,7 @@ export default function Home({ darkMode }) {
                   md: 5,
                 },
                 boxShadow:
-                   "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
+                  "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
                 transition: "transform 0.6s ease, border 1s ease",
                 "&:hover": {
                   transform: "scale(1.02)",
@@ -374,7 +376,7 @@ export default function Home({ darkMode }) {
                   fontFamily: "Mulish-Extralight, sans-serif",
                   fontSize: {
                     xs: "1rem",
-                    md: "1.1rem",
+                    md: "1.2rem",
                   },
                   textAlign: "center",
                 }}
@@ -386,7 +388,7 @@ export default function Home({ darkMode }) {
                 <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
                 <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
                 <strong>Vite</strong>, <strong>Jest</strong>,{" "}
-                <strong>Vitest</strong>, <br />
+                <strong>Vitest</strong>,{" "} 
                 <strong>Node.js</strong>, <strong>Express.js</strong> and{" "}
                 <strong>MySQL</strong>.
               </Typography>
@@ -458,7 +460,7 @@ export default function Home({ darkMode }) {
               pl: 5,
               pr: 5,
               boxShadow:
-                  "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
+                "2px 2px 2px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
               transition: "transform 0.6s ease, border 1s ease",
               "&:hover": {
                 transform: "scale(1.02)",

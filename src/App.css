@@ -384,3 +384,23 @@ html {
 /* .css-16qopci-MuiTypography-root {
   font-family: "Cabin, sans-serif" !important;
 } */
+
+
+/* .random-line {
+  position: fixed;
+  left: -200px;
+  width: 200px;
+  height: 2px;
+  background: rgba(76, 201, 254, 0.4);
+  pointer-events: none;
+  animation: move-line linear forwards;
+  z-index: 9999;
+}
+
+@keyframes move-line {
+  to {
+    transform: translateX(120vw);
+  }
+} */
+
+
