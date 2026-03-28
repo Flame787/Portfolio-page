@@ -235,7 +235,7 @@ export default function Projects() {
                 opacity: 0,
               }}
             >
-              SmartSpace Studio - Full - stack shop app with React, Express.js
+              SmartSpace Studio - Full-stack shop app with React, Express.js
               and MySQL
             </Typography>
 
