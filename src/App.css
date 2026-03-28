@@ -385,7 +385,6 @@ html {
   font-family: "Cabin, sans-serif" !important;
 } */
 
-
 /* .random-line {
   position: fixed;
   left: -200px;
@@ -402,5 +401,42 @@ html {
     transform: translateX(120vw);
   }
 } */
+
+
+/* Animation for subtitle "frontend developer" */
+
+
+.animated-text-reveal {
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap !important;
+  cursor: pointer;
+}
+
+.animated-text-reveal::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(42, 181, 246, 0.88);
+}
+
+.animated-text-reveal::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  color: rgba(42, 181, 246, 0.88);
+  border-right: 4px solid rgba(42, 181, 246, 0.88);
+  transition: width 0.6s ease;
+}
+
+.animated-text-reveal:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 25px rgba(42, 181, 246, 0.88));
+}
 
 

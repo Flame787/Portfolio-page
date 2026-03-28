@@ -45,8 +45,6 @@ export default function Home({ darkMode }) {
     }
   }, [location]);
 
- 
-
   return (
     <Container id="home" sx={{ scrollMarginTop: "100px" }}>
       <Typography
@@ -78,30 +76,22 @@ export default function Home({ darkMode }) {
       </Typography>
 
       <Fade in={showSubTitle} timeout={600}>
-        <Box>
+        <Box sx={{ textAlign: "center" }}>
           <Typography
             // className="scale-up-center"
+            className="animated-text-reveal"
+            data-text="frontend developer"
             sx={{
               mt: 4,
               mb: 2,
-              textAlign: "center",
-              // fontFamily: "Mulish-Extralight, sans-serif",
               fontFamily: "Cabin, sans-serif",
-              // fontWeight: "500",
-              // fontSize: "1.8rem",
               fontSize: {
                 xs: "1.4rem",
                 sm: "1.6rem",
                 md: "1.8rem",
                 lg: "2rem",
               },
-              // fontSize: {
-              //   xs: "1.2rem",
-              //   sm: "1.2rem",
-              //   md: "1.4rem",
-              //   lg: "1.6rem",
-              // },
-              //  fontWeight: "600",
+
               animation:
                 "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
               animationDelay: "0.6s",
@@ -268,7 +258,6 @@ export default function Home({ darkMode }) {
                 Building <strong>scalable</strong> and{" "}
                 <strong>user-friendly</strong> web applications with{" "}
                 <strong>React</strong> and <strong>TypeScript</strong>. <br />
-               
                 Following best practices to ensure <strong>
                   performance
                 </strong>, <strong>accessibility</strong> and{" "}
@@ -388,9 +377,8 @@ export default function Home({ darkMode }) {
                 <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
                 <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
                 <strong>Vite</strong>, <strong>Jest</strong>,{" "}
-                <strong>Vitest</strong>,{" "} 
-                <strong>Node.js</strong>, <strong>Express.js</strong> and{" "}
-                <strong>MySQL</strong>.
+                <strong>Vitest</strong>, <strong>Node.js</strong>,{" "}
+                <strong>Express.js</strong> and <strong>MySQL</strong>.
               </Typography>
 
               <Box
