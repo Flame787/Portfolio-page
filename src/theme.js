@@ -39,6 +39,16 @@ export const darkTheme = createTheme({
       fontFamily: "Mulish-Extralight, sans-serif",
     // fontFamily: "Satoshi-Regular, sans-serif"
   },
+
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        ":root": {
+          "--reveal-color": "rgba(42, 181, 246, 0.88)", // DARK MODE COLOR
+        },
+      },
+    },
+  },
 });
 
 export const lightTheme = createTheme({
@@ -70,5 +80,15 @@ export const lightTheme = createTheme({
   // fontFamily: "Lato-Regular, sans-serif",
   // fontFamily: "Satoshi-Regular, sans-serif",
     fontFamily: "Mulish-Extralight, sans-serif",
+  },
+
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        ":root": {
+          "--reveal-color": "rgba(5, 143, 193, 0.75)", // LIGHT MODE COLOR
+        },
+      },
+    },
   },
 });

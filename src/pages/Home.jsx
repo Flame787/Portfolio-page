@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Typography, Grid, Box, Fade } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -30,6 +30,33 @@ export default function Home({ darkMode }) {
     setTimeout(() => setShowText2(true), 1100);
     setTimeout(() => setShowText3(true), 1400);
   }, []);
+
+  // animation for revealing name:
+  function useRevealOnScroll() {
+    const ref = useRef(null);
+
+    useEffect(() => {
+      const el = ref.current;
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.classList.add("animate");
+            observer.disconnect(); // pokreni samo jednom
+          }
+        },
+        { threshold: 0.4 },
+      );
+
+      observer.observe(el);
+      return () => observer.disconnect();
+    }, []);
+
+    return ref;
+  }
+
+  const revealRef = useRevealOnScroll();
 
   // enable scrolling to the Projects-section from other pages, like Contact:
   const location = useLocation();
@@ -74,6 +101,7 @@ export default function Home({ darkMode }) {
       >
         Hi, I'm{" "}
         <Box
+          ref={revealRef}
           className="animated-text-reveal"
           data-text="Marina"
           component="span"

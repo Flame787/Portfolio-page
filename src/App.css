@@ -24,103 +24,22 @@ html {
   margin-left: 5px;
 }
 
-@font-face {
-  font-family: "Kenfolg Serif";
-  src: url("../public/fonts/Kenfolg.otf") format("opentype");
-}
-
-@font-face {
+/* @font-face {
   font-family: "TheSeasons-Regular";
   src: url("../public/fonts/Fontspring-DEMO-theseasons-reg.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "TheSeasons-Bold";
   src: url("../public/fonts/Fontspring-DEMO-theseasons-bd.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-@font-face {
-  font-family: "Forum";
-  src: url("../public/fonts/Forum-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Cardo-Regular";
-  src: url("../public/fonts/Cardo-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Cardo-Bold";
-  src: url("../public/fonts/Cardo-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Marcellus-Regular";
-  src: url("../public/fonts/Marcellus-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lato";
-  src: url("../public/fonts/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lato-Light";
-  src: url("../public/fonts/Lato-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lato-Black";
-  src: url("../public/fonts/Lato-Black.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Lato-Thin";
-  src: url("../public/fonts/Lato-Thin.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Source-Sans-Regular";
-  src: url("../public/fonts/SourceSans3-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-Regular";
-  src: url("../public/fonts/Satoshi-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-Bold";
-  src: url("../public/fonts/Satoshi-Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "Mulish-Extralight";
@@ -418,7 +337,8 @@ html {
   position: absolute;
   inset: 0;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(42, 181, 246, 0.88);
+  /* -webkit-text-stroke: 1px rgba(42, 181, 246, 0.88); */
+    -webkit-text-stroke: 1px var(--reveal-color);
 }
 
 /* filled text & cursor */
@@ -429,9 +349,16 @@ html {
   width: 0%;
   height: 100%;
   overflow: hidden;
-  color: rgba(42, 181, 246, 0.88);
-  border-right: 4px solid rgba(42, 181, 246, 0.88);
-  /* transition: width 0.6s ease; */
+  /* color: rgba(42, 181, 246, 0.88);
+  border-right: 4px solid rgba(42, 181, 246, 0.88); */
+  color: var(--reveal-color);
+  border-right: 4px solid var(--reveal-color);
+  transition: width 0.6s ease;
+  /* animation: auto-reveal 1.8s ease-in-out infinite alternate; */
+}
+
+.animated-text-reveal.animate::before {
+  /* animation: auto-reveal 2.4s ease forwards; */
   animation: auto-reveal 1.8s ease-in-out infinite alternate;
 }
 
@@ -441,6 +368,10 @@ html {
 } */
 
 @keyframes auto-reveal {
-  0% { width: 0%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

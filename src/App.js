@@ -10,12 +10,26 @@ import Footer from "./components/Footer";
 import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "@mui/material";
 
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
-  const handleThemeToggle = () => setDarkMode(!darkMode); // toggles darkMode state between true and false
+  // const [darkMode, setDarkMode] = useState(true);
+
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved === null ? true : saved === "true";
+  });
+
+  // const handleThemeToggle = () => setDarkMode(!darkMode); // toggles darkMode state between true and false
+
+  const handleThemeToggle = () => {
+    setDarkMode((prev) => {
+      const next = !prev;
+      localStorage.setItem("darkMode", next);
+      return next;
+    });
+  };
 
   const darkBackground = `
     radial-gradient(circle at 22% 27%, rgba(42, 181, 246, 0.15), transparent 9%),
@@ -38,13 +52,13 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}> 
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <GlobalStyles 
+      <GlobalStyles
         styles={{
           body: {
-            backgroundColor: darkMode ? "rgb(0, 15, 33)" : "rgb(221, 240, 250)", 
-            backgroundImage: darkMode ? darkBackground : lightBackground, 
+            backgroundColor: darkMode ? "rgb(0, 15, 33)" : "rgb(221, 240, 250)",
+            backgroundImage: darkMode ? darkBackground : lightBackground,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
@@ -54,7 +68,7 @@ function App() {
           },
         }}
       />
-      <Router> 
+      <Router>
         <div
           style={{
             display: "flex",
@@ -63,14 +77,16 @@ function App() {
           }}
         >
           <Navbar darkMode={darkMode} handleThemeToggle={handleThemeToggle} />
-          <main style={{ flex: 1 }}> 
+          <main style={{ flex: 1 }}>
             <Routes>
               <Route path="/" element={<Home darkMode={darkMode} />} />
-              <Route path="/contact" element={<Contact darkMode={darkMode} />} />
-              
+              <Route
+                path="/contact"
+                element={<Contact darkMode={darkMode} />}
+              />
             </Routes>
           </main>
-          <Footer darkMode={darkMode}/>
+          <Footer darkMode={darkMode} />
         </div>
       </Router>
     </ThemeProvider>
