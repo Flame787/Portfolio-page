@@ -107,7 +107,7 @@ export default function Projects() {
     "/portfolio7.png",
     "/portfolio8.png",
     "/portfolio9.png",
-    "/portfolio10.png",
+    // "/portfolio10.png",
   ];
 
   // arrows for previous/next picture in carousel:
