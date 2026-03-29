@@ -10,6 +10,7 @@ import ForumIcon from "@mui/icons-material/Forum";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import LaptopIcon from "@mui/icons-material/Laptop";
+import HolidayVillageIcon from '@mui/icons-material/HolidayVillage';
 // import ApartmentIcon from "@mui/icons-material/Apartment";
 
 import Projects from "../components/Projects";
@@ -500,6 +501,62 @@ export default function Home({ darkMode }) {
             >
               Check out my latest projects:
             </Typography>
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "4px",
+                paddingBottom: "8px",
+              }}
+            >
+              <Typography
+                color="text.secondary"
+                sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.02)",
+                  },
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <HolidayVillageIcon
+                  sx={{
+                    fontSize: "1.2rem",
+                    verticalAlign: "middle",
+                    mb: 0.6,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project00" className="project1234">
+                  <strong>Full-stack holiday rentals listing app</strong> - React, TypeScript, Redux Toolkit,
+                  React Query, Express.js
+                </a>
+              </Typography>
+            </Box>
 
             <Box
               sx={{

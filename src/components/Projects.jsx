@@ -18,6 +18,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomButton from "./CustomButton";
 import CustomTypography from "./CustomTypography";
 
+
 export default function Projects() {
   const location = useLocation();
 
@@ -70,6 +71,24 @@ export default function Projects() {
 
     return () => observer.disconnect();
   }, []);
+
+  const images0 = [
+    "/app1.png",
+    "/app2.png",
+    "/app3.png",
+    "/app4.png",
+    "/app5.png",
+    "/app6.png",
+    "/app7.png",
+    "/app8.png",
+    "/app9.png",
+    "/app10.png",
+    "/app11.png",
+    "/app12.png",
+    "/app13.png",
+    "/app14.png",
+    "/app15.png",
+  ];
 
   const images1 = [
     "/011.png",
@@ -188,7 +207,219 @@ export default function Projects() {
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
-        {/* Project 0 */}
+        {/* Project 00 - Apartments */}
+        <Grid
+          size={{ xs: 12, sm: 12, md: 12 }}
+          sx={{ mb: 6, scrollMarginTop: "80px" }}
+          id="project00"
+        >
+          <Card
+            sx={{
+              width: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              // transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
+              border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
+              "&:hover": {
+                // transform: "scale(1.02)",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              },
+            }}
+          >
+            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
+            <Typography
+              // ref={titleRef}
+              data-animate-title
+              variant="h6"
+              gutterBottom
+              // className={animateTitle ? "slide-up-fade" : ""}
+              sx={{
+                textAlign: "center",
+                mt: 6,
+                mb: 4,
+                ml: 4,
+                mr: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
+                fontSize: "1.6rem",
+                opacity: 0,
+              }}
+            >
+              AdriaticResorts - Full-stack app with React and Express.js
+            </Typography>
+
+            <CardMedia>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: {
+                    xs: 220 + 20,
+                    sm: 320 + 30,
+                    md: 420 + 40,
+                    lg: 520,
+                  },
+                  overflow: "hidden",
+                  pl: 4,
+                  pr: 4,
+                  pb: { xs: 0, sm: 0, md: 0 },
+                  "& .slick-dots": {
+                    bottom: -50,
+                  },
+                  "& .slick-dots li button:before": {
+                    fontSize: "12px",
+                    color: "#34a8d9",
+                  },
+                  "& .slick-dots li.slick-active button:before": {
+                    color: "#34a8d9",
+                  },
+                }}
+              >
+                <Slider {...settings}>
+                  {images0.map((src, i) => (
+                    <Box
+                      key={i}
+                      component="img"
+                      // src="/011.png"
+                      //  alt="Slide 1"
+                      src={src}
+                      alt={`Slide ${i + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                        objectFit: "contain",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setSelectedImage(selectedImage === src ? null : src)
+                      }
+                    />
+                  ))}
+                </Slider>
+              </Box>
+            </CardMedia>
+
+            {/*  */}
+            <CardContent>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                Full‑stack application built with React and Express.js for
+                listing, sorting, filtering, and renting holiday accommodations.
+                It provides image galleries and all essential booking
+                information, fully optimized for both desktop and mobile.
+              </CustomTypography>
+
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                SPA built with React Router. Data from the backend is fetched
+                through custom hooks using TanStack Query. Global state is
+                managed with Redux Toolkit for handling search terms and
+                favoriting best accommodations. Also includes a dedicated widget for
+                top‑rated listings.
+              </CustomTypography>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                Pagination is implemented with infinite scroll. The app supports
+                category‑based filtering, keyword search,
+                filtering by destination, dates and number of persons, and sorting by price, rating,
+                size, etc.
+              </CustomTypography>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                Technologies:
+                <button className="round">React</button>
+                <button className="round">TypeScript</button>
+                <button className="round">React Router</button>
+                <button className="round">Redux Toolkit</button>
+                <button className="round">TanStack Query</button>
+                <button className="round">Express.js</button>
+              </CustomTypography>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+                <CustomButton
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    ml: 2,
+                    // fontSize: "1rem",
+                    textTransform: "none",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
+                  }}
+                  href="https://github.com/Flame787/Apartments-app"
+                  target="_blank"
+                >
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                </CustomButton>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Project 0 - Shop app */}
         <Grid
           size={{ xs: 12, sm: 12, md: 12 }}
           sx={{ mb: 6, scrollMarginTop: "80px" }}
@@ -235,8 +466,8 @@ export default function Projects() {
                 opacity: 0,
               }}
             >
-              SmartSpace Studio - Full-stack shop app with React, Express.js
-              and MySQL
+              SmartSpace Studio - Full-stack shop app with React, Express.js and
+              MySQL
             </Typography>
 
             <CardMedia>
