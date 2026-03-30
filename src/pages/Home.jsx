@@ -405,7 +405,7 @@ export default function Home({ darkMode }) {
                 Experienced with diverse frontend and backend technologies:{" "}
                 <br />
                 <strong>React Router</strong>, <strong>Redux</strong>,{" "}
-                <strong>React Query</strong>, <strong>Next.js</strong>,{" "}
+                <strong>TanStack Query</strong>, <strong>Next.js</strong>,{" "}
                 <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
                 <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
                 <strong>Vite</strong>, <strong>Jest</strong>,{" "}
@@ -553,7 +553,7 @@ export default function Home({ darkMode }) {
                 />{" "}
                 <a href="#project00" className="project1234">
                   <strong>Full-stack holiday rentals listing app</strong> - React, TypeScript, Redux Toolkit,
-                  React Query, Express.js
+                  TanStack Query, Express.js
                 </a>
               </Typography>
             </Box>
@@ -609,7 +609,7 @@ export default function Home({ darkMode }) {
                 />{" "}
                 <a href="#project0" className="project1234">
                   <strong>Full-stack shop app</strong> - React, Redux Toolkit,
-                  React Query, Express.js and MySQL database
+                  TanStack Query, Express.js and MySQL database
                 </a>
               </Typography>
             </Box>

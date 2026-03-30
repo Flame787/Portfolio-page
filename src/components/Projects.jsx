@@ -18,7 +18,6 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CustomButton from "./CustomButton";
 import CustomTypography from "./CustomTypography";
 
-
 export default function Projects() {
   const location = useLocation();
 
@@ -325,9 +324,9 @@ export default function Projects() {
                 }}
               >
                 Full‑stack application built with React and Express.js for
-                listing, sorting, filtering, and renting holiday accommodations.
-                It provides image galleries and all essential booking
-                information, fully optimized for both desktop and mobile.
+                browsing and renting holiday accommodations. It provides image
+                galleries and all essential booking information, fully optimized
+                for both desktop and mobile.
               </CustomTypography>
 
               <CustomTypography
@@ -347,8 +346,8 @@ export default function Projects() {
                 SPA built with React Router. Data from the backend is fetched
                 through custom hooks using TanStack Query. Global state is
                 managed with Redux Toolkit for handling search terms and
-                favoriting best accommodations. Also includes a dedicated widget for
-                top‑rated listings.
+                favoriting best accommodations. Also includes a dedicated widget
+                for top‑rated listings.
               </CustomTypography>
               <CustomTypography
                 sx={{
@@ -365,9 +364,8 @@ export default function Projects() {
                 }}
               >
                 Pagination is implemented with infinite scroll. The app supports
-                category‑based filtering, keyword search,
-                filtering by destination, dates and number of persons, and sorting by price, rating,
-                size, etc.
+                keyword search, filtering by category, destination, dates, tags
+                and number of persons, and sorting by price, rating and size of accommodation.
               </CustomTypography>
               <CustomTypography
                 sx={{
