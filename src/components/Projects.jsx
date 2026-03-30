@@ -346,7 +346,7 @@ export default function Projects() {
                 SPA built with React Router. Data from the backend is fetched
                 through custom hooks using TanStack Query. Global state is
                 managed with Redux Toolkit for handling search terms and
-                favoriting best accommodations. Also includes a dedicated widget
+                bookmarking favorite accommodations. Also includes a dedicated widget
                 for top‑rated listings.
               </CustomTypography>
               <CustomTypography
