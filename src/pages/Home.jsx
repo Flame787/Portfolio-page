@@ -117,7 +117,7 @@ export default function Home({ darkMode }) {
           <Typography
             className="scale-up-center"
             // className="animated-text-reveal"
-            data-text="frontend developer"
+            data-text="full-stack JS developer"
             sx={{
               color: "primary.title",
               mt: 4,
@@ -136,7 +136,7 @@ export default function Home({ darkMode }) {
               animationDelay: "0.2s",
             }}
           >
-            frontend developer
+            full-stack JS developer
           </Typography>
           <Typography
             sx={{
