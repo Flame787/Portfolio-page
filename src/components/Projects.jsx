@@ -1395,7 +1395,7 @@ export default function Projects() {
                 }}
               >
                 The app also supports theme switching, allowing users to
-                personalize the visual experience by choosing a black or white
+                personalize the visual experience by choosing a dark or light
                 theme. This single-page application is fully responsive and
                 optimized for accessibility and performance across devices.
               </CustomTypography>

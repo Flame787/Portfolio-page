@@ -9,6 +9,7 @@ export const darkTheme = createTheme({
       main: "rgba(4, 58, 125, 0.5)",
       // transparent: "rgba(3, 76, 160, 0.75)",
       transparent: "rgba(4, 58, 125, 0.65)",
+      // transparent: "rgba(4, 58, 125)",
       // title: "rgba(29, 167, 231, 0.88)",
       title: "rgba(42, 181, 246, 0.88)",
       title2: "rgba(31, 142, 193, 0.88)",
@@ -16,7 +17,6 @@ export const darkTheme = createTheme({
       button: "rgba(19, 145, 203, 0.88)",
       button2: "rgba(16, 115, 161, 0.88)",
       form: "rgba(89, 190, 236, 0.88)",
- 
     },
     background: {
       // default: "#121212",
@@ -36,7 +36,7 @@ export const darkTheme = createTheme({
     // fontFamily: "Marcellus-Regular, serif",
     // fontFamily: "Source-Sans-Regular, sans-serif",
     // fontFamily: "Lato-Regular, sans-serif",
-      fontFamily: "Mulish-Extralight, sans-serif",
+    fontFamily: "Mulish-Extralight, sans-serif",
     // fontFamily: "Satoshi-Regular, sans-serif"
   },
 
@@ -76,9 +76,9 @@ export const lightTheme = createTheme({
   typography: {
     // fontFamily: "Roboto, sans-serif",
     // fontFamily: "Marcellus-Regular, serif",
-  //   fontFamily: "Source-Sans-Regular, sans-serif",
-  // fontFamily: "Lato-Regular, sans-serif",
-  // fontFamily: "Satoshi-Regular, sans-serif",
+    //   fontFamily: "Source-Sans-Regular, sans-serif",
+    // fontFamily: "Lato-Regular, sans-serif",
+    // fontFamily: "Satoshi-Regular, sans-serif",
     fontFamily: "Mulish-Extralight, sans-serif",
   },
 

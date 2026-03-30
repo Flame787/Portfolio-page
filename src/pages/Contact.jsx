@@ -232,7 +232,7 @@ export default function Contact({ darkMode }) {
               textAlign: "justify",
             }}
           >
-            I am frontend developer specialized in React, JavaScript, and
+            I am full-stack developer specialized in React, JavaScript (Node.js, Express.js), and
             TypeScript, with experience in building scalable, user-focused web
             applications.
           </CustomTypography>

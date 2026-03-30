@@ -161,7 +161,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
           </span>
         </Typography>
 
-        {/* Hamburger Menu, if mobile resolution: */}
+        {/* Hamburger Menu and it's options, on mobile resolution: */}
         <IconButton
           sx={{ display: { xs: "block", sm: "none" }, color: "white" }}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -179,6 +179,16 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
               sm: "none",
             },
           }}
+          // changing background color of mobile hamburger-menu options based on selected dark/light theme:
+          slotProps={{
+            paper: {
+              sx: {
+                backgroundColor: darkMode
+                  ? "rgba(4, 58, 125)"
+                  : "rgba(5, 143, 193)",
+              },
+            },
+          }}
         >
           <List>
             <ListItem
@@ -189,7 +199,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             >
               <ListItemText
                 primary="HOME"
-                sx={{ color: "primary.title3" }}
+                sx={{ color: "#fff" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
@@ -207,7 +217,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             >
               <ListItemText
                 primary="PROJECTS"
-                sx={{ color: "primary.title3" }}
+                sx={{ color: "#fff" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
@@ -222,7 +232,7 @@ export default function Navbar({ darkMode, handleThemeToggle }) {
             >
               <ListItemText
                 primary="ABOUT"
-                sx={{ color: "primary.title3" }}
+                sx={{ color: "#fff" }}
                 primaryTypographyProps={{
                   fontWeight: "bold",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",
