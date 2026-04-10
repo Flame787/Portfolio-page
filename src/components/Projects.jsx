@@ -88,6 +88,9 @@ export default function Projects() {
     "/app14.png",
     "/app15.png",
     "/app16.png",
+    "/app17.png",
+    "/app18.png",
+    "/app19.png",
   ];
 
   const images1 = [
@@ -347,8 +350,8 @@ export default function Projects() {
                 SPA built with React Router. Data from the backend is fetched
                 through custom hooks using TanStack Query. Global state is
                 managed with Redux Toolkit for handling search terms and
-                bookmarking favorite accommodations. Also includes a dedicated widget
-                for top‑rated listings.
+                bookmarking favorite accommodations. Also includes a dedicated
+                widget for top‑rated listings.
               </CustomTypography>
               <CustomTypography
                 sx={{
@@ -366,7 +369,8 @@ export default function Projects() {
               >
                 Pagination is implemented with infinite scroll. The app supports
                 keyword search, filtering by category, destination, dates, tags
-                and number of persons, and sorting by price, rating and size of accommodation.
+                and number of persons, and sorting by price, rating and size of
+                accommodation.
               </CustomTypography>
               <CustomTypography
                 sx={{
