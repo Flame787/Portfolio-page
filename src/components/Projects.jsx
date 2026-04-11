@@ -90,7 +90,6 @@ export default function Projects() {
     "/app16.png",
     "/app17.png",
     "/app18.png",
-    "/app19.png",
   ];
 
   const images1 = [
