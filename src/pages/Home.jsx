@@ -10,7 +10,7 @@ import ForumIcon from "@mui/icons-material/Forum";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import LaptopIcon from "@mui/icons-material/Laptop";
-import HolidayVillageIcon from '@mui/icons-material/HolidayVillage';
+import HolidayVillageIcon from "@mui/icons-material/HolidayVillage";
 // import ApartmentIcon from "@mui/icons-material/Apartment";
 
 import Projects from "../components/Projects";
@@ -156,7 +156,7 @@ export default function Home({ darkMode }) {
               animationDelay: "0.4s",
             }}
           >
-            passionate about creating interactive,
+            with experience in planning and building interactive,
           </Typography>
 
           <Typography
@@ -294,7 +294,7 @@ export default function Home({ darkMode }) {
                   textAlign: "center",
                 }}
               >
-                Building <strong>modular</strong> and{" "}
+                Developing <strong>modular</strong> and{" "}
                 <strong>user-friendly</strong> web applications with{" "}
                 <strong>React</strong> and <strong>TypeScript</strong>. <br />
                 Following best practices to ensure <strong>
@@ -407,10 +407,10 @@ export default function Home({ darkMode }) {
                 <strong>React Router</strong>, <strong>Redux</strong>,{" "}
                 <strong>TanStack Query</strong>, <strong>Next.js</strong>,{" "}
                 <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
-                <strong>Material UI</strong>, <strong>TypeScript</strong>,{" "}
-                <strong>Vite</strong>, <strong>Jest</strong>,{" "}
-                <strong>Vitest</strong>, <strong>Node.js</strong>,{" "}
-                <strong>Express.js</strong> and <strong>MySQL</strong>.
+                <strong>Material UI</strong>, <strong>Vite</strong>,{" "}
+                <strong>Jest</strong>, <strong>TypeScript</strong>,{" "}
+                <strong>Node.js</strong>, <strong>Express.js,</strong>{" "}
+                <strong>MySQL</strong> and <strong>PostgreSQL</strong>.
               </Typography>
 
               <Box
@@ -552,8 +552,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project00" className="project1234">
-                  <strong>Full-stack holiday rentals listing app</strong> - React, TypeScript, Redux Toolkit,
-                  TanStack Query, Express.js
+                  <strong>Full-stack holiday rentals listing app</strong> -
+                  React, TypeScript, Redux Toolkit, TanStack Query, Express.js
                 </a>
               </Typography>
             </Box>

@@ -15,6 +15,7 @@ const mySkills = [
   "React Router",
   "TanStack Query",
   "Redux",
+  "Zustand",
   "EmailJS",
   "Chart.js",
   "HTML",
@@ -31,11 +32,15 @@ const mySkills = [
   "Express.js",
   "Websockets - Scaledrone",
   "MySQL",
+  "PostgreSQL",
+  "Prisma ORM",
   "Python - basic",
 
   "Git",
   "GitHub",
   "Visual Studio Code",
+  "Figma",
+  "Playwright",
   "Netlify",
   "Render",
   "Postman",
@@ -232,31 +237,24 @@ export default function Contact({ darkMode }) {
               textAlign: "justify",
             }}
           >
-            I am full-stack developer specialized in React, JavaScript (Node.js, Express.js), and
-            TypeScript, with experience in building scalable, user-focused web
-            applications.
+            Hi, I’m Marina - full-stack developer with strong experience in
+            React, TypeScript, Node.js, Express.js and SQL, focused on planning
+            and building scalable, modern, user-centered web applications.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            Over the past few years, I have consistently advanced my programming
-            skills through hands-on work on several full-stack projects using
-            modern JavaScript technologies.
+            I have hands-on experience integrating REST APIs, designing frontend
+            architectures, and working with relational databases such as MySQL
+            and PostgreSQL. My technical toolkit includes React, React Router,
+            Redux Toolkit, TanStack Query, SCSS, Material UI, Vite, Jest, and
+            Express.js, along with basic experience in Python and scripting.
           </CustomTypography>
           <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I have experience integrating REST APIs and working with a broad
-            range of frontend tools, including React Router, TanStack Query,
-            Redux, SCSS, Bootstrap, Material UI, Vite, and Jest, as well as
-            backend technologies such as Express.js and MySQL. In addition to
-            that, I have hands-on experience with Shell scripting and basic
-            proficiency in Python.
-          </CustomTypography>
-
-          <CustomTypography color="text.secondary" sx={{ marginBottom: 1 }}>
-            I am highly motivated to create modern, scalable, and intuitive
-            digital solutions, and I bring a proactive, adaptable, and
-            problem-solving mindset to software development. I also have
-            valuable experience in project planning, work in cross‑functional
-            teams and effective collaboration with stakeholders in an agile
-            environment.
+            Alongside my development work, I have experience in technical
+            analysis, problem solving, stakeholder communication, and solution
+            design in agile environments. I have been working closely with
+            cross-functional teams, contributing to requirements understanding,
+            project planning and delivery of technical solutions ranging from
+            smaller-scale applications to enterprise-level systems.
           </CustomTypography>
         </Box>
       </Grid>

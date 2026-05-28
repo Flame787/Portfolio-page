@@ -558,7 +558,8 @@ export default function Projects() {
                   },
                 }}
               >
-                Implements advanced routing with React Router, data fetching and
+                Implements advanced routing with React Router, backend API handling with Express, 
+                MySQL and Prisma ORM, authentication with JWT, data fetching and
                 caching with TanStack Query, global state management with
                 Context API and Redux Toolkit, and modular architecture built
                 for scalability.
@@ -604,6 +605,7 @@ export default function Projects() {
                 <button className="round">TanStack Query</button>
                 <button className="round">Express.js</button>
                 <button className="round">MySQL</button>
+                <button className="round">Prisma ORM</button>
               </CustomTypography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <CustomButton
