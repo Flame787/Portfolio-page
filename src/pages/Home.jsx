@@ -552,7 +552,7 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project0" className="project1234">
-                  <strong>SmartSpace Studio</strong>- full-stack demo e-commerce
+                  <strong>SmartSpace Studio</strong> - full-stack demo e-commerce
                   app
                   <br></br>(React, Node.js, Express.js, MySQL database)
                 </a>
@@ -834,7 +834,7 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project4" className="project1234">
-                  <strong>Developer portfolio</strong> - my personal portfolio
+                  <strong>Developer portfolio</strong> - projects and skills overview
                   <br /> (React, Material UI)
                 </a>
               </Typography>
