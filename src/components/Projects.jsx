@@ -209,7 +209,244 @@ export default function Projects() {
 
       {/* Grid for project cards */}
       <Grid container spacing={4} sx={{ mt: 4 }}>
+        {/* Project 0 - Shop app */}
+        <Grid
+          size={{ xs: 12, sm: 12, md: 12 }}
+          sx={{ mb: 6, scrollMarginTop: "80px" }}
+          id="project0"
+        >
+          <Card
+            sx={{
+              width: "100%",
+              margin: "0 auto",
+              wordWrap: "break-word",
+              borderRadius: 4,
+              // transition: "border 0.3s ease",
+              boxShadow:
+                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
+              border: "1px solid transparent",
+              // "&:hover": {
+              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              // },
+              transition: "transform 0.25s ease, border 0.25s ease",
+              "&:hover": {
+                // transform: "scale(1.02)",
+                border: "1.3px solid rgba(76, 201, 254, 0.4)",
+              },
+            }}
+          >
+            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
+            <Typography
+              // ref={titleRef}
+              data-animate-title
+              variant="h6"
+              gutterBottom
+              // className={animateTitle ? "slide-up-fade" : ""}
+              sx={{
+                textAlign: "center",
+                mt: 6,
+                mb: 4,
+                ml: 4,
+                mr: 4,
+                color: "primary.title3",
+                // fontFamily: "TheSeasons-Regular, serif",
+                fontFamily: "Cabin, sans-serif",
+                letterSpacing: "0.02em",
+                fontSize: "1.6rem",
+                opacity: 0,
+              }}
+            >
+              SmartSpace Studio - Full-stack shop app with React, Express.js and
+              MySQL
+            </Typography>
+
+            <CardMedia>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: {
+                    xs: 220 + 20,
+                    sm: 320 + 30,
+                    md: 420 + 40,
+                    lg: 520,
+                  },
+                  overflow: "hidden",
+                  pl: 4,
+                  pr: 4,
+                  pb: { xs: 0, sm: 0, md: 0 },
+                  "& .slick-dots": {
+                    bottom: -50,
+                  },
+                  "& .slick-dots li button:before": {
+                    fontSize: "12px",
+                    color: "#34a8d9",
+                  },
+                  "& .slick-dots li.slick-active button:before": {
+                    color: "#34a8d9",
+                  },
+                }}
+              >
+                <Slider {...settings}>
+                  {images1.map((src, i) => (
+                    <Box
+                      key={i}
+                      component="img"
+                      // src="/011.png"
+                      //  alt="Slide 1"
+                      src={src}
+                      alt={`Slide ${i + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
+                        objectFit: "contain",
+                        borderRadius: 4,
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setSelectedImage(selectedImage === src ? null : src)
+                      }
+                    />
+                  ))}
+                </Slider>
+              </Box>
+            </CardMedia>
+
+            {/*  */}
+            <CardContent>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                Full-stack e-commerce application built with React on the
+                frontend and Express.js/Node.js on the backend, using MySQL as
+                the database.
+              </CustomTypography>
+
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                The app implements frontend routing with React Router,
+                server-side API architecture using Express, MySQL, and Prisma
+                ORM, authentication with JWT, data fetching and caching with
+                TanStack Query, global state management with Context API and
+                Redux Toolkit, and modular architecture built for scalability.
+              </CustomTypography>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                It includes category-based filtering, product sorting (by price
+                or alphabetical order), search by keyword, shopping cart logic.
+                Currently in development: payment & delivery options, and a
+                separate admin panel with storage overview and business charts.
+              </CustomTypography>
+              <CustomTypography
+                sx={{
+                  pl: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                  pr: {
+                    xs: 2,
+                    md: 4,
+                    lg: 6,
+                  },
+                }}
+              >
+                Technologies:
+                <button className="round">React</button>
+                <button className="round">React Router</button>
+                <button className="round">Redux Toolkit</button>
+                <button className="round">TanStack Query</button>
+                <button className="round">Express.js</button>
+                <button className="round">MySQL</button>
+                <button className="round">Prisma ORM</button>
+              </CustomTypography>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+                <CustomButton
+                  variant="contained"
+                  component="a"
+                  href="https://shop-app-frontend-production.up.railway.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="primary"
+                  sx={{
+                    // fontSize: "1rem",
+                    textTransform: "none",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
+                  }}
+                >
+                  LIVE PAGE <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                </CustomButton>
+                <CustomButton
+                  variant="contained"
+                  color="primary"
+                  sx={{
+                    ml: 2,
+                    // fontSize: "1rem",
+                    textTransform: "none",
+                    // fontFamily: "TheSeasons-Regular, serif",
+                    // letterSpacing: "0.07em",
+                    fontFamily: "Cabin, sans-serif",
+                    letterSpacing: "0.02em",
+                    fontSize: "1rem",
+                    transition: "transform 0.25s ease, border 0.25s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
+                  }}
+                  href="https://github.com/Flame787/Shop-app"
+                  target="_blank"
+                >
+                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
+                </CustomButton>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
         {/* Project 00 - Apartments */}
+
         <Grid
           size={{ xs: 12, sm: 12, md: 12 }}
           sx={{ mb: 6, scrollMarginTop: "80px" }}
@@ -412,220 +649,6 @@ export default function Projects() {
                     },
                   }}
                   href="https://github.com/Flame787/Apartments-app"
-                  target="_blank"
-                >
-                  GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />
-                </CustomButton>
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Project 0 - Shop app */}
-        <Grid
-          size={{ xs: 12, sm: 12, md: 12 }}
-          sx={{ mb: 6, scrollMarginTop: "80px" }}
-          id="project0"
-        >
-          <Card
-            sx={{
-              width: "100%",
-              margin: "0 auto",
-              wordWrap: "break-word",
-              borderRadius: 4,
-              // transition: "border 0.3s ease",
-              boxShadow:
-                "4px 4px 8px 0 rgba(76, 201, 254, 0.2), 0 6px 10px 0 rgba(76, 201, 254, 0.19)",
-              border: "1px solid transparent",
-              // "&:hover": {
-              //   border: "1.3px solid rgba(76, 201, 254, 0.4)",
-              // },
-              transition: "transform 0.25s ease, border 0.25s ease",
-              "&:hover": {
-                // transform: "scale(1.02)",
-                border: "1.3px solid rgba(76, 201, 254, 0.4)",
-              },
-            }}
-          >
-            {/* <Card sx={{ flexGrow: 1, wordWrap: 'break-word' }}> */}
-            <Typography
-              // ref={titleRef}
-              data-animate-title
-              variant="h6"
-              gutterBottom
-              // className={animateTitle ? "slide-up-fade" : ""}
-              sx={{
-                textAlign: "center",
-                mt: 6,
-                mb: 4,
-                ml: 4,
-                mr: 4,
-                color: "primary.title3",
-                // fontFamily: "TheSeasons-Regular, serif",
-                fontFamily: "Cabin, sans-serif",
-                letterSpacing: "0.02em",
-                fontSize: "1.6rem",
-                opacity: 0,
-              }}
-            >
-              SmartSpace Studio - Full-stack shop app with React, Express.js and
-              MySQL
-            </Typography>
-
-            <CardMedia>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: {
-                    xs: 220 + 20,
-                    sm: 320 + 30,
-                    md: 420 + 40,
-                    lg: 520,
-                  },
-                  overflow: "hidden",
-                  pl: 4,
-                  pr: 4,
-                  pb: { xs: 0, sm: 0, md: 0 },
-                  "& .slick-dots": {
-                    bottom: -50,
-                  },
-                  "& .slick-dots li button:before": {
-                    fontSize: "12px",
-                    color: "#34a8d9",
-                  },
-                  "& .slick-dots li.slick-active button:before": {
-                    color: "#34a8d9",
-                  },
-                }}
-              >
-                <Slider {...settings}>
-                  {images1.map((src, i) => (
-                    <Box
-                      key={i}
-                      component="img"
-                      // src="/011.png"
-                      //  alt="Slide 1"
-                      src={src}
-                      alt={`Slide ${i + 1}`}
-                      sx={{
-                        width: "100%",
-                        height: { xs: 150, sm: 250, md: 350, lg: 450 },
-                        objectFit: "contain",
-                        borderRadius: 4,
-                        cursor: "pointer",
-                      }}
-                      onClick={() =>
-                        setSelectedImage(selectedImage === src ? null : src)
-                      }
-                    />
-                  ))}
-                </Slider>
-              </Box>
-            </CardMedia>
-
-            {/*  */}
-            <CardContent>
-              <CustomTypography
-                sx={{
-                  pl: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                  pr: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                }}
-              >
-                Full-stack e-commerce application built with React on the
-                frontend and Express.js/Node.js on the backend, using MySQL as
-                the database.
-              </CustomTypography>
-
-              <CustomTypography
-                sx={{
-                  pl: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                  pr: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                }}
-              >
-                Implements advanced routing with React Router, backend API handling with Express, 
-                MySQL and Prisma ORM, authentication with JWT, data fetching and
-                caching with TanStack Query, global state management with
-                Context API and Redux Toolkit, and modular architecture built
-                for scalability.
-              </CustomTypography>
-              <CustomTypography
-                sx={{
-                  pl: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                  pr: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                }}
-              >
-                Includes category-based filtering, product sorting (by price or
-                alphabetical order), search by keyword, and shopping cart logic.
-                Soon it will also include payment and delivery options, user
-                authentication via JWT, and a separate admin panel with editing
-                options and business charts.
-              </CustomTypography>
-              <CustomTypography
-                sx={{
-                  pl: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                  pr: {
-                    xs: 2,
-                    md: 4,
-                    lg: 6,
-                  },
-                }}
-              >
-                Technologies:
-                <button className="round">React</button>
-                <button className="round">React Router</button>
-                <button className="round">Redux Toolkit</button>
-                <button className="round">TanStack Query</button>
-                <button className="round">Express.js</button>
-                <button className="round">MySQL</button>
-                <button className="round">Prisma ORM</button>
-              </CustomTypography>
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
-                <CustomButton
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    ml: 2,
-                    // fontSize: "1rem",
-                    textTransform: "none",
-                    // fontFamily: "TheSeasons-Regular, serif",
-                    // letterSpacing: "0.07em",
-                    fontFamily: "Cabin, sans-serif",
-                    letterSpacing: "0.02em",
-                    fontSize: "1rem",
-                    transition: "transform 0.25s ease, border 0.25s ease",
-                    "&:hover": {
-                      transform: "scale(1.02)",
-                    },
-                  }}
-                  href="https://github.com/Flame787/Shop-app"
                   target="_blank"
                 >
                   GITHUB <OpenInNewIcon sx={{ ml: 0.7, fontSize: "1rem" }} />

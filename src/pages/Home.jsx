@@ -156,7 +156,7 @@ export default function Home({ darkMode }) {
               animationDelay: "0.4s",
             }}
           >
-            with experience in planning and building interactive,
+            with experience in project planning and building interactive,
           </Typography>
 
           <Typography
@@ -404,12 +404,12 @@ export default function Home({ darkMode }) {
               >
                 Experienced with diverse frontend and backend technologies:{" "}
                 <br />
-                <strong>React Router</strong>, <strong>Redux</strong>,{" "}
-                <strong>TanStack Query</strong>, <strong>Next.js</strong>,{" "}
-                <strong>SCSS</strong>, <strong>Bootstrap</strong>,{" "}
-                <strong>Material UI</strong>, <strong>Vite</strong>,{" "}
-                <strong>Jest</strong>, <strong>TypeScript</strong>,{" "}
-                <strong>Node.js</strong>, <strong>Express.js,</strong>{" "}
+                <strong>TypeScript</strong>, <strong>React Router</strong>,{" "}
+                <strong>Redux</strong>, <strong>TanStack Query</strong>,{" "}
+                <strong>Node.js</strong>, <strong>SCSS</strong>,{" "}
+                <strong>Bootstrap</strong>, <strong>Material UI</strong>,{" "}
+                <strong>Vite</strong>, <strong>Jest</strong>,{" "}
+                <strong>Express.js,</strong>, <strong>Next.js</strong>,{" "}
                 <strong>MySQL</strong> and <strong>PostgreSQL</strong>.
               </Typography>
 
@@ -499,64 +499,8 @@ export default function Home({ darkMode }) {
                 textAlign: "center",
               }}
             >
-              Check out my latest projects:
+              Check out my projects:
             </Typography>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
-                paddingTop: "4px",
-                paddingBottom: "8px",
-              }}
-            >
-              <Typography
-                color="text.secondary"
-                sx={{
-                  transition: "transform 0.25s ease, border 0.25s ease",
-                  "&:hover": {
-                    transform: "scale(1.02)",
-                  },
-                  marginBottom: 1,
-                  fontFamily: "Mulish-Extralight, sans-serif",
-                  fontSize: {
-                    xs: "1rem",
-                    md: "1.2rem",
-                  },
-                  textAlign: "center",
-                  color: "#1EA0D9",
-                  "& a": {
-                    textDecoration: "none",
-                    cursor: "pointer",
-                    color: "#1EA0D9",
-                    "&:link": {
-                      color: "#1EA0D9",
-                    },
-                    "&:hover": {
-                      textDecoration: "underline",
-                    },
-                    "&:visited": {
-                      color: "#1EA0D9", // prevent violet color on visited link
-                    },
-                  },
-                }}
-              >
-                <HolidayVillageIcon
-                  sx={{
-                    fontSize: "1.2rem",
-                    verticalAlign: "middle",
-                    mb: 0.6,
-                    color: darkMode ? "white" : "text.secondary",
-                  }}
-                />{" "}
-                <a href="#project00" className="project1234">
-                  <strong>Full-stack holiday rentals listing app</strong> -
-                  React, TypeScript, Redux Toolkit, TanStack Query, Express.js
-                </a>
-              </Typography>
-            </Box>
 
             <Box
               sx={{
@@ -608,8 +552,67 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project0" className="project1234">
-                  <strong>Full-stack shop app</strong> - React, Redux Toolkit,
-                  TanStack Query, Express.js and MySQL database
+                  <strong>SmartSpace Studio</strong>- full-stack demo e-commerce
+                  app
+                  <br></br>(React, Node.js, Express.js, MySQL database)
+                </a>
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderBottom: `1px solid ${darkMode ? "rgba(237, 250, 254, 0.3)" : "rgba(22, 175, 242, 0.2)"}`,
+                paddingTop: "4px",
+                paddingBottom: "8px",
+              }}
+            >
+              <Typography
+                color="text.secondary"
+                sx={{
+                  transition: "transform 0.25s ease, border 0.25s ease",
+                  "&:hover": {
+                    transform: "scale(1.02)",
+                  },
+                  marginBottom: 1,
+                  fontFamily: "Mulish-Extralight, sans-serif",
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                  },
+                  textAlign: "center",
+                  color: "#1EA0D9",
+                  "& a": {
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#1EA0D9",
+                    "&:link": {
+                      color: "#1EA0D9",
+                    },
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                    "&:visited": {
+                      color: "#1EA0D9", // prevent violet color on visited link
+                    },
+                  },
+                }}
+              >
+                <HolidayVillageIcon
+                  sx={{
+                    fontSize: "1.2rem",
+                    verticalAlign: "middle",
+                    mb: 0.6,
+                    color: darkMode ? "white" : "text.secondary",
+                  }}
+                />{" "}
+                <a href="#project00" className="project1234">
+                  <strong>AdriaticResorts</strong> - full-stack vacation rental
+                  platform
+                  <br />
+                  (React, TypeScript, Node.js, Express.js)
                 </a>
               </Typography>
             </Box>
@@ -664,8 +667,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project1" className="project1234">
-                  <strong>Real-time chat application</strong> - React, Spotify
-                  API and Scaledrone WebSocket
+                  <strong>Chat app</strong> - real-time chat application{" "}
+                  <br></br>(React, Scaledrone WebSocket)
                 </a>
               </Typography>
             </Box>
@@ -720,8 +723,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project2" className="project1234">
-                  <strong>Music search platform</strong> - JavaScript, Spotify
-                  API, SCSS and Express.js
+                  <strong>Music domain </strong> - music search platform{" "}
+                  <br></br>(JavaScript, Spotify API, SCSS, Express.js)
                 </a>
               </Typography>
             </Box>
@@ -775,8 +778,9 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project3" className="project1234">
-                  <strong>Book website</strong> - JavaScript, Open Library API
-                  and Chart.js
+                  <strong>Tolkien page</strong> - website about J.R.R. Tolkien
+                  <br />
+                  (JavaScript, Open Library API, Chart.js)
                 </a>
               </Typography>
             </Box>
@@ -830,8 +834,8 @@ export default function Home({ darkMode }) {
                   }}
                 />{" "}
                 <a href="#project4" className="project1234">
-                  <strong>Developer portfolio</strong> - React Router and
-                  Material UI
+                  <strong>Developer portfolio</strong> - my personal portfolio
+                  <br /> (React, Material UI)
                 </a>
               </Typography>
             </Box>
